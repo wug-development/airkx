@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国内机票查询|国内机票预订-中国民航北京机票一级代理400-722-7722 凯行网官网Airkx.com</title>
+    @@include('./common/meta.html')
+    <link rel="stylesheet" href="@@csspath/book.css">
+    <link rel="stylesheet" href="@@csspath/bookticket.css">
+</head>
+<body>
+    <div class="book-box">
+        @@include('./common/header.html', {"index": "2"})
+        <div class="banner-gn-box">
+            <div class="box-width banner-content">
+                <div class="bookticket-box">
+                    <div class="book-title"><span>KX</span>国内机票查询</div>
+                    <div class="book-tree"></div>
+                    <div class="book-tip">选择出发到达的城市及时间</div>
+                    <div class="book-airflight-way">
+                        <div class="btn-way btn-one cur">单程</div>
+                    </div>
+                    <div class="book-form-box">
+                        <div class="form-txt-box ddl-start">
+                            <span>出发城市</span>
+                            <input type="text" class="txt" readonly placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                        </div>
+                        <div class="form-txt-box ddl-end">
+                            <span>到达城市</span>
+                            <input type="text" class="txt" readonly placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                        </div>
+                        <div class="form-txt-box ddl-date">
+                            <span>出发日期</span>
+                            <input type="text" class="txt" readonly placeholder="请选择" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="book-btns">
+                        <div class="btn-search">查询票价</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('./common/footer.html')
+    </div>
+    <script src="@@jspath/lib/swiper-2.1.min.js"></script>
+    <script src="@@jspath/book.js"></script>
+</body>
+</html>

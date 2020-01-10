@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国际机票查询|国际机票预订-中国民航北京机票一级代理400-722-7722 凯行网官网Airkx.com</title>
+    @@include('./common/meta.html')
+    <link rel="stylesheet" href="@@csspath/book.css">
+    <link rel="stylesheet" href="@@csspath/bookticket.css">
+</head>
+<body>
+    <div class="book-box">
+        @@include('./common/header.html', {"index": "1"})
+        <div class="banner-gj-box">
+            <div class="box-width banner-content">
+                <div class="bookticket-box">
+                    <div class="book-title"><span>KX</span>国际机票查询</div>
+                    <div class="book-tree"></div>
+                    <div class="book-tip">选择出发到达的城市及时间</div>
+                    <div class="book-airflight-way">
+                        <div class="btn-way btn-one">单程</div>
+                        <div class="btn-way btn-dobble cur">往返</div>
+                    </div>
+                    <div class="book-change-org">
+                        <div class="book-btn cur">中国大陆始发</div>
+                        <div class="book-btn">境外始发</div>
+                    </div>
+                    <div class="book-form-box">
+                        <div class="form-txt-box ddl-start">
+                            <span>出发城市</span>
+                            <input type="text" class="txt" readonly placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                        </div>
+                        <div class="form-txt-box ddl-end">
+                            <span>到达城市</span>
+                            <input type="text" class="txt" readonly placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                        </div>
+                        <div class="form-txt-box ddl-date">
+                            <span>出发日期</span>
+                            <input type="text" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
+                            <div class="back-date">
+                                <span>返回日期</span>
+                                <input type="text" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
+                            </div>
+                        </div>
+                        <div class="form-txt-box ddl-more">
+                            <span>更多选择</span>
+                            <input type="text" class="txt" readonly placeholder="经济舱" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="book-btns">
+                        <div class="btn-search">查询票价</div>
+                        <div class="book-change-org">
+                            <div class="book-btn">仅查直飞</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="book-hot">
+            <div class="hot-title">热门推荐</div>
+
+        </div>
+        @@include('./common/footer.html')
+    </div>
+    <script src="@@jspath/lib/swiper-2.1.min.js"></script>
+    <script src="@@jspath/book.js"></script>
+    <script src="@@jspath/hot-ticket.js"></script>
+</body>
+</html>

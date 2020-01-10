@@ -1,0 +1,129 @@
+.book-box{
+    overflow: hidden;
+}
+.banner-gj-box{
+    height: 872px;
+    background: url('@@imgpath/gj-banner.jpg') no-repeat center;
+}
+.banner-gn-box{
+    height: 872px;
+    background: url('@@imgpath/gn-banner.jpg') no-repeat center;
+}
+.banner-content{
+    padding-top: 128px;
+}
+.book-hot{
+    padding-top: 50px;
+    .hot-title{
+        font-size: 32px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .con-ten {
+        width: 100%;
+        overflow: hidden;
+        margin-right: -4px;
+        font-family: "苹方", sans-serif;
+    }
+    .con-list {
+        width: 390px;
+        height: 142px;
+        border-radius: 3px;
+        background-color: #eeeeee;
+        float: left;
+        margin-right: 4px;
+        margin-bottom: 26px;
+        position: relative;
+        cursor: pointer;
+    }
+    .con-list:after {
+        content: "";
+        width: 212px;
+        height: 1px;
+        border-top: dashed 1px #a6a5a5;
+        position: absolute;
+        left: 6px;
+        top: 45px;
+    }
+    .listtitle {
+        float: left;
+        font-size: 20px;
+        line-height: 20px;
+        color: #000;
+        font-weight: bold;
+        margin-top: 17px;
+        margin-left: 20px;
+        font-family: "苹方";
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .con-list img {
+        float: right;
+        margin-right: 27px;
+        margin-top: 21px;
+        width: 24px;
+        height: 24px;
+    }
+    .aircompany {
+        position: absolute;
+        font-size: 13px;
+        line-height: 13px;
+        color: #000;
+        font-family: "苹方";
+        right: 12px;
+        top: 48px;
+    }
+    .listdate {
+        float: left;
+        font-size: 12px;
+        line-height: 11px;
+        color: #3c3c3c;
+        font-family: "苹方";
+        position: absolute;
+        left: 15px;
+        top: 53px;
+        color: #f29322;
+    }
+    .price {
+        position: absolute;
+        width: 202px;
+        height: 44px;
+        left: 90px;
+        bottom: 16px;
+        font-size: 20px;
+        color: #fff;
+        font-family: "苹方";
+        background-image: url(./images/tejia.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        line-height: 50px;
+    }
+    .price i {
+        color: #fff;
+        font-size: 26px;
+        padding-left: 3px;
+    }
+    .phone-wrap {
+        position: fixed;
+        background-color: #f00000;
+        color: #FFFFFF;
+        right: 0;
+        top: 300px;
+        -width: 200px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        z-index: 999;
+        padding: 10px;
+    }
+    .airType {
+        position: absolute;
+        color: #f03030;
+        font-size: 14px;
+        line-height: 14px;
+        left: 223px;
+        top: 37px;
+    }
+}

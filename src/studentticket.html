@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留学生机票查询|留学生机票预订-中国民航北京机票一级代理400-722-7722 凯行网官网Airkx.com</title>
+    @@include('./common/meta.html')
+    <link rel="stylesheet" href="@@csspath/studentticket.css">
+</head>
+<body>
+    <div class="student-box">
+        @@include('./common/header.html', {"index": "3"})
+        <div class="banner-stu-box"></div>
+        <div class="box-width div-list" id="div-list">
+            <div class="stu-area-box"></div>
+        </div>
+        @@include('./common/footer.html')
+    </div>
+    <script src="@@jspath/lib/doT.min.js"></script>
+    <script id="tmpList" type="text/x-dot-template">
+        {{~it:f:i}}
+        <div class="stu-area-box">
+            <div class="area-title">{{=f.name}}</div>
+            <ul class="stu-flight-list">
+                {{~f.children:item:j}}
+                <li class="stu-item cur" data-id="{{=item.Id}}">
+                    <div>{{=item.Biaoti}}<span>{{=item.Paiojia}}元起</span></div>
+                    <div class="item-date">{{=item.sTime}} - {{=item.eTime}}</div>
+                </li>
+                {{~}}
+            </ul>
+        </div>
+        {{~}}
+    </script>
+    <script src="@@jspath/stuticket.js"></script>
+</body>
+</html>

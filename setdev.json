@@ -1,0 +1,11 @@
+{
+    "imgpath" : "http://172.16.0.9:1239/images",
+    "xmimgpath" : "http://172.16.0.9:1239/images",
+    "csspath" : "http://172.16.0.9:1239/css",
+    "fontpath" : "./font",
+    "jspath" : "http://172.16.0.9:1239/js",
+    "pagepath" : "http://172.16.0.9:1239",
+    "apispath" : "http://www.airkx.com/kaixing",
+    "apiopath" : "http://192.168.0.19:8666/",
+    "money" : "&yen;"
+}

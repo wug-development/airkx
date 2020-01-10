@@ -1,0 +1,11 @@
+{
+    "imgpath" : "http://www.huakai.com/",
+    "xmimgpath" : "../images",
+    "csspath" : "${staticPath}/css",
+    "fontpath" : "http://www.huakai.com/font",
+    "jspath" : "${staticPath}/js",
+    "pagepath" : "http://www.huakai.com",
+    "apispath" : "http://192.168.0.19:8555/ro-website-web",
+    "apiopath" : "http://192.168.0.19:8555/ro-website-web",
+    "money" : "&yen;"
+}

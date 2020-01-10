@@ -1,0 +1,25 @@
+<div class="header-box">
+    <div class="box-width header-body">
+        <div class="logo-box">
+            <img src="@@imgpath/logo.png" alt="凯行网">
+        </div>
+        <div class="link-lg-box">
+            <div class="link-method">
+                订票热线：400-722-7722&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;010-64060909&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;18601183538 
+            </div>
+            <div class="lg-reg-box">
+                <span>登录</span>|<span>注册</span>
+            </div>
+        </div>
+    </div>
+    <div class="menu-box">
+        <div class="box-width menu-body">
+            <div @@if (context.index==="0" ) { class="m-index cur" } else { class="m-index" }><a href="@@pagepath">首页</a></div>
+            <div @@if (context.index==="1" ) { class="m-gjticket cur" } else { class="m-gjticket" }><a href="@@pagepath/internationalairticket.html">国际机票</a></div>
+            <div @@if (context.index==="2" ) { class="m-gnticket cur" } else { class="m-gnticket" }><a href="@@pagepath/inlandairticket.html">国内机票</a></div>
+            <div @@if (context.index==="3" ) { class="m-stuticket cur" } else { class="m-stuticket" }><a href="@@pagepath/studentticket.html">留学生机票</a></div>
+            <div @@if (context.index==="4" ) { class="m-aboutme cur" } else { class="m-aboutme" }><a href="@@pagepath/aboutme.html">关于我们</a></div>
+            <div @@if (context.index==="5" ) { class="m-linkme cur" } else { class="m-linkme" }><a href="@@pagepath/contactus.html">联系我们</a></div>
+        </div>
+    </div>
+</div>

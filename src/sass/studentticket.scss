@@ -1,0 +1,150 @@
+.student-box{
+    background-color: #F1F2F8;
+    font-family: '微软雅黑', sans-serif;
+    overflow: hidden;
+    .banner-stu-box{
+        height: 557px;
+        background: url('@@imgpath/banner-lxs.jpg') no-repeat center;
+    }
+    .div-list{
+        padding-bottom: 50px;
+    }
+    .stu-area-box{
+        margin-top: 60px;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 0 65px 50px 65px;
+        box-sizing: border-box;
+        .area-title{
+            padding-left: 48px;
+            line-height: 100px;
+            height: 100px;
+            border-bottom: 1px dashed #808080;
+            background: url('@@imgpath/icon-earth.png') no-repeat left center;
+            font-size: 36px;
+            color: #333;
+        }
+        .stu-flight-list{
+            padding: 25px 0;
+            .stu-item{
+                height: 50px;
+                line-height: 50px;
+                padding-left: 15px;
+                position: relative;
+                cursor: pointer;
+                div{
+                    float: left;
+                }
+                .item-date{
+                    float: right;
+                }
+            }
+            .cur::before{
+                content: '.';
+                color: #de1721;
+                font-size: 36px;
+                position: absolute;
+                left: 0;
+                height: 36px;
+                line-height: 25px;
+                top: 0;
+            }
+        }
+        .airway-info{
+            padding-top: 20px;
+            li{
+                line-height: 50px;
+                padding-left: 30px;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                position: relative;
+                .icon{
+                    position: absolute;
+                    top: 22px;
+                    left: 10px;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 10px;
+                    background-color: #de1721;
+                    margin-right: 20px;
+                }
+                .icon::before{
+                    content: '';
+                    position: absolute;
+                    left: 4px;
+                    top: -50px;
+                    width: 0;
+                    height: 50px;
+                    border-left: 1px dashed #de1721;
+                }
+                div{
+                    display: flex;
+                    label{
+                        white-space: nowrap;
+                    }
+                }
+            }
+            li:first-child .icon::before{
+                content: none;
+            }
+        }
+    }
+    .stu-book-box{
+        padding-top: 30px;
+        .stu-book-title{
+            text-align: center;
+            font-size: 30px;
+            color: #333;
+        }
+        .stu-book-form{
+            margin-top: 30px;
+            color: #888;
+            .div-content{
+                border: 1px solid #bfbfbf;
+                overflow: hidden;
+                border-radius: 5px;
+                .txt-content{
+                    border: 0;
+                    height: 185px;
+                    display: block;
+                    resize: none;
+                    width: 100%;
+                    padding: 15px;
+                }
+            }
+            .txt-box{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 0;
+                li{
+                    border: 1px solid #bfbfbf;
+                    border-radius: 4px;
+                    height: 46px;
+                    line-height: 46px;
+                    overflow: hidden;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    width: 265px;
+                    display: flex;
+                    span{
+                        white-space: nowrap;
+                    }
+                    input{
+                        height: 100%;
+                        width: 100%;
+                        border: 0;
+                    }
+                }
+            }
+            .btn{
+                margin: 20px auto 0 auto;
+                width: 178px;
+                height: 46px;
+                line-height: 46px;
+                border-radius: 5px;
+                font-size: 20px;
+            }
+        }
+    }
+}

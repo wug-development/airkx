@@ -1,0 +1,218 @@
+.index-box{
+    margin: 0;
+    overflow: hidden;
+    .banner-box{
+        height: 874px;
+        background: url('@@imgpath/banner.jpg') no-repeat center;
+        .banner-content{
+            padding-top: 128px;
+        }
+    }
+    .zfcg-box{
+        height: 730px;
+        text-align: center;
+        padding-top: 66px;
+        box-sizing: border-box;
+        font-family: "微软雅黑", sans-serif;
+        .zfcg-title{
+            font-size: 40px;
+            color: #333;
+        }
+        .zfcg-content{
+            margin-top: 32px;
+            color: #888;
+            font-size: 16px;
+            line-height: 32px;
+        }
+        .zfcg-list{
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            .zfcg-item{
+                width: 300px;
+                height: 422px;
+                box-shadow: 0 0 5px #eee;
+                .item-img{
+                    height: 210px;
+                    overflow: hidden;
+                    img{
+                        display: block;
+                        width: 100%;
+                        transition: all .6s;
+                    }
+                }
+                .item-img:hover{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+                .item-title{
+                    margin-top: 30px;
+                    font-size: 24px;
+                    color: #000;
+                    font-weight: bold;
+                }
+                .item-content{
+                    padding: 30px;
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    color: #888;
+                    line-height: 24px;
+                    span{
+                        font-size: 24px;
+                        color: #ec2121;
+                    }
+                }
+            }
+        }
+    }
+    .qyyj-box{
+        text-align: center;
+        background-color: #F1F2F8;
+        padding: 72px 0;
+        font-family: "微软雅黑", sans-serif;
+        .qyyj-title{
+            color: #333;
+            font-size: 40px;
+        }
+        .qyyj-tip{
+            margin-top: 36px;
+            font-size: 16px;
+            color: #888;
+        }
+        .qyyj-list{
+            display: flex;
+            margin-top: 70px;
+            justify-content: space-between;
+            .qyyj-item{
+                width: 220px;
+                text-align: center;
+                position: relative;
+                .item-img{
+                    margin: 0 auto;
+                    width: 154px;
+                    height: 154px;
+                    border-radius: 154px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(to bottom right, #f15f45, 50%, #df1c23);
+                }
+                .item-name{
+                    margin-top: 20px;
+                    font-size: 16px;
+                    color: #333;
+                    a{
+                        color: #e42d2c;
+                        border-bottom: 1px solid #e42d2c;
+                    }
+                }
+            }
+            .qyyj-item::after{
+                content: '...';
+                position: absolute;
+                top: 40px;
+                left: 220px;
+                color: #ecb4b9;
+                font-size: 40px;
+                letter-spacing: 5px;
+                line-height: 40px;
+            }
+            .qyyj-item:last-child::after{
+                content: none;
+            }
+        }
+        .qyyj-more{
+            margin-top: 40px;
+            text-align: center;
+            a{
+                display: block;
+                margin: 0 auto;
+                width: 120px;
+                height: 36px;
+                line-height: 36px;
+                color: #fff;
+                background-color: #c8c8ca;
+                border-radius: 20px;
+            }
+        }
+    }
+    .qzbx-box{
+        display: flex;
+        .qzbx-qz{
+            flex: 1;
+            height: 571px;
+            background: url('@@imgpath/icon-qianzheng.png') no-repeat right center;
+        }
+        .qzbx-bx{
+            flex: 1;
+            height: 571px;
+            background: url('@@imgpath/icon-baoxian.png') no-repeat left center;
+        }
+    }
+    .hzhb-box{
+        padding-top: 100px;
+        text-align: center;
+        .hzhb-title{
+            font-size: 36px;
+            color: #333;
+        }
+        .hzhb-content{
+            font-size: 18px;
+            color: #888;
+            line-height: 50px;
+        }
+        .hzhb-companys{
+            overflow: hidden;
+            position: relative;
+            .hzhb-list{
+                position: relative;
+                height: 540px !important;
+                .hzhb-item{
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 70px 0;
+                    height: 540px !important;
+                    float: left;
+                    .com-logo{
+                        width: 248px;
+                        height: 100px;
+                        display: flex;
+                        overflow: hidden;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            max-width: 100%;
+                            max-height: 100%;
+                            user-select: none;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                position: absolute;
+                left: 0;
+                padding-top: 20px;
+                text-align: center;
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                .swiper-pagination-switch {
+                    display: block;
+                    height: 16px;
+                    width: 16px;
+                    border: 1px solid #ccc;
+                    border-radius: 30px;
+                    margin: 0 12px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                }
+                .swiper-active-switch {
+                    background-color: #ccc
+                }
+            }
+        }
+    }
+}
