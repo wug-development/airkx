@@ -190,29 +190,6 @@
                     }
                 }
             }
-            .pagination {
-                position: absolute;
-                left: 0;
-                padding-top: 20px;
-                text-align: center;
-                width: 100%;
-                height: 40px;
-                display: flex;
-                justify-content: center;
-                .swiper-pagination-switch {
-                    display: block;
-                    height: 16px;
-                    width: 16px;
-                    border: 1px solid #ccc;
-                    border-radius: 30px;
-                    margin: 0 12px;
-                    box-sizing: border-box;
-                    cursor: pointer;
-                }
-                .swiper-active-switch {
-                    background-color: #ccc
-                }
-            }
         }
     }
 }

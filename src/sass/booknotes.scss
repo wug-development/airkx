@@ -1,0 +1,35 @@
+.booknotes-box{
+    margin: 0;
+    font-family: '微软雅黑', sans-serif;
+    .banner-booknotes-box{
+        height: 302px;
+        background: url('@@imgpath/banner-aboutme.png') no-repeat center;
+        .my-data{
+            color: #fff;
+            text-align: center;
+            padding-top: 150px;
+            .data-title{
+                font-size: 36px;
+            }
+        }
+    }
+    .booknotes-content{
+        padding: 30px 0 60px 0;
+        color: #333333;
+        line-height: 28px;
+        h1{
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        h2{
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 30px;
+        }
+        h3{
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+}

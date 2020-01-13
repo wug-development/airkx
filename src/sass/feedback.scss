@@ -1,0 +1,43 @@
+.feedback-box{
+    margin: 0;
+    font-family: '微软雅黑', sans-serif;
+    .banner-feedback-box{
+        height: 302px;
+        background: url('@@imgpath/banner-aboutme.png') no-repeat center;
+        .my-data{
+            color: #fff;
+            text-align: center;
+            padding-top: 150px;
+            .data-title{
+                font-size: 36px;
+            }
+        }
+    }
+    .feedback-content{
+        padding: 60px 0;
+        color: #333333;
+        line-height: 28px;
+        text-align: center;
+        font-size: 20px;
+        .cur{
+            font-size: 24px;
+            color: #de1721;
+            padding: 30px 0;
+        }
+        .feedback-method{
+            display: flex;
+            justify-content: space-around;
+            .fm-bg{
+                width: 75px;
+                height: 75px;
+                border-radius: 75px;
+                margin: 0 auto;
+                background: url('@@imgpath/icon-fb-phone.png') no-repeat center;
+                background-color: #de1721;
+            }
+            span{
+                line-height: 48px;
+            }
+        }
+    }
+}

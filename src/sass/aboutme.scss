@@ -1,0 +1,144 @@
+.aboutme-box{
+    margin: 0;
+    overflow: hidden;
+    font-family: '微软雅黑', sans-serif;
+    .banner-aboutme-box{
+        height: 557px;
+        background: url('@@imgpath/banner-aboutme.png') no-repeat center;
+        .my-data{
+            color: #fff;
+            text-align: center;
+            padding-top: 170px;
+            .data-title{
+                font-size: 36px;
+            }
+            .data-sub-title{
+                margin-top: 20px;
+                font-size: 16px;
+            }
+            .data-list{
+                display: flex;
+                justify-content: center;
+                padding-top: 70px;
+                font-size: 16px;
+                .data-item{
+                    margin: 0 75px;
+                    .item-data{
+                        font-size: 44px;
+                    }
+                }
+            }
+        }
+    }
+    .company-info{
+        background-color: #fff;
+        padding: 96px 0;
+        .aboutme-info-body{
+            display: flex;
+            color: #333;
+            .info-content{
+                padding-right: 38px;
+                .info-title{
+                    font-size: 36px;
+                    font-family: '微软雅黑', sans-serif;
+                    line-height: 40px;
+                    .info-t-sub{
+                        font-family: Arial, sans-serif;
+                        font-size: 16px;
+                    }
+                }
+                .info-body{
+                    padding: 10px 0;
+                    line-height: 20px;
+                    div{
+                        padding: 8px 0;
+                    }
+                    .cur{
+                        color: #de1721;
+                    }
+                }
+            }
+            .aboutme-info-img{
+                img{
+                    display: block;
+                    width: 670px;
+                }
+            }
+        }
+    }
+    .company-travel-info{
+        background-color: #f1f2f8;
+        .aboutme-info-body{
+            .info-content{
+                padding: 0 0 0 38px;
+            }
+        }
+    }
+    .company-team{
+        padding: 90px 0;
+        background-color: #fff;
+        text-align: center;
+        font-family: '微软雅黑', sans-serif;
+        .team-title{
+            font-size: 36px;
+            color: #333;
+            line-height: 48px;
+        }
+        .team-sub{
+            font-size: 18px;
+            margin-top: 24px;
+            color: #888;
+            line-height: 32px;
+        }
+        .team-img{
+            margin-top: 40px;
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .company-zizhi{
+        padding: 90px 0;
+        background-color: #f1f2f8;
+        text-align: center;
+        .zizhi-title{
+            font-size: 36px;
+            color: #333;
+            line-height: 48px;
+        }
+        .zizhi-card{
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            img{
+                display: block;
+                width: 200px;
+            }
+        }
+        .zizhi-cert{
+            margin-top: 30px;
+            padding: 40px 0;
+            .zizhi-cert-list{
+                margin: 0;
+                .zizhi-cert-item{
+                    height: 1150px;
+                    div{
+                        background: url('@@imgpath/zizhi/aboutme_item_bg.png') no-repeat bottom center;
+                        background-size: 100%;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 50px;
+                        padding-bottom: 40px;
+                        img{
+                            margin: 0 40px;
+                        }
+                    }
+                    div:first-child{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

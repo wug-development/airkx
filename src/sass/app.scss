@@ -31,7 +31,7 @@ a{
 }
 *:focus {outline: none;}
 /* 公用宽度1240 */
-.box-width,.wg-div-item{ 
+.box-width{ 
     width: 1240px;
     margin: 0 auto;
 }
@@ -286,6 +286,40 @@ a{
             font-size: 14px;
             box-sizing: border-box;
             padding: 40px 10px;
+        }
+    }
+}
+/*swiper*/
+.swiper-container{
+    position: relative;
+    overflow: hidden;
+    .swiper-wrapper{
+        position: relative;
+        .swiper-slide{
+            float: left;
+        }
+    }
+    .pagination {
+        position: absolute;
+        left: 0;
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        .swiper-pagination-switch {
+            display: block;
+            height: 16px;
+            width: 16px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            margin: 0 12px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background-color: #de1721
         }
     }
 }

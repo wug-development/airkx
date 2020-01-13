@@ -1,0 +1,80 @@
+.ticketpay-box{
+    margin: 0;
+    font-family: '微软雅黑', sans-serif;
+    .banner-ticketpay-box{
+        height: 302px;
+        background: url('@@imgpath/banner-aboutme.png') no-repeat center;
+        .my-data{
+            color: #fff;
+            text-align: center;
+            padding-top: 150px;
+            .data-title{
+                font-size: 36px;
+            }
+        }
+    }
+    .ticketpay-content{
+        padding: 20px 0 50px 0;
+        color: #333333;
+        line-height: 32px;
+        font-size: 16px;
+        .tp-con-box{
+            border-bottom: 1px dashed #ccc;
+            padding: 20px 0;
+            .tp-title{
+                font-size: 30px;
+                line-height: 32px;
+            }
+            .tp-content{
+                margin-top: 15px;
+                .tp-bank-box{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    li{
+                        display: flex;
+                        width: 560px;
+                        margin-bottom: 30px;
+                        .bank-img{
+                            background-color: #fff;
+                            border: 1px solid #ccc;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 15px;
+                            width: 242px;
+                        }
+                        .bank-info{
+                            line-height: 24px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            align-content: center;
+                            max-width: 300px;
+                        }
+                        .bank-info-pub{
+                            max-width: 500px;
+                        }
+                    }
+                }
+                .tp-bank-other{
+                    display: flex;
+                    margin-bottom: 30px;
+                    .bank-box{
+                        height: 90px;
+                        border: 1px solid #ccc;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 20px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        .ticketpay-tip{
+            font-size: 20px;
+            color: #de1721;
+            padding-top: 30px;
+        }
+    }
+}

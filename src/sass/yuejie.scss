@@ -1,0 +1,125 @@
+.yuejie-box{
+    margin: 0;
+    .banner-yuejie-box{
+        height: 557px;
+        background: url('@@imgpath/banner-yuejie.jpg') no-repeat center;
+        .my-data{
+            color: #fff;
+            text-align: center;
+            padding-top: 180px;
+            .data-title{
+                font-size: 80px;
+            }
+            .data-sub-title{
+                margin-top: 20px;
+                font-size: 44px;
+            }
+        }
+    }
+    .yuejie-servers{
+        background-color: #fff;
+        padding: 60px 0;
+        .zfcg-list{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            .zfcg-item{
+                width: 300px;
+                height: 442px;
+                box-shadow: 0 0 5px #eee;
+                .item-img{
+                    height: 210px;
+                    overflow: hidden;
+                    img{
+                        display: block;
+                        width: 100%;
+                        transition: all .6s;
+                    }
+                }
+                .item-img:hover{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+                .item-title{
+                    margin-top: 30px;
+                    font-size: 24px;
+                    color: #000;
+                    font-weight: bold;
+                }
+                .item-content{
+                    padding: 30px 30px 0 30px;
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    color: #888;
+                    line-height: 24px;
+                    span{
+                        font-size: 24px;
+                        color: #ec2121;
+                    }
+                }
+                .item-btn{
+                    width: 158px;
+                    height: 42px;
+                    line-height: 42px;
+                    margin: 50px auto;
+                    font-size: 18px;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+    .yuejie-liucheng{
+        background-color: #f1f2f8;
+        padding: 80px 0;
+        .lc-title{
+            text-align: center;
+            font-size: 36px;
+        }
+        .qyyj-list{
+            display: flex;
+            margin-top: 70px;
+            justify-content: space-between;
+            .qyyj-item{
+                width: 220px;
+                text-align: center;
+                position: relative;
+                .item-img{
+                    margin: 0 auto;
+                    width: 140px;
+                    height: 140px;
+                    border-radius: 154px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(to bottom right, #f15f45, 50%, #df1c23);
+                }
+                .item-name{
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: #333;
+                    padding: 0 15px;
+                    a{
+                        color: #e42d2c;
+                        border-bottom: 1px solid #e42d2c;
+                    }
+                }
+            }
+            .qyyj-item::after{
+                content: '';
+                position: absolute;
+                top: 70px;
+                left: 200px;
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-right: 2px solid #888;
+                border-top: 2px solid #888;
+                transform: rotate(45deg);
+            }
+            .qyyj-item:last-child::after{
+                content: none;
+            }
+        }
+    }
+}
