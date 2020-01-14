@@ -20,7 +20,7 @@ gulp.task("dealjs", done => {
  
 //lib/js复制
 gulp.task("libjs", done => {
-    gulp.src("src/js/lib/*.js")
+    gulp.src("src/js/lib/**/*")
         .pipe(gulp.dest(distpath + "/js/lib")) //通过gulp 命令，自动输出dist下面js文件
         .pipe(livereload())
     done()

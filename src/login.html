@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录-中国民航北京机票一级代理400-722-7722 凯行网官网Airkx.com</title>
+    @@include('./common/meta.html')
+    <link rel="stylesheet" href="@@csspath/reglogin.css">
+</head>
+<body>
+    <div class="reglogin-box">
+        @@include('./common/header.html', {"index": "10"})
+        <div class="reglogin-body">
+            <div class="rl-bg">
+                <div class="rl-left"></div>
+                <div class="rl-right"></div>
+            </div>
+            <div class="rl-form">
+                <div class="box-width">
+                    <div class="rl-from-box">
+                        <div class="r-form">
+                            <h1 class="title">
+                                <img src="@@imgpath/vip_login_01.png" alt="">
+                            </h1>
+                            <div class="from-cont">
+                                <div class="fc-l">
+                                    <div class="fcl-item">
+                                        <span>手机号：</span>
+                                        <input id="phone" type="text">
+                                    </div>
+                                    <div class="fcl-item">
+                                        <span>密码：</span>
+                                        <input id="password" type="password">
+                                    </div>
+                                    <div class="btnbox">
+                                        <input id="loginBtn" class="minbtn" type="button" value="立即登录">
+                                        <a class="forget-pass" href="javascript:;">忘记密码？</a>
+                                    </div>
+                                </div>
+                                <div class="fc-r">
+                                    <div class="vip-log" style="margin-top: 0">
+                                        <img src="./images/vip_log_01.png" alt="">
+                                    </div>
+                                    <div class="btnbox" style="margin-left: 75px">
+                                        <a class="minbtn" href="register.html">立即注册</a>
+                                    </div>
+                                    <div class="vip-old">
+                                        <a href="register.html">还不是凯行会员?</a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('./common/footer.html')
+    </div>
+    <script src="@@jspath/lib/swiper-2.1.min.js"></script>
+    <script src="@@jspath/reglogin.js"></script>
+</body>
+</html>

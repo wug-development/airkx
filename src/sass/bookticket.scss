@@ -1,5 +1,6 @@
 .bookticket-box{
     width: 634px;
+    min-height: 606px;
     padding: 20px 50px 30px 50px;
     box-sizing: border-box;
     border-radius: 4px;
@@ -109,56 +110,47 @@
             top: 44px;
         }
     }
-    .book-change-org{
-        height: 20px;
-        line-height: 20px;
-        display: flex;
-        padding-top: 15px;
-        padding-left: 21px;
-        .book-btn{
-            position: relative;
-            margin-right: 15px;
-            padding-left: 20px;
-            cursor: pointer;
-            user-select: none;
-        }
-        .book-btn::before{
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 4px;
-            width: 12px;
-            height: 12px;
-            border: 1px solid #888;
-            box-sizing: border-box;
-            border-radius: 12px;
-        }
-        .cur::before{
-            border: 1px solid #de1721;
-        }
-        .cur::after{
-            content: '';
-            position: absolute;
-            left: 3px;
-            top: 7px;
-            width: 6px;
-            height: 6px;
-            background-color: #de1721;
-            box-sizing: border-box;
-            border-radius: 6px;
-        }
-    }
-    .book-zhifei{
-        padding-top: 0;
-        line-height: 20px;
-        height: 20px;
-        .book-btn::before{
-            top: 4px;
-        }
-    }
     .book-form-box{
         margin-top: 15px;
         padding: 0;
+        .book-change-org{
+            height: 20px;
+            line-height: 20px;
+            display: flex;
+            padding: 5px 0 10px 21px;
+            .book-btn{
+                position: relative;
+                margin-right: 15px;
+                padding-left: 20px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .book-btn::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 4px;
+                width: 12px;
+                height: 12px;
+                border: 1px solid #888;
+                box-sizing: border-box;
+                border-radius: 12px;
+            }
+            .cur::before{
+                border: 1px solid #de1721;
+            }
+            .cur::after{
+                content: '';
+                position: absolute;
+                left: 3px;
+                top: 7px;
+                width: 6px;
+                height: 6px;
+                background-color: #de1721;
+                box-sizing: border-box;
+                border-radius: 6px;
+            }
+        }
         .form-txt-box{
             position: relative;
             height: 60px;
@@ -170,7 +162,6 @@
             padding: 0 50px;
             white-space: nowrap;
             cursor: pointer;
-            overflow: hidden;
             line-height: 15px;
             span{
                 padding-right: 10px;
@@ -186,17 +177,56 @@
                 box-sizing: border-box;
                 font-family: "思源黑体", SourceHanSansCN, sans-serif;
             }
-            .txt-small{
-                width: 130px;
-            }
             .back-date{
                 display: flex;
-                width: 200px;
+                flex: 1;
                 height: 100%;
                 align-items: center;
                 box-sizing: border-box;
                 padding-left: 40px;
                 background: url('@@imgpath/icon_change.png') no-repeat left center;
+            }
+            .start-date{
+                display: flex;
+                flex: 1;
+                height: 100%;
+                align-items: center;
+                box-sizing: border-box;
+            }
+            .ddl-city{
+                position: absolute;
+                left: 0;
+                top: 56px;
+                z-index: 211;
+                width: 534px;
+                height: 0;
+                max-height: 300px;
+                box-sizing: border-box;
+                background-color: #fff;
+                border-top: 0;
+                overflow: hidden auto;
+                transition: all .2s;
+                li{
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: left;
+                    font-size: 14px;
+                    padding-left: 125px;
+                    overflow: hidden;
+                }
+                li:hover{
+                    background-color: #efefef;
+                }
+                li.cur{
+                    background-color: #e01114;
+                    color: #fff;
+                }
+            }
+            .ddl-city.cur{
+                border: 1px solid #999;
+                top: 57px;
+                left: -1px;
+                height: auto;
             }
         }
         .form-txt-box::before{
@@ -247,6 +277,38 @@
         .ddl-more{
             background: url('@@imgpath/icon_more.png') no-repeat left center;
             background-position: 12px;
+            .ddl-cag-box{
+                position: absolute;
+                left: -1px;
+                top: 61px;
+                z-index: 211;
+                width: 534px;
+                height: 0px;
+                box-sizing: border-box;
+                background-color: #fff;
+                border-top: 0;
+                overflow: hidden;
+                transition: all .2s;
+                li{
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    font-size: 16px;
+                }
+                li:hover{
+                    background-color: #efefef;
+                }
+                li.cur{
+                    background-color: #e01114;
+                    color: #fff;
+                }
+            }
+            .ddl-cag-box.cur{
+                display: block;
+                border: 1px solid #999;
+                top: 57px;
+                height: 96px;
+            }
         }
     }
     .book-btns{
@@ -268,6 +330,62 @@
         }
         .btn-search:active{
             background-color: #f00000;
+        }
+        .book-directflight{
+            height: 20px;
+            line-height: 20px;
+            display: flex;
+            padding: 10px 21px;
+            .book-btn{
+                position: relative;
+                margin-right: 15px;
+                padding-left: 20px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .book-btn::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 4px;
+                width: 12px;
+                height: 12px;
+                border: 1px solid #888;
+                box-sizing: border-box;
+            }
+            .cur::before{
+                border: 1px solid #de1721;
+                background: url('@@imgpath/icon-dui.png') no-repeat top center;
+                background-size: 8px;
+                background-color: #de1721;
+            }
+        }
+    }
+    .book-dingzhi{
+        display: none;
+        .tip{
+            line-height: 48px;
+            height: 48px;
+            font-size: 16px;
+            color: #666;
+        }
+        .txt-content{
+            border: 1px solid #de1721;
+            width: 100%;
+            height: 100px;
+            border-radius: 5px;
+            resize: none;
+            padding: 10px;
+            line-height: 20px;
+            color: #666;
+        }
+        .btn{
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            margin: 20px auto;
+            font-size: 18px;
+            border-radius: 4px;
         }
     }
 }

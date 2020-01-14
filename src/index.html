@@ -35,42 +35,56 @@
                         </ul>
                     </div>
                     <div class="book-tip">选择出发到达的城市及时间</div>
-                    <div class="book-airflight-way">
-                        <div class="btn-way btn-one">单程</div>
-                        <div class="btn-way btn-dobble cur">往返</div>
-                        <div class="btn-way btn-made">定制行程</div>
-                    </div>
-                    <div class="book-change-org">
-                        <div class="book-btn cur">中国大陆始发</div>
-                        <div class="book-btn">境外始发</div>
+                    <div class="book-airflight-way" id="choose_way">
+                        <div class="btn-way btn-one" data-type="1">单程</div>
+                        <div class="btn-way btn-dobble cur" data-type="2">往返</div>
+                        <div class="btn-way btn-made" data-type="3">定制行程</div>
                     </div>
                     <div class="book-form-box">
-                        <div class="form-txt-box ddl-start">
-                            <span>出发城市</span>
-                            <input type="text" class="txt" readonly placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                        <div class="book-change-org">
+                            <div class="book-btn cur" data-type="2">中国大陆始发</div>
+                            <div class="book-btn" data-type="1">境外始发</div>
                         </div>
-                        <div class="form-txt-box ddl-end">
-                            <span>到达城市</span>
-                            <input type="text" class="txt" readonly placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                        <div class="form-txt-box ddl-start ddl-box sddl" data-type="2">
+                            <span class="sddl">出发城市</span>
+                            <input type="text" id="txt_startCity" class="txt sddl" placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                            <ul class="ddl-city sddl" id="ddl-scity"></ul>
+                        </div>
+                        <div class="form-txt-box ddl-end ddl-box eddl" data-type="1">
+                            <span class="eddl">到达城市</span>
+                            <input type="text" id="txt_endCity" class="txt eddl" placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                            <ul class="ddl-city eddl" id="ddl-ecity"></ul>
                         </div>
                         <div class="form-txt-box ddl-date">
-                            <span>出发日期</span>
-                            <input type="text" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
+                            <div class="start-date">
+                                <span>出发日期</span>
+                                <input type="text" id="txt_stime" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
+                            </div>
                             <div class="back-date">
                                 <span>返回日期</span>
-                                <input type="text" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
+                                <input type="text" id="txt_etime" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
                             </div>
                         </div>
-                        <div class="form-txt-box ddl-more">
-                            <span>更多选择</span>
-                            <input type="text" class="txt" readonly placeholder="经济舱" maxlength="100">
+                        <div class="form-txt-box ddl-more ddl">
+                            <span class="ddl">更多选择</span>
+                            <input type="text" class="txt ddl" id="ddl_more" readonly placeholder="经济舱" maxlength="100">
+                            <ul class="ddl-cag-box ddl">
+                                <li class="cur">经济舱</li>
+                                <li>商务舱</li>
+                                <li>头等舱</li>
+                            </ul>
+                        </div>
+                        <div class="book-btns">
+                            <div class="btn-search" id="btn_search">搜索航班</div>
+                            <div class="book-directflight">
+                                <div class="book-btn" id="btn-direct">仅查直飞</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="book-btns">
-                        <div class="btn-search">搜索航班</div>
-                        <div class="book-change-org">
-                            <div class="book-btn">仅查直飞</div>
-                        </div>
+                    <div class="book-dingzhi">
+                        <div class="tip">亲！请写下您的行程，剩下的交给我们来办</div>
+                        <textarea class="txt-content" id="txt_content" placeholder="如果可以，请尽量详细描述，以便我们能更好为您量身设计行程！"></textarea>
+                        <div class="btn" id="btn_submit">提交</div>
                     </div>
                 </div>
             </div>
@@ -181,6 +195,8 @@
         @@include('./common/footer.html')
     </div>
     <script src="@@jspath/lib/swiper-2.1.min.js"></script>
+    <script src="@@jspath/lib/layDate-v5.0.7/laydate/laydate.js"></script>
     <script src="@@jspath/index.js"></script>
+    <script src="@@jspath/book.js"></script>
 </body>
 </html>

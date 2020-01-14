@@ -1,0 +1,155 @@
+.reglogin-box{
+    margin: 0;
+    overflow: hidden;
+    .reglogin-body{
+        background-color: #CCCACA;
+        padding-top: 90px;
+        position: relative;
+        .rl-bg{
+            height: 721px;
+            display: flex;
+            .rl-left{
+                flex: 1;
+                background: url('@@imgpath/reg-left.png') no-repeat right center;
+                background-size: auto 100%;
+            }
+            .rl-right{
+                flex: 1;
+                background: url('@@imgpath/reg-right.png') no-repeat left center;
+                background-size: auto 100%;
+            }
+        }
+        .rl-form{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            .rl-from-box{
+                width: 632px;
+                margin: 134px auto 0 auto;
+                padding: 40px 55px 20px;
+                box-sizing: border-box;
+                background-color: rgba(255,255,255,.7);
+                box-shadow: 0 0 10px #aaa2a2;
+                .title {
+                    width: 100%;
+                    height: 40px;
+                    text-align: center;
+                }                
+                .from-cont {
+                    margin-top: 30px;
+                    font-family: "苹方";
+                }                
+                .fc-l {
+                    padding-right: 13px;
+                    border-right: 1px solid #bcbcbc;
+                    float: left;
+                }                
+                .fc-r {
+                    float: left;
+                }                
+                .fcl-item {
+                    margin-bottom: 10px;
+                }                
+                .fcl-item span {
+                    display: inline-block;
+                    width: 80px;
+                    text-align: right;
+                    height: 35px;
+                    line-height: 35px;
+                    font-size: 14px;
+                    font-weight: bold;
+                }                
+                .fcl-item input {
+                    border: none;
+                    height: 33px;
+                    font-size: 16px;
+                    width: 180px;
+                    background-color: transparent;
+                    border: 1px solid #cccccc;
+                    border-radius: 3px;
+                }                
+                .area {
+                    width: 252px;
+                    height: 106px;
+                    padding: 10px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    border: 1px solid #cccccc;
+                    line-height: 20px;
+                    color: #666666;
+                }                
+                .area p {
+                    display: inline-block;
+                    font-size: 14px;
+                    text-align: center;
+                    width: 100%;
+                    padding-bottom: 12px;
+                }                
+                .read {
+                    margin-top: 8px;
+                    text-align: right;
+                }                
+                .read input[type="checkbox"] {
+                    vertical-align: middle;
+                    width: 12px;
+                    height: 13px;
+                    border: 1px solid #ccc;
+                    cursor: pointer;
+                }
+                .read input[type="checkbox"]:checked {
+                    background: url('@@imgpath/icon-dui.png') no-repeat top center;
+                    background-size: 10px;
+                    background-color: #f00000;
+                    border: 1px solid #f00000;
+                }
+                .forget-pass {
+                    display: block;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    color: #f00000;
+                }                
+                .bigbtn {
+                    border: 0;
+                }                
+                .btnbox {
+                    margin-top: 18px;
+                }                
+                .vip-log {
+                    margin-top: 110px;
+                    margin-left: 80px;
+                }                
+                .vip-old {
+                    margin-top: 10px;
+                    margin-left: 82px;
+                }                
+                .vip-old a {
+                    font-size: 14px;
+                    color: #333333;
+                }
+                .minbtn {
+                    font-family: "苹方";
+                    display: inline-block;
+                    width: 110px;
+                    height: 36px;
+                    background-color: #f00000;
+                    line-height: 36px;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    color: #ffffff;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: 0;
+                }
+                .btnbox {
+                    text-align: right;
+                    margin-top: 36px;
+                }
+            }
+            .clear{
+                clear: both;
+            }
+        }
+    }
+}
