@@ -84,7 +84,29 @@ const _ = {
         var oDate1 = new Date(date1);
         var oDate2 = new Date(date2);
         return oDate1.getTime() > oDate2.getTime()    
-    }, 
+    },
+    /**
+     * 相差天数
+     *  */
+    dateDiff : function (s, e) {
+        var day = 24 * 60 * 60 * 1000;
+        try {
+            var dateArr = s.split("-");
+            var checkDate = new Date();
+            checkDate.setFullYear(dateArr[0], dateArr[1] - 1, dateArr[2]);
+            var checkTime = checkDate.getTime();
+
+            var dateArr2 = e.split("-");
+            var checkDate2 = new Date();
+            checkDate2.setFullYear(dateArr2[0], dateArr2[1] - 1, dateArr2[2]);
+            var checkTime2 = checkDate2.getTime();
+
+            var cha = Math.ceil((checkTime - checkTime2) / day);
+            return cha;
+        } catch (e) {
+            return false;
+        }
+    },
     /*
     * 获取本地存储数据
     * */
@@ -187,6 +209,9 @@ const _ = {
             { key: '853', value: '中国澳门' }, 
             { key: '886', value: '中国台湾' }
         ]
+    },
+    randomNum (min, max) {
+        return Math.floor(min + Math.random() * (max - min));
     }
 }
 
@@ -225,3 +250,77 @@ function closealert(){
     var _layer = document.getElementById("wg_layer_alert");
     _layer.remove();
 }
+
+
+/**
+ * 验证信息
+ */
+window.phone = function(phone) {//手机号
+    var mobileRegex = /^(((1[3456789][0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+    if (mobileRegex.test(phone)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+window.emall = function(emall) {//emall
+    var mobileRegex = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+    if (mobileRegex.test(emall)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+window.verifyPassword = function(obj) {//重复密码
+    var passRegex = /^[a-z0-9_-]{5,18}$/;
+    if (passRegex.test(obj)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//验证英文名字
+window.englishName=function(name){
+    // var regName =/^[\u4e00-\u9fa5]{2,4}$/;
+    var regName = /^[a-zA-Z\/ ]{2,20}$/;
+    if(!regName.test(name)){
+        return false;
+    }else{
+        return true;
+    }
+}
+//验证出生日期
+window.chusheng=function(name){
+    // var regName =/^[\u4e00-\u9fa5]{2,4}$/;
+    var regName = /^\d{8}$/;
+    if(!regName.test(name)){
+        return false;
+    }else{
+        return true;
+    }
+}
+    
+var App = {
+	isNumber:function(v) {
+		return new RegExp(/^\d+$/).test(v);
+	},
+	isEn: function(v){
+		return new RegExp(/^[A-Za-z]+$/).test(v);
+	},
+	isCn: function(v){
+		return new RegExp(/^[\u4e00-\u9fa5]+$/).test(v);
+	},
+	isNumberEn: function(v){
+		return new RegExp(/^[A-Za-z0-9]+$/).test(v);
+	},
+	clearSpace: function(v,elem){
+		var _val = v.replace(/ /,'');
+		if(elem){
+			$(elem).val(_val);
+		}
+		return _val;
+	}
+};

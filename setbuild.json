@@ -1,11 +1,11 @@
 {
-    "imgpath" : "http://www.huakai.com/",
-    "xmimgpath" : "../images",
-    "csspath" : "${staticPath}/css",
-    "fontpath" : "http://www.huakai.com/font",
-    "jspath" : "${staticPath}/js",
-    "pagepath" : "http://www.huakai.com",
-    "apispath" : "http://192.168.0.19:8555/ro-website-web",
-    "apiopath" : "http://192.168.0.19:8555/ro-website-web",
+    "imgpath" : "http://www.airkx.com/new/images",
+    "xmimgpath" : "http://www.airkx.com/new/images",
+    "csspath" : "http://www.airkx.com/new/css",
+    "fontpath" : "./font",
+    "jspath" : "http://www.airkx.com/new/js",
+    "pagepath" : "http://www.airkx.com/new",
+    "apispath" : "http://www.airkx.com/kaixing",
+    "apiopath" : "http://www.airkx.com/kaixing",
     "money" : "&yen;"
 }

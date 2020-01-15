@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>填写乘机人信息-中国民航北京机票一级代理400-722-7722 凯行网官网Airkx.com</title>
+    @@include('./common/meta.html')
+    <link rel="stylesheet" href="@@csspath/index.css">
+    <link rel="stylesheet" href="@@csspath/personalInformationGN.css">
+</head>
+<body>
+    <div class="index-box">
+        @@include('./common/header.html', {"index": "1"}) 
+        <div class="pad-line"></div>
+        
+        <div class="content" style="min-width: 1200px;">
+            <div class="speed-bar">
+                <span class="sbar-item">
+                    <img src="@@imgpath/disc_01.png" alt="">
+                    搜索
+                    <b></b>
+                </span>
+                <span class="sbar-item">
+                    <img src="@@imgpath/disc_02.png" alt="">
+                    选择
+                    <b></b>
+                </span>
+                <span class="sbar-item">
+                    <img src="@@imgpath/disc-2.png" alt="">
+                    预定
+                    <b></b>
+                </span>
+                <span class="sbar-item">
+                    <img src="@@imgpath/disc_04.png" alt="">
+                    提交
+                </span>
+            </div>
+            <div class="person-wrap">
+                <div class="pw-cont">
+                    <div class="pw-contl">
+                        <div class="jinggaoxinxi">
+                            <p>若您会员账户中有可使用的奖金，请在提交订单后使用账户奖金，以便让您在预定国内机票时享受优惠；</p>
+                            <p>由于国内票价更新较快，请您预订成功后及时付款，系统1小时后将自动取消未付款的订单；</p>
+                            <p>网站目前仅供查询成人票价，如有儿童票需求，请联系客服</p>
+                        </div>
+                        <div class="text-bar">
+                            <h1>填写乘机人信息</h1>
+                            <span>请准确填写乘客信息</span>
+                        </div>
+                        <div class="person-info-wrap" id="person_box">
+                            <div class="person-info chengjiren">
+                                <div class="personList">
+                                    <span>乘客姓名:</span>
+                                    <div class="peopleType">成人</div>
+                                    <input type="text" class="xingming">
+                                    <p>该信息不能为空</p>
+                                </div>
+                                <div class="personList">
+                                    <span>证件信息:</span>
+                                    <select>
+                                        <option>身份证</option>
+                                        <option>护照</option>
+                                        <option>军人证</option>
+                                        <option>港澳通行证</option>
+                                    </select>
+                                    <input type="text" class="shenfenzheng">
+                                    <p>该信息不能为空</p>
+                                </div>
+                                <div class="personList">
+                                    <span>里程卡号:</span>
+                                    <input type="text" class="lichengkahao">
+                                    <p>该信息不能为空</p>
+                                </div>
+                                <div class="personList">
+                                    <span>购买保险:</span>
+                                    <select class="maibaoxian">
+                                        <option>1份</option>
+                                        <option>2份</option>
+                                        <option>3份</option>
+                                    </select>
+                                    <b>每份20元</b>
+                                </div>
+                            </div>
+                            <div class="changyongCJR">
+                                <div class="changyongCJRT">常用乘机人</div>
+                                <div class="changyongCJRTC">
+                                    <div class="changyongCJRCon">
+                                    </div>
+                                    <div class="changyongCJRSure">确定</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-person">
+                            <div id="addPersonInfo">＋乘机人</div>
+                            <div class="addPersonInfoCP">成人</div>
+                            <!-- <div class="addPersonInfoCP" title="默认为Y舱票价50%，具体以实时数据为准">儿童</div>
+                            <div class="addPersonInfoCP" title="默认为票价10%，具体以实时数据为准">婴儿</div> -->
+                        </div>
+                        <div class="text-bar contactT">
+                            <h1>联系人信息  </h1>
+                            <span>我们将及时通知您机票出票状态及航班相关重要信息</span>
+                        </div>
+                        <div class="person-info contact">
+                            <div class="contacts">
+                                <div class="pi-item">
+                                    <span>手机号:</span>
+                                    <input id="phone" class="phone" type="text">
+                                    <b>*</b>
+                                    <p>该信息格式有误</p>
+                                </div>
+                                <div class="pi-item">
+                                    <span>联系人:</span>
+                                    <input id="contacts" type="text">
+                                    <b>*</b>
+                                    <p>该信息不能为空</p>
+                                </div>
+                                <div class="pi-item">
+                                    <span>Email:</span>
+                                    <input type="text" class="email">
+                                    <b>*</b>
+                                    <p>该信息格式有误</p>
+                                </div>
+                                <div class="pi-item">
+                                    <span>设置密码:</span>
+                                    <input type="password" class="pass">
+                                    <b>*</b>
+                                    <p>该密码有误</p>
+                                </div>
+                            </div>
+                            <div class="ishuiyuan">
+                                亲，系统检测您的手机号已注册会员，请输会员密码！
+                            </div>
+                            <div class="zhushi">查询订单使用</div>
+                            <div class="wangjima">忘记密码</div>
+                        </div>
+                        <div class="btnbox">
+                            <input type="button" class="cbigbtn" value="提交订单">
+                        </div>
+                    </div>
+                    <div class="pw-contr">
+                        <div class="pwc-wrap">
+                            <div class="pwc-tit">
+                                <img src="@@imgpath/route_dc_01.png" alt="">&ensp;
+                                <span>单程</span>&ensp;
+                                <a href="inlandAirTicket.html">[重新预定航班]</a>
+                            </div>
+                            <div class="personal-ticket">
+                            </div>
+                            <div class="personal-ticket">
+                            </div>
+                            <div class="ticket-price">
+                                <i></i>
+                                <span class="fontw">票价</span>
+                                <span class="piaojia">100</span>
+                                <span class="fontw">机建燃油费</span>
+                                <span class="jijian">100</span>
+                            </div>
+                            <div class="ticketPrice">
+                                <span class="fontw">保险</span>
+                                <span class="baoxian">20元</span>
+                                <span class="fontw">票价合计</span>
+                                <span class="zonggong">220</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        @@include('./common/footer.html')
+    </div>
+    <script src="@@jspath/lib/layDate-v5.0.7/laydate/laydate.js"></script>
+    <script src="@@jspath/personalInformationGN.js"></script>
+</body>
+</html>

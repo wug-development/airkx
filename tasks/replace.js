@@ -9,7 +9,7 @@ gulp.task("replacedev", done => {
 
 //替换测试配置文件
 gulp.task("replacetest", done => {
-    const _reset = require('../settest.json');
+    const _reset = require('../setbuild.json');
     setreplace(_reset)
     done()
 })

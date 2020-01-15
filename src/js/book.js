@@ -98,14 +98,81 @@ const bindEvent = () => {
     })
     /// 定制行程
     $('#btn_submit').click(function () {
-        ///
+        let userID = _.getItem("userID") || ''
+        let phone = $('#txt_phone').val().trim()
+        let name = $('#txt_name').val().trim()
+        let email = $('#txt_email').val().trim()
+        let pass = $('#txt_pass').val().trim()
+        let content = $('#txt_content').val().trim()
+        let OrderCode = _.randomNum(100000, 999999)
+        if (!_.checkTel(phone)) {
+            alert('请输入正确手机号')
+        } else {
+            $.ajax({
+                url: 'AdminLunhuan',
+                type: 'post',
+                dataType: 'text',
+                data: {
+                    "Mobile": phone,
+                    "userID": userID
+                },
+                error: function() {
+                    alert("网络错误，请刷新重试，或联系管理员")
+                },
+                success: data => {
+                    var CLNAME = data;
+                    var navInfo = "";
+                    var qudao = "index.js";
+                    //获取userAgent信息
+                    if(navigator && navigator.userAgent){
+                        navInfo = navigator.userAgent;
+                    }
+                    _.ajax({
+                        url: '/ZdyOrderServlet',
+                        type: 'get',
+                        dataType: 'json',
+                        data: {
+                            "xingmingxingming": name,
+                            "phone": phone,
+                            "emall": email,
+                            "mima": pass,
+                            "xinxi": content,
+                            "OrderCode": OrderCode,
+                            "CLNAME": CLNAME,
+                            "userID": userID,
+                            "navInfo":navInfo,
+                            "qudao":qudao
+                        },
+                        error: function() {
+                            alert("网络错误，请刷新重试")
+                        },
+                        success: (data) => {
+                            if (data == "-1") {
+                                alert("您的手机或密码输入错误，请输入正确的信息")
+                            } else if (data == "0") {
+                                alert("提交失败，请刷新重试，或联系管理员")
+                            } else {
+                                setSessionstorage("userID", data);
+                                alert("提交成功!", () => {
+                                    window.location.href = "personalHomePage.html"
+                                })
+                            }
+                        }
+                    })
+                }
+            })
+        }
     })
     /// 搜索航班
     $('#btn_search').click(function () {
-        userTrip.cityType = ''
+        userTrip.cityType = 1
+        if (location.href.indexOf('inlandairticket') > 1) {
+            userTrip.cityType = 2
+        }
         userTrip.type = $('#choose_way').find('.cur').data('type') == 1? '单程' : '往返'
         userTrip.sTime = $('#txt_stime').val().trim()
         userTrip.eTime = $('#txt_etime').val().trim()
+        userTrip.direct = $('#btn-direct').hasClass('cur')
         if (userTrip.sCity == '') {
             alert('请选择出发城市')
         } else if (userTrip.eCity == '') {
@@ -116,6 +183,16 @@ const bindEvent = () => {
             alert('请选择返回日期')
         } else {
             _.setItem('searchData', JSON.stringify(userTrip))
+            let _search = `sCity=${userTrip.sCity}&eCity=${userTrip.eCity}&sTime=${userTrip.sTime}&eTime=${userTrip.eTime}`
+            let _days = userTrip.type == '往返' ? _.dateDiff(userTrip.sTime, userTrip.eTime) : 0
+            let _sdate = userTrip.sTime.split("-")[1];
+            // 国内
+            if (userTrip.cityType == 2) {
+                url = `@@pagepath/roundTripGN.html?${_search}&cityType=2`
+            } else {
+                url = `@@pagepath/roundTrip.html?${_search}&EDay=${_days}&SDate=${_sdate}&cityType=1&zhifei=${userTrip.direct}`
+            }
+            window.location.href = url
         }
     })
 }
@@ -198,7 +275,8 @@ function getfilterData (v) {
         cityType: '',
         sTime: '',
         eTime: '',
-        type: ''   
+        type: '',
+        direct: false    
     }
     let sdata = _.getItem('searchData')
     if (sdata) {

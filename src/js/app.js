@@ -13,3 +13,11 @@ function loadSwiper (obj) {
         onSlideChangeStart: function() {}
     });
 }
+
+// var _hmt = _hmt || [];
+// (function() {
+//     var hm = document.createElement("script");
+//     hm.src = "https://hm.baidu.com/hm.js?beb7b2efca8d11fd0c524903355d8969";
+//     var s = document.getElementsByTagName("script")[0];
+//     s.parentNode.insertBefore(hm, s);
+// })();

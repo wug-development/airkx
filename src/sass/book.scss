@@ -22,7 +22,7 @@
     .con-ten {
         width: 100%;
         overflow: hidden;
-        margin-right: -4px;
+        margin: 40px auto;
         font-family: "苹方", sans-serif;
     }
     .con-list {
@@ -94,7 +94,7 @@
         font-size: 20px;
         color: #fff;
         font-family: "苹方";
-        background-image: url(./images/tejia.jpg);
+        background-image: url(@@imgpath/tejia.jpg);
         background-position: center;
         background-repeat: no-repeat;
         text-align: center;
