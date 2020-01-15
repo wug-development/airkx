@@ -130,8 +130,8 @@ const submitBook = () => {
             url: '/ListOverseasServlet',
             dataType: 'json',
             success: function (res) {
-                if (res && res.data && res.data.length > 0) {
-                    window.flightArr = res.data
+                if (res && res.length > 0) {
+                    window.flightArr = res
                     loadHtml()
                 }
             }

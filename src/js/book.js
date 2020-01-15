@@ -50,11 +50,17 @@ const bindEvent = () => {
             $(this).val(v)
         } else {
             let c = $(this).data('city')
-            if (userTrip.scity != v) {
+            if (userTrip.sCity != v) {
                 let li = $(this).siblings('.ddl-city').find('li')
                 if (li.length > 0) {
                     let data = $(li).data()
-                    userTrip.scity = data.city
+                    if (this.id == 'txt_startCity') {
+                        userTrip.sCity = data.display
+                        userTrip.sPort = data.portname
+                    } else {
+                        userTrip.eCity = data.display
+                        userTrip.ePort = data.portname
+                    }
                     $(this).data('city', data.city)
                     $(this).val(data.portname + '(' + data.display + ')')
                 } else {
@@ -66,14 +72,31 @@ const bindEvent = () => {
     })
     $('#txt_startCity,#txt_endCity').on('keyup', function () {
         let _v = $(this).val()
-        let d = getfilterData(_v)
+        let _t = $(this).next('.ddl-city').data('type')
+        let d = getfilterData(_t, _v)
         bindEventHtml(d, $(this).parent())
     })
     /// 显示更多舱位
     $('.ddl-box').on('click', function () {
         let _t = $(this).data('type')
-        let _data = getCityData(_t)
-        bindEventHtml(_data, $(this))
+        if ($(this).find('.ddl-city').find('li').length < 1) {
+            let _data = getfilterData(_t, '')
+            bindEventHtml(_data, $(this))
+        } else {
+            let _v = $(this).find('.txt').val().trim()
+            if (_v == '') {
+                _v = $(this).find('.txt').attr('placeholder')
+                if (_v.indexOf('英文') > -1) {
+                    _v = ''
+                }
+            }
+            let _i = _v.indexOf('(')
+            if (_i > -1) {
+                _v = _v.substr(_i + 1, 3)
+            }
+            let _data = getfilterData(_t, _v)
+            bindEventHtml(_data, $(this))
+        }
     })
     /// 关闭下拉框
     $(window).click(function(e,f) {
@@ -182,24 +205,34 @@ const bindEvent = () => {
         } else if (userTrip.type == '往返' && userTrip.eTime == '') {
             alert('请选择返回日期')
         } else {
-            _.setItem('searchData', JSON.stringify(userTrip))
             let _search = `sCity=${userTrip.sCity}&eCity=${userTrip.eCity}&sTime=${userTrip.sTime}&eTime=${userTrip.eTime}`
             let _days = userTrip.type == '往返' ? _.dateDiff(userTrip.sTime, userTrip.eTime) : 0
             let _sdate = userTrip.sTime.split("-")[1];
+            let url = ''
             // 国内
             if (userTrip.cityType == 2) {
                 url = `@@pagepath/roundTripGN.html?${_search}&cityType=2`
+                _.setItem('searchGNData', JSON.stringify(userTrip))
             } else {
                 url = `@@pagepath/roundTrip.html?${_search}&EDay=${_days}&SDate=${_sdate}&cityType=1&zhifei=${userTrip.direct}`
+                _.setItem('searchGJData', JSON.stringify(userTrip))
             }
+            setData(userTrip)
             window.location.href = url
         }
     })
 }
+/// 存储数据
+function setData (obj) {
+    _.setItem('startCityH', `${obj.sPort}(${obj.sCity})`)
+    _.setItem('endCityH', `${obj.ePort}(${obj.eCity})`)
+    _.setItem('type', obj.type)
+    _.setItem('cangwei', $('#ddl_more').val() || '经济舱')
+}
 /// 获取城市下拉框模板转HTML
 function getTmpToHtml (data) {
-    return `${data.map(item => `
-        <li data-city="${item.city}" data-pinyin="${item.Pinyin}" data-portname="${item.Portname}" data-display="${item.Display}" data-country="${item.country}">
+    return `${data.map((item, i) => `
+        <li data-city="${item.city}" id="li${i}" data-pinyin="${item.Pinyin}" data-portname="${item.Portname}" data-display="${item.Display}" data-country="${item.country}">
             ${item.Portname} ${item.city} ${item.Pinyin} ${item.Display} ${item.country}
         </li> 
     `).join('')}`
@@ -208,49 +241,39 @@ function getTmpToHtml (data) {
 function bindEventHtml (d, that) {
     let _html = getTmpToHtml(d)
     that.find('.ddl-city').html(_html)
-    that.find('.ddl-city').addClass('cur').find('li').off().on('click', function () {
-        $(this).addClass('cur').siblings().removeClass('cur')
-        let obj = $(this).data()
-        if ($(this).parent().className.includes('sddl')) {
-            userTrip.scity = data.city
+    that.find('.ddl-city').addClass('cur').on('click', function (e) {
+        let obj = $('#' + e.target.id).data()
+        if (this.id == 'ddl-scity') {
+            userTrip.sCity = obj.display
+            userTrip.sPort = obj.portname
         } else {
-            userTrip.ecity = data.city
+            userTrip.eCity = obj.display
+            userTrip.ePort = obj.portname
         }
         let _v = obj.portname + '(' + obj.display + ')'
-        $(this).parent().prev().val(_v).data('city', obj.city)
+        $(this).prev().val(_v).data('city', obj.city)
     })
 }
 /// 获取城市
-function getCityData (v) {
-    if (typeof cityData === 'object') {
-        let _d = cityData.filter(e => {
+function getCityData (v, data) {
+    if (typeof data === 'object') {
+        let _d = data.filter(e => {
             return e.type == v
         })
         return _d.sort((x, y) => {
             return Number(y.hot) - Number(x.hot)
         })
     } else {
-        return [
-            {"country":"摩洛哥","city":"卡萨布兰卡","Pinyin":"KASABULANKA","EngName":"CASABLANCA ","type":"1","Portname":"默罕默德机场","Display":"CMN"},
-            {"country":"摩洛哥","city":"马拉喀什","Pinyin":"MALAKASHI","EngName":"MARRAKECH ","type":"1","Portname":"马拉喀什机场","Display":"RAK"}
-        ]
+        return []
     }
 }
 /// 获取筛选城市
-function getfilterData (v) {
+function getfilterData (t, v) {
     let data = []
-    if (typeof cityData === 'object') {
-        let _d = cityData.filter(e => {
-            return e.type == v
-        })
-        data = _d.sort((x, y) => {
-            return Number(y.hot) - Number(x.hot)
-        })
+    if (t == '1') {
+        data = gjData
     } else {
-        data = [
-            {"country":"摩洛哥","city":"卡萨布兰卡","Pinyin":"KASABULANKA","EngName":"CASABLANCA ","type":"1","Portname":"默罕默德机场","Display":"CMN"},
-            {"country":"摩洛哥","city":"马拉喀什","Pinyin":"MALAKASHI","EngName":"MARRAKECH ","type":"1","Portname":"马拉喀什机场","Display":"RAK"}
-        ]
+        data = gnData
     }
     return data.filter(e => {
         return e.Display.includes(v.toUpperCase()) || e.city.includes(v) || e.EngName.includes(v.toUpperCase()) || e.Pinyin.includes(v.toUpperCase()) 
@@ -263,7 +286,8 @@ function getfilterData (v) {
         type: 'post',
         dataType: 'json',
         success: res => {
-            window.cityData = res
+            window.gjData = uniqueArray(getCityData('1', res), 'Display')
+            window.gnData = uniqueArray(getCityData('2', res), 'Display')
         }
     })
 
@@ -272,16 +296,26 @@ function getfilterData (v) {
     window.userTrip = {
         sCity: '',
         eCity: '',
+        sPort: '',
+        ePort: '',
         cityType: '',
         sTime: '',
         eTime: '',
         type: '',
         direct: false    
     }
-    let sdata = _.getItem('searchData')
+    let sdata = ''
+    if (location.href.indexOf('inlandairticket') > -1) {
+        sdata = _.getItem('searchGNData') 
+    } else {
+        sdata = _.getItem('searchGJData')
+    }
     if (sdata) {
         Object.assign(userTrip, JSON.parse(sdata))
+        initData(JSON.parse(sdata))
     }
+    window.gjData = []
+    window.gnData = []
 
     laydate.render({
         elem: "#txt_stime",
@@ -294,3 +328,29 @@ function getfilterData (v) {
         max: 365
     });
 })()
+
+function initData (obj) {
+    $('#txt_startCity').val(`${obj.sPort}(${obj.sCity})`)
+    $('#txt_endCity').val(`${obj.ePort}(${obj.eCity})`)
+    $('#txt_stime').val(obj.sTime)
+    $('#txt_etime').val(obj.eTime)
+    obj.direct && $('#btn-direct').addClass('cur')
+}
+
+function uniqueArray(array, key){
+    var result = [array[0]];
+    for(var i = 1; i < array.length; i++){
+        var item = array[i];
+        var repeat = false;
+        for (var j = 0; j < result.length; j++) {
+            if (item[key] == result[j][key]) {
+                repeat = true;
+                break;
+            }
+        }
+        if (!repeat) {
+            result.push(item);
+        }
+    }
+    return result;
+}

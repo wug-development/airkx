@@ -21,7 +21,6 @@ i{
     font-style: normal;
 }
 input, textarea{ 
-    -webkit-appearance: none; 
     border-radius: 0; 
     outline: none; 
 }
@@ -56,10 +55,11 @@ a{
                 background: url('@@imgpath/icon-phone.png') no-repeat left center;
             }
             .lg-reg-box{
-                width: 138px;
+                display: none;
                 height: 32px;
                 line-height: 32px;
                 margin-left: 50px;
+                padding: 0 8px;
                 color: #fff;
                 background-color: #03122c;
                 border-radius: 4px;

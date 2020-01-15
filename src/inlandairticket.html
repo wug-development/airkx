@@ -17,24 +17,28 @@
                     <div class="book-tree"></div>
                     <div class="book-tip">选择出发到达的城市及时间</div>
                     <div class="book-airflight-way">
-                        <div class="btn-way btn-one cur">单程</div>
+                        <div class="btn-way btn-one cur" data-type="1">单程</div>
                     </div>
                     <div class="book-form-box">
-                        <div class="form-txt-box ddl-start">
-                            <span>出发城市</span>
-                            <input type="text" class="txt" readonly placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                        <div class="form-txt-box ddl-start ddl-box sddl" data-type="2">
+                            <span class="sddl">出发城市</span>
+                            <input type="text" id="txt_startCity" class="txt sddl" placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                            <ul class="ddl-city sddl" id="ddl-scity" data-type="2"></ul>
                         </div>
-                        <div class="form-txt-box ddl-end">
-                            <span>到达城市</span>
-                            <input type="text" class="txt" readonly placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                        <div class="form-txt-box ddl-end ddl-box eddl" data-type="1">
+                            <span class="eddl">到达城市</span>
+                            <input type="text" id="txt_endCity" class="txt eddl" placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
+                            <ul class="ddl-city eddl" id="ddl-ecity" data-type="2"></ul>
                         </div>
                         <div class="form-txt-box ddl-date">
-                            <span>出发日期</span>
-                            <input type="text" class="txt" readonly placeholder="请选择" maxlength="100">
+                            <div class="start-date">
+                                <span>出发日期</span>
+                                <input type="text" id="txt_stime" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
+                            </div>
                         </div>
                     </div>
                     <div class="book-btns">
-                        <div class="btn-search">查询票价</div>
+                        <div class="btn-search" id="btn_search">搜索航班</div>
                     </div>
                 </div>
             </div>

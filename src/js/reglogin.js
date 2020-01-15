@@ -38,7 +38,7 @@ $(function() {
                             } else {
                                 alert("登陆成功");
                                 setSessionstorage("userID", data);
-                                window.location.href = "personalHomePage.html";
+                                window.location.href = "@@pagepath/personalHomePage.html";
                             }
                         }
                     })
@@ -141,7 +141,7 @@ $(function() {
                         } else {
                             alert("注册成功");
                             setSessionstorage("userID", data);
-                            window.location.href = "personalHomePage.html";
+                            window.location.href = "@@pagepath/personalHomePage.html";
                         }
                     }
                 })

@@ -8,7 +8,7 @@ global.reoption = {}; // 文件内替换内容
 requireDir('./tasks') // 获取任务列表
 
 // 处理公共文件
-gulp.task('dealtask', gulp.series(gulp.parallel('imagemin', 'uglify', 'fonts', 'sassc'), done =>{
+gulp.task('dealtask', gulp.series(gulp.parallel('uglify', 'fonts', 'sassc'), done =>{//'imagemin', 
     done()
 }))
 // 处理本地文件+页面

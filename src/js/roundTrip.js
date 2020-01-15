@@ -11,7 +11,7 @@ $(function() {
     var SDate = getUrlParam("SDate");
     var cityType = getUrlParam("cityType");
     var sportName = getSessionstorage("startCityH").substring(0,getSessionstorage("startCityH").length-5);
-    var eportName = getSessionstorage("endCityH").substring(0,getSessionstorage("startCityH").length-5);
+    var eportName = getSessionstorage("endCityH").substring(0,getSessionstorage("endCityH").length-5);
     var eTime = getUrlParam("eTime");
     var zhifei = getUrlParam("zhifei");
     var cangwei = getSessionstorage("cangwei");
