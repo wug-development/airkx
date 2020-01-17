@@ -14,7 +14,7 @@
                     type: 'post',
                     dataType: 'json',
                     data: {
-                        "Mobile": Mobile
+                        "Mobile": p
                     },
                     error: function() {
                         alert("网络错误，请刷新重试")

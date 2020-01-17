@@ -23,6 +23,7 @@
             background: url('@@imgpath/icon-earth.png') no-repeat left center;
             font-size: 36px;
             color: #333;
+            white-space: nowrap;
         }
         .stu-flight-list{
             padding: 25px 0;
@@ -115,7 +116,6 @@
             }
             .txt-box{
                 display: flex;
-                justify-content: space-between;
                 padding: 20px 0;
                 li{
                     border: 1px solid #bfbfbf;
@@ -127,6 +127,7 @@
                     box-sizing: border-box;
                     width: 265px;
                     display: flex;
+                    margin-left: 16px;
                     span{
                         white-space: nowrap;
                     }
@@ -135,6 +136,9 @@
                         width: 100%;
                         border: 0;
                     }
+                }
+                li:first-child{
+                    margin: 0;
                 }
             }
             .btn{

@@ -34,6 +34,11 @@ const bindEvent = () => {
             $('.ddl-start').data('type', '2')
             $('.ddl-end').data('type', '1')
         }
+        $('#txt_startCity,#txt_endCity').val('')
+        userTrip.sCity = ''
+        userTrip.sPort = ''
+        userTrip.eCity = ''
+        userTrip.ePort = ''
     })
     /// 输入城市
     $('#txt_startCity,#txt_endCity').on('click', function () {
@@ -72,7 +77,7 @@ const bindEvent = () => {
     })
     $('#txt_startCity,#txt_endCity').on('keyup', function () {
         let _v = $(this).val()
-        let _t = $(this).next('.ddl-city').data('type')
+        let _t = $(this).parent().data('type')
         let d = getfilterData(_t, _v)
         bindEventHtml(d, $(this).parent())
     })
@@ -81,7 +86,11 @@ const bindEvent = () => {
         let _t = $(this).data('type')
         if ($(this).find('.ddl-city').find('li').length < 1) {
             let _data = getfilterData(_t, '')
-            bindEventHtml(_data, $(this))
+            if (_data.length < 1) {
+                alert('城市加载中...')
+            } else {
+                bindEventHtml(_data, $(this))
+            }
         } else {
             let _v = $(this).find('.txt').val().trim()
             if (_v == '') {
@@ -119,73 +128,6 @@ const bindEvent = () => {
             $(this).addClass('cur')
         }
     })
-    /// 定制行程
-    $('#btn_submit').click(function () {
-        let userID = _.getItem("userID") || ''
-        let phone = $('#txt_phone').val().trim()
-        let name = $('#txt_name').val().trim()
-        let email = $('#txt_email').val().trim()
-        let pass = $('#txt_pass').val().trim()
-        let content = $('#txt_content').val().trim()
-        let OrderCode = _.randomNum(100000, 999999)
-        if (!_.checkTel(phone)) {
-            alert('请输入正确手机号')
-        } else {
-            $.ajax({
-                url: 'AdminLunhuan',
-                type: 'post',
-                dataType: 'text',
-                data: {
-                    "Mobile": phone,
-                    "userID": userID
-                },
-                error: function() {
-                    alert("网络错误，请刷新重试，或联系管理员")
-                },
-                success: data => {
-                    var CLNAME = data;
-                    var navInfo = "";
-                    var qudao = "index.js";
-                    //获取userAgent信息
-                    if(navigator && navigator.userAgent){
-                        navInfo = navigator.userAgent;
-                    }
-                    _.ajax({
-                        url: '/ZdyOrderServlet',
-                        type: 'get',
-                        dataType: 'json',
-                        data: {
-                            "xingmingxingming": name,
-                            "phone": phone,
-                            "emall": email,
-                            "mima": pass,
-                            "xinxi": content,
-                            "OrderCode": OrderCode,
-                            "CLNAME": CLNAME,
-                            "userID": userID,
-                            "navInfo":navInfo,
-                            "qudao":qudao
-                        },
-                        error: function() {
-                            alert("网络错误，请刷新重试")
-                        },
-                        success: (data) => {
-                            if (data == "-1") {
-                                alert("您的手机或密码输入错误，请输入正确的信息")
-                            } else if (data == "0") {
-                                alert("提交失败，请刷新重试，或联系管理员")
-                            } else {
-                                setSessionstorage("userID", data);
-                                alert("提交成功!", () => {
-                                    window.location.href = "personalHomePage.html"
-                                })
-                            }
-                        }
-                    })
-                }
-            })
-        }
-    })
     /// 搜索航班
     $('#btn_search').click(function () {
         userTrip.cityType = 1
@@ -194,7 +136,9 @@ const bindEvent = () => {
         }
         userTrip.type = $('#choose_way').find('.cur').data('type') == 1? '单程' : '往返'
         userTrip.sTime = $('#txt_stime').val().trim()
-        userTrip.eTime = $('#txt_etime').val().trim()
+        if (userTrip.type == '往返') {
+            userTrip.eTime = $('#txt_etime').val().trim()
+        }
         userTrip.direct = $('#btn-direct').hasClass('cur')
         if (userTrip.sCity == '') {
             alert('请选择出发城市')
@@ -242,7 +186,7 @@ function bindEventHtml (d, that) {
     let _html = getTmpToHtml(d)
     that.find('.ddl-city').html(_html)
     that.find('.ddl-city').addClass('cur').on('click', function (e) {
-        let obj = $('#' + e.target.id).data()
+        let obj = $(e.target).data()
         if (this.id == 'ddl-scity') {
             userTrip.sCity = obj.display
             userTrip.sPort = obj.portname
@@ -275,9 +219,13 @@ function getfilterData (t, v) {
     } else {
         data = gnData
     }
-    return data.filter(e => {
-        return e.Display.includes(v.toUpperCase()) || e.city.includes(v) || e.EngName.includes(v.toUpperCase()) || e.Pinyin.includes(v.toUpperCase()) 
-    })
+    if (v) {
+        return data.filter(e => {
+            return e.Display.includes(v.toUpperCase()) || e.city.includes(v) || e.EngName.includes(v.toUpperCase()) || e.Pinyin.includes(v.toUpperCase()) 
+        })
+    } else {
+        return data
+    }
 }
 
 (() => {

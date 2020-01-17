@@ -45,23 +45,23 @@
                 <div class="stu-book-title">我要预订</div>
                 <div class="stu-book-form">
                     <div class="div-content">
-                        <textarea class="txt-content" name="" id="txt-content" placeholder="请填写出发城市、到达城市和出发日期以及乘机人信息" cols="30" rows="10"></textarea>
+                        <textarea class="txt-content" name="" id="txt_content" placeholder="请填写出发城市、到达城市和出发日期以及乘机人信息" cols="30" rows="10"></textarea>
                     </div>
                     <ul class="txt-box">
-                        <li>
-                            <span>联系人：</span>
-                            <input type="text" id="txt_name" maxlength="50">
-                        </li>
                         <li>
                             <span>手机号码：</span>
                             <input type="text" id="txt_phone" maxlength="20">
                         </li>
-                        <li>
+                        <li id="div_name">
+                            <span>联系人：</span>
+                            <input type="text" id="txt_name" maxlength="50">
+                        </li>
+                        <li id="div_email">
                             <span>邮箱：</span>
                             <input type="text" id="txt_email" maxlength="100">
                         </li>
                         <li>
-                            <span>设置订单查询密码：</span>
+                            <span id="span_pass">设置订单查询密码：</span>
                             <input type="text" id="txt_pass" maxlength="20">
                         </li>
                     </ul>
@@ -74,5 +74,6 @@
         @@include('./common/footer.html')
     </div>
     <script src="@@jspath/stuticket.js"></script>
+    <script src="@@jspath/custom-route.js"></script>
 </body>
 </html>
