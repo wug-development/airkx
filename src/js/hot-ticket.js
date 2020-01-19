@@ -126,7 +126,7 @@ $.ajax({
                     setSessionstorage("startCityH", sportName+"("+sCity+")");
                     setSessionstorage("endCityH", eportName+"("+eCity+")");
                     setSessionstorage("type", type);
-                    window.location.href = "roundTrip.html?sCity=" + sCity + "&eCity=" + eCity + "&sTime=" + sTime + "&EDay=" + EDay + "&SDate=" + SDate + "&cityType=" + cityType+ "&eTime=" + eTime;
+                    window.location.href = "@@pagepath/roundTrip.html?sCity=" + sCity + "&eCity=" + eCity + "&sTime=" + sTime + "&EDay=" + EDay + "&SDate=" + SDate + "&cityType=" + cityType+ "&eTime=" + eTime;
                 })
             }
         })
