@@ -25,7 +25,8 @@ function setreplace(_reset){
             { match:'pagepath', replacement:_reset.pagepath },
             { match:'apispath', replacement:_reset.apispath },
             { match:'apiopath', replacement:_reset.apiopath },
-            { match:'money', replacement:_reset.money }
+            { match:'money', replacement:_reset.money },
+            { match:'verson', replacement:(new Date()).getTime() }
         ]
     }
 }

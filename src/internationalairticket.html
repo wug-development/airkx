@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>国际机票查询|国际机票预订-中国民航北京机票一级代理400-722-7722 凯行网官网Airkx.com</title>
     @@include('./common/meta.html')
-    <link rel="stylesheet" href="@@csspath/book.css">
-    <link rel="stylesheet" href="@@csspath/bookticket.css">
+    <link rel="stylesheet" href="@@csspath/book.css?v=@@verson">
+    <link rel="stylesheet" href="@@csspath/bookticket.css?v=@@verson">
 </head>
 <body>
     <div class="book-box">
@@ -13,12 +13,32 @@
         <div class="banner-gj-box">
             <div class="box-width banner-content">
                 <div class="bookticket-box">
-                    <div class="book-title"><span>KX</span>国际机票查询</div>
-                    <div class="book-tree"></div>
+                    <div class="book-title"><span>KX</span>预定国际航班</div>
+                    <div class="book-tree">
+                        <ul>
+                            <li class="cur">
+                                <span>搜索</span>
+                                <i></i>
+                            </li>
+                            <li>
+                                <span>选择</span>
+                                <i></i>
+                            </li>
+                            <li>
+                                <span>预定</span>
+                                <i></i>
+                            </li>
+                            <li>
+                                <span>提交</span>
+                                <i></i>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="book-tip">选择出发到达的城市及时间</div>
                     <div class="book-airflight-way" id="choose_way">
                         <div class="btn-way btn-one" data-type="1">单程</div>
                         <div class="btn-way btn-dobble cur" data-type="2">往返</div>
+                        <div class="btn-way btn-made" data-type="3">定制行程</div>
                     </div>
                     <div class="book-form-box">
                         <div class="book-change-org">
@@ -54,12 +74,35 @@
                                 <li>头等舱</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="book-btns">
-                        <div class="btn-search" id="btn_search">搜索航班</div>
-                        <div class="book-directflight">
-                            <div class="book-btn" id="btn-direct">仅查直飞</div>
+                        <div class="book-btns">
+                            <div class="btn-search" id="btn_search">搜索航班</div>
+                            <div class="book-directflight">
+                                <div class="book-btn" id="btn-direct">仅查直飞</div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="book-dingzhi">
+                        <div class="tip">亲！请写下您的行程，剩下的交给我们来办</div>
+                        <textarea class="txt-content" id="txt_content" placeholder="如果可以，请尽量详细描述，以便我们能更好为您量身设计行程！"></textarea>
+                        <div class="txts-box">
+                            <div>
+                                <span>手机号</span>
+                                <input type="text" id="txt_phone" maxlength="20" placeholder="">
+                            </div>
+                            <div id="div_name">
+                                <span>姓名</span>
+                                <input type="text" id="txt_name" maxlength="20" placeholder="">
+                            </div>
+                            <div id="div_email">
+                                <span>邮箱</span>
+                                <input type="text" id="txt_email" maxlength="100" placeholder="">
+                            </div>
+                            <div>
+                                <span>密码</span>
+                                <input type="text" id="txt_pass" maxlength="30" placeholder="">
+                            </div>
+                        </div>
+                        <div class="btn" id="btn_submit">提交</div>
                     </div>
                 </div>
             </div>
@@ -70,9 +113,10 @@
         </div>
         @@include('./common/footer.html')
     </div>
-    <script src="@@jspath/lib/swiper-2.1.min.js"></script>
-    <script src="@@jspath/lib/layDate-v5.0.7/laydate/laydate.js"></script>
-    <script src="@@jspath/book.js"></script>
-    <script src="@@jspath/hot-ticket.js"></script>
+    <script src="@@jspath/lib/swiper-2.1.min.js?v=@@verson"></script>
+    <script src="@@jspath/lib/layDate-v5.0.7/laydate/laydate.js?v=@@verson"></script>
+    <script src="@@jspath/book.js?v=@@verson"></script>
+    <script src="@@jspath/hot-ticket.js?v=@@verson"></script>
+    <script src="@@jspath/custom-route.js?v=@@verson"></script>
 </body>
 </html>

@@ -204,7 +204,7 @@
                 box-sizing: border-box;
                 background-color: #fff;
                 border-top: 0;
-                overflow: hidden auto;
+                overflow: hidden;
                 transition: all .2s;
                 li{
                     height: 32px;
@@ -227,6 +227,7 @@
                 top: 57px;
                 left: -1px;
                 height: auto;
+                overflow: auto;
             }
         }
         .form-txt-box::before{

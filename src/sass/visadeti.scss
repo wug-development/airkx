@@ -1,0 +1,141 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.head-wrap {
+    background-color: #fff;
+}
+
+.center {
+    width: 1200px;
+    margin: 70px auto 18px;
+    box-shadow: 0 0 6px 6px #eae9e9;
+    border-radius: 8px;
+}
+
+.title {
+    padding-left: 170px;
+    height: 289px;
+    box-shadow: 0 0 6px 6px #eae9e9;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+}
+
+.title h3 {
+    font-family: "苹方";
+    font-size: 25px;
+    color: #000;
+    display: block;
+    margin: 0;
+    line-height: 25px;
+    padding-top: 60px;
+}
+
+.title p {
+    display: block;
+    font-size: 23px;
+    line-height: 23px;
+    margin: 0;
+    margin-top: 22px;
+    color: #666666;
+}
+
+.title i {
+    color: #f00000;
+    font-style: normal;
+}
+
+.title span {
+    float: left;
+    color: #666666;
+    font-size: 17px;
+    line-height: 21px;
+    margin-top: 23px;
+    font-family: "苹方";
+}
+
+.validity,
+.stay,
+.time,
+.invitation,
+.interview,
+.acceptance,
+.invisa {
+    padding-left: 15px;
+    padding-right: 31px;
+}
+
+.title button {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #f00000;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    bottom: 58px;
+    left: 170px;
+}
+
+.title img {
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: 67px;
+}
+
+.context {
+    width: 100%;
+    background-color: #fcfcfc;
+}
+
+.context ul {
+    width: 1132px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.context ul li {
+    border-bottom: dashed 1px #e5e5e5;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 230px;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.lil {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -14px;
+    font-size: 21px;
+    line-height: 28px;
+    height: 28px;
+    color: #000;
+    width: 200px;
+    text-align: right;
+}
+
+.lir {
+    float: left;
+    margin-left: 57px;
+}
+
+.lir p {
+    font-size: 16px;
+    line-height: 32px;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+}

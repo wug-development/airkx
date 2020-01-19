@@ -139,6 +139,10 @@
     }
     .qzbx-box{
         display: flex;
+        a{
+            display: block;
+            height: 100%;
+        }
         .qzbx-qz{
             flex: 1;
             height: 571px;

@@ -1,0 +1,678 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.center {
+    width: 1200px;
+    margin: 70px auto 18px;
+    box-shadow: 0 0 25px 25px #eae9e9;
+    border-radius: 8px;
+}
+
+.title {
+    height: 305px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: solid 3px #e2e2e2;
+    padding-left: 170px;
+    position: relative;
+    padding-top: 105px;
+    padding-right: 382px;
+}
+
+.title:after {
+    content: "";
+    width: 1160px;
+    height: 1px;
+    border-top: 1px solid #dcdcdc;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+
+.title h3 {
+    font-size: 21px;
+    color: #000;
+    line-height: 21px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    margin: 0;
+}
+
+.title img {
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: 110px;
+}
+
+.title h4 {
+    font-size: 25px;
+    color: #000;
+    line-height: 25px;
+    display: block;
+    margin: 0
+}
+
+.title a {
+    font-size: 16px;
+    color: #ff0000;
+    line-height: 16px;
+    position: absolute;
+    left: 544px;
+    top: 113px;
+    font-weight: bold;
+}
+
+.title span {
+    float: left;
+    color: #666666;
+    font-size: 17px;
+    line-height: 21px;
+    margin-top: 15px;
+    font-family: "苹方";
+}
+
+.title p {
+    font-size: 17px;
+    color: #666666;
+    line-height: 24px;
+    margin: 0;
+    margin-top: 17px;
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: absolute;
+    left: 170px;
+    top:215px;
+    width: 620px;
+}
+.title b{
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.validity,
+.stay,
+.time,
+.invitation,
+.interview,
+.acceptance,
+.invisa {
+    padding-left: 13px;
+    padding-right: 37px;
+}
+
+.dasht {
+    width: 848px;
+    height: 1px;
+    border-top: 1px dashed #e5e5e5;
+    position: absolute;
+    left: 170px;
+    bottom: 190px;
+}
+
+.dashb {
+    width: 848px;
+    height: 1px;
+    border-top: 1px dashed #e5e5e5;
+    position: absolute;
+    left: 170px;
+    bottom: 80px;
+}
+
+.price {
+    height: 81px;
+    line-height: 81px;
+    font-size: 17px;
+    margin-top: 15px;
+    float: left;
+    position: absolute;
+    left: 170px;
+    top:310px;
+}
+
+.price i {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.fill {
+    background-color: #fff;
+    border-radius: 8px;
+    border: solid 3px #e2e2e2;
+    position: relative;
+    overflow: hidden;
+}
+
+.fill h3 {
+    font-size: 21px;
+    color: #000;
+    line-height: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    margin-top: 14px;
+}
+
+.fill h5 {
+    font-size: 15px;
+    color: #666;
+    line-height: 15px;
+    float: left;
+    margin-top: 20px;
+}
+
+.fill:after {
+    content: "";
+    width: 1160px;
+    height: 1px;
+    border-top: 1px solid #dcdcdc;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+
+.fillcontext {
+    width: 60%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.list {
+    width: 100%;
+    height: 55px;
+}
+
+.listl {
+    float: left;
+    width: 147px;
+    text-align: right;
+    height: 100%;
+    line-height: 55px;
+}
+
+.listl i {
+    color: red;
+    padding-right: 5px;
+}
+
+.listr {
+    width: 244px;
+    height: 34px;
+    float: left;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.listr input {
+    width: 230px;
+    padding: 0;
+    line-height: 34px;
+    padding-left: 10px;
+    height: 30px;
+    outline: none;
+}
+
+.listr input.sex {
+    width: 12px;
+    height: 12px;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 132px;
+    height: 32px;
+    border-radius: 3px;
+    overflow: hidden;
+    border: solid 1px #f00e0e;
+    margin-top: 12px;
+    margin-left: 35px;
+}
+
+.btn button {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    line-height: 32px;
+    color: #000;
+    text-align: center;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+
+.pay {
+    background-color: #fff;
+    border-radius: 8px;
+    border: solid 3px #e2e2e2;
+    position: relative;
+    overflow: hidden;
+}
+
+.pay h3 {
+    font-size: 21px;
+    color: #000;
+    line-height: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    margin-top: 14px;
+}
+
+.pay:after {
+    content: "";
+    width: 1160px;
+    height: 1px;
+    border-top: 1px solid #dcdcdc;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+
+.selectBank {
+    width: 1160px;
+    margin: 70px auto 0;
+}
+
+.selectitle {
+    height: 56px;
+    padding-left: 54px;
+    position: relative;
+    cursor: pointer;
+}
+
+.selectitle img {
+    position: absolute;
+    display: block;
+    left: 20px;
+    top: 23px;
+    transition: transform 0.3s linear;
+}
+.selectitle img.active{
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -moz-transform: rotate(90deg);
+    /* Firefox */
+    -webkit-transform: rotate(90deg);
+    /* Safari and Chrome */
+    -o-transform: rotate(90deg);
+    /* Opera */
+}
+.selectitle h3 {
+    font-size: 15px;
+    line-height: 56px;
+    color: #131313;
+    float: left;
+    margin: 0;
+}
+
+.selectitle h5 {
+    float: left;
+    font-size: 15px;
+    color: #b1b1b1;
+    margin: 0;
+    line-height: 56px;
+}
+
+.seleccontext {
+    padding-left: 54px;
+    overflow: hidden;
+    height: 0;
+}
+
+.seleccontext ul {
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    margin-right: -50px;
+}
+
+.seleccontext ul li {
+    list-style-type: none;
+    float: left;
+    height: 34px;
+    margin-right: 40px;
+    margin-bottom: 14px;
+}
+
+.seleccontext ul li.mgr0 {
+    margin-right: 0;
+}
+
+.seleccontext ul li input {
+    float: left;
+    margin-top: 11px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.seleccontext ul li img {
+    float: left;
+    display: block;
+}
+.makeinvoice{
+    background-color: #fff;
+    border-radius: 8px;
+    border: solid 3px #e2e2e2;
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+}
+.makeinvoice h3{
+    font-size: 21px;
+    color: #000;
+    line-height: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    margin-top: 14px;
+}
+.pamakeinvoicey:after {
+    content: "";
+    width: 1160px;
+    height: 1px;
+    border-top: 1px solid #dcdcdc;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+.invoiceselec{
+    margin-top: 70px;
+    padding-left: 54px;
+    overflow: hidden;
+}
+.need{
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #131313;
+    text-align: center;
+    margin-right:44px; 
+    float: left;
+    background-image: url(@@imgpath/smallblack.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    cursor: pointer;
+}
+.need.active{
+    background-image: url(@@imgpath/smallred.png);
+}
+.invoiceselectitle{
+    height: 30px;
+    position: absolute;
+    left: 86px;
+    top:109px;
+    display: none;
+}
+.invoiceselectitle span{
+    float: left;
+    font-size: 14px;
+    color: #666666;
+    line-height: 30px;
+    margin-right: 18px;
+}
+.invoiceselectitle input{
+    width: 234px;
+    height: 26px;
+    outline: none;
+    float: left;
+    padding-left: 10px;
+}
+.invoiceselectitle.active{
+    display: block;
+}
+.sendtyle{
+    background-color: #fff;
+    border-radius: 8px;
+    border: solid 3px #e2e2e2;
+    position: relative;
+    overflow: hidden;
+}
+.sendtyle h3{
+    font-size: 21px;
+    color: #000;
+    line-height: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 14px;
+    margin-bottom: 40px;
+}
+.sendtyle:after {
+    content: "";
+    width: 1160px;
+    height: 1px;
+    border-top: 1px solid #dcdcdc;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+.sendlist{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.sendlisttitle{
+    line-height: 20px;
+    font-size: 15px;
+    color: #131313;
+    text-align: left;
+    background-image: url(@@imgpath/smallblack.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    cursor: pointer;
+
+    height: 20px;
+    padding-left: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sendlistcontext{
+    margin-left: 36px;
+    overflow: hidden;
+    height: 0;
+}
+.sendlistcontext p{
+    font-size: 14px;
+    color:#666666;
+    line-height: 23px;
+    margin: 0;
+}
+.sendlistcontext a{
+    font-size: 14px;
+    color:#f00000;
+    line-height: 23px;
+    margin: 0;
+}
+.sendlistcontext ul{
+    margin: 0;
+    padding: 0;
+}
+.sendlistcontext ul li{
+    display: block;
+    height: 25px;
+    margin: 5px 0;
+}
+.sendlistcontext ul li span{
+    float: left;
+    font-size: 14px;
+    color: #666666;
+    line-height: 14px;
+    margin-top: 10px;
+}
+.sendlistcontext ul li input{
+    width: 445px;
+    height: 23px;
+    border: none;
+    outline: none;
+    border-bottom: dashed 1px #dcdcdc;
+    float: left;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.sendlisttitle.active{
+    background-image: url(@@imgpath/smallred.png);
+}
+.contactp{
+    background-color: #fff;
+    border-radius: 8px;
+    border: solid 3px #e2e2e2;
+    position: relative;
+    overflow: hidden;
+}
+.contactp h3{
+   font-size: 21px;
+    color: #000;
+    line-height: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    margin-top: 14px;
+
+}
+.contactp h5{
+    float: left;
+    font-size: 15px;
+    color: #b1b1b1;
+    margin: 0;
+    line-height: 56px;
+}
+.contactp:after {
+    content: "";
+    width: 1160px;
+    height: 1px;
+    border-top: 1px solid #dcdcdc;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+.contactpcontext {
+    width: 60%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.contactplist {
+    width: 100%;
+    height: 55px;
+}
+
+.contactplistl {
+    float: left;
+    width: 147px;
+    text-align: right;
+    height: 100%;
+    line-height: 55px;
+}
+
+.contactplistl i {
+    color: red;
+    padding-right: 5px;
+}
+
+.contactplistr {
+    width: 244px;
+    height: 34px;
+    float: left;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.contactplistr input {
+    width: 230px;
+    padding: 0;
+    line-height: 34px;
+    padding-left: 10px;
+    height: 30px;
+    outline: none;
+}
+
+.contactplistr input.sex {
+    width: 12px;
+    height: 12px;
+    margin-top: 10px;
+}
+.submit{
+    width: 654px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #f00000;
+    margin: 30px auto 70px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 19px;
+    cursor: pointer;
+}
+.btn-close{
+    display: block;
+    position: absolute;
+    width: 30px;
+    background-color: #f00000;
+    font-size: 0;
+    left: 0px;
+    top:45px;
+    cursor: pointer;
+}
+.remarks{
+    margin-top: 48px;
+    width: 710px;
+    background-color: rgba(255,255,204,0.7);
+    padding-bottom: 35px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.remarks:after{
+    content: "";
+    position: absolute;
+    left: 58px;
+    top:60px;
+    width: 590px;
+    height: 1px;
+    border-bottom: dashed 1px #ccc;
+}
+.remarks:before{
+    content: "";
+    position: absolute;
+    left: 58px;
+    top:100px;
+    width: 590px;
+    height: 1px;
+    border-bottom: dashed 1px #ccc;
+}
+.remarks>div{
+    width: 590px;
+    margin: 0 auto;
+    line-height: 56px;
+    font-size: 14px;
+    padding-top: 20px;
+}
+.remarks>img{
+    vertical-align: middle;
+    position: absolute;
+    left: 30px;
+    top: 33px;
+}
+.remarks_text>textarea{
+    height: 80px;
+    border: 0;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    text-align: left;
+    resize: none;
+    line-height: 40px;
+}

@@ -124,7 +124,7 @@ $.ajax({
                     var sportName = $(this).find(".airType").attr("title").split("-")[0];
                     var eportName = $(this).find(".airType").attr("title").split("-")[1];
                     setSessionstorage("startCityH", sportName+"("+sCity+")");
-                    setSessionstorage("endCityH", eportName);
+                    setSessionstorage("endCityH", eportName+"("+eCity+")");
                     setSessionstorage("type", type);
                     window.location.href = "roundTrip.html?sCity=" + sCity + "&eCity=" + eCity + "&sTime=" + sTime + "&EDay=" + EDay + "&SDate=" + SDate + "&cityType=" + cityType+ "&eTime=" + eTime;
                 })

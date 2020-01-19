@@ -282,7 +282,6 @@ function initData (obj) {
     $('#txt_endCity').val(`${obj.ePort}(${obj.eCity})`)
     $('#txt_stime').val(obj.sTime)
     $('#txt_etime').val(obj.eTime)
-    obj.direct && $('#btn-direct').addClass('cur')
 }
 
 function uniqueArray(array, key){
