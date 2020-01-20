@@ -19,8 +19,9 @@ function setreplace(_reset){
         patterns:[
             { match:'csspath', replacement:_reset.csspath },
             { match:'fontpath', replacement:_reset.fontpath },
-            { match:'imgpath', replacement:_reset.imgpath },
+            { match:'imgpath', replacement: _reset.imgpath },
             { match:'xmimgpath', replacement:_reset.xmimgpath },
+            { match:'bannerimgpath', replacement:_reset.bannerimgpath },
             { match:'jspath', replacement:_reset.jspath },
             { match:'pagepath', replacement:_reset.pagepath },
             { match:'apispath', replacement:_reset.apispath },

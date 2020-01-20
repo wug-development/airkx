@@ -1,6 +1,7 @@
 {
     "imgpath" : "http://172.16.0.9:1239/images",
     "xmimgpath" : "http://172.16.0.9:1239/images",
+    "bannerimgpath" : "http://172.16.0.9:1239/images",
     "csspath" : "http://172.16.0.9:1239/css",
     "fontpath" : "./font",
     "jspath" : "http://172.16.0.9:1239/js",

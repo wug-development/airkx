@@ -15,6 +15,10 @@ function loadSwiper (obj) {
 }
 
 (() => {
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href = "http://m.airkx.com";
+    }
+
     let userID = sessionStorage.getItem("userID")
     if (userID) {
         $.ajax({
@@ -43,12 +47,28 @@ function loadSwiper (obj) {
     } else {
         $('#login_before').show()
     }
+
+    window.lessThenIE8 = function () {
+	    var UA = navigator.userAgent,
+	        isIE = UA.indexOf('MSIE') > -1,
+	        v = isIE ? /\d+/.exec(UA.split(';')[1]) : 'no ie';
+	    return v < 9;
+	}();
+	
+	//小于ie9执行
+	if(lessThenIE8){
+		$(window).ready(function(){thrid_codes();});
+	}else{
+		window.onload = thrid_codes;
+	}
 })()
 
-var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?beb7b2efca8d11fd0c524903355d8969";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();
+function thrid_codes () {
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?beb7b2efca8d11fd0c524903355d8969";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+}
