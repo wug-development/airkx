@@ -5,7 +5,7 @@ gulp.task('server', done => {
     connect.server({
         root: './dist/',
         livereload: true,
-        host: '172.16.0.9',
+        host: 'localhost',
         port: 1239,
         directoryListing:false
     })

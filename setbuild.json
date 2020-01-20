@@ -1,10 +1,10 @@
 {
-    "imgpath" : "http://www.airkx.com/new/images",
-    "xmimgpath" : "http://www.airkx.com/new/images",
-    "csspath" : "http://www.airkx.com/new/css",
+    "imgpath" : "http://www.airkx.com/images",
+    "xmimgpath" : "http://www.airkx.com/images",
+    "csspath" : "http://www.airkx.com/css",
     "fontpath" : "./font",
-    "jspath" : "http://www.airkx.com/new/js",
-    "pagepath" : "http://www.airkx.com/new",
+    "jspath" : "http://www.airkx.com/js",
+    "pagepath" : "http://www.airkx.com",
     "apispath" : "http://www.airkx.com/kaixing",
     "apiopath" : "http://www.airkx.com/kaixing",
     "money" : "&yen;"
