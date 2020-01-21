@@ -1,3 +1,5 @@
 (()=>{
     loadSwiper()
+
+    Writecustomer()
 })()

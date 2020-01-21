@@ -1,0 +1,140 @@
+.kf{
+    position: fixed;
+    width: 100px;
+    height: 440px;
+    background:url("@@xmimgpath/kf01.png") no-repeat center;
+    background-size: 100% 100%;
+    top:50%;
+    right: 6px;
+    margin-top: -220px;
+    z-index: 66;
+    padding: 1px;
+    box-sizing: border-box;
+}
+.kfl{
+    width: 20px;
+    float: left;
+    height: 440px;
+}
+.kfl  span{
+    display: block;
+    line-height: 26px;
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 158px;
+    margin-left: 5px;
+}
+.kfr{
+    width: 97px;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+}
+.kfr-tx{
+    width: 98px;
+    height: 98px;
+    overflow: hidden;
+    margin-top: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.kfr-tx img{
+    display: inline-block;
+    width: 100px;
+}
+.kf-name{
+    width: 100%;
+}
+.kf-name p{
+    margin-top: 10px;
+    font-family: "苹方";
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    color: #f00000;
+}
+.kf-name p:last-child{
+    font-size: 16px;
+}
+.kf-name p a{
+    color: #f00000;
+    text-decoration: underline;
+}
+.fw {
+    width:102px ;
+    margin: 0 auto;
+    text-align: center;
+}
+.fw li{
+    display: inline-block;
+    width: 75px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px dashed #f00000;
+    padding: 9px 0;
+    font-family: "苹方";
+    position: relative;
+}
+.fw li img,.fw li span{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.fw li span a{
+    color: #f00000;
+
+}
+.fw li i{
+    display: block;
+    width: 26px;
+    height:20px;
+    background-image: url(@@xmimgpath/customer_Spirit.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.fw li .kf_01{
+    background-position: -108px -118px;
+}
+.fw li .qq_01{
+    background-position: -138px -118px;
+}
+.fw li .wx_01{
+    background-position: -172px -118px;
+}
+.fw li .tel_01{
+    background-position: -205px -118px;
+}
+.weixinerweima{
+    width: 148px;
+    height: 140px;
+    position: absolute;
+    border-radius: 7px;
+    border: solid 1px #f00000;
+    left: -170px;
+    top: -80px;
+    opacity: 0;
+    cursor: pointer;
+}
+.shoujihao{
+    width: 148px;
+    height: 30px;
+    position: absolute;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    background-color: #fff;
+    border-radius: 7px;
+    border: solid 1px #f00000;
+    left: -170px;
+    top: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+.weixinerweima img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
