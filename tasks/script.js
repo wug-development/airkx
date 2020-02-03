@@ -7,6 +7,7 @@ const replace = require('gulp-replace-task') // 替换变量
 
 //处理业务js
 gulp.task("dealjs", done => {
+    console.log('处理dealjs')
     gulp.src("src/js/*.js")
         .pipe(replace(reoption))
         .pipe(babel({
@@ -20,6 +21,7 @@ gulp.task("dealjs", done => {
  
 //lib/js复制
 gulp.task("libjs", done => {
+    console.log('复制libjs')
     gulp.src("src/js/lib/**/*")
         .pipe(gulp.dest(distpath + "/js/lib")) //通过gulp 命令，自动输出dist下面js文件
         .pipe(livereload())
