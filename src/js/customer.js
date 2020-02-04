@@ -69,6 +69,8 @@ window.Writecustomer = function() {
                     $(".kfName").html(CLNAME);
                     $(".weixinerweima").find("img").attr("src",data.wx);
                     $(".shoujihao").html(data.phone);
+                    _.setItem('jrzx', data.phone);
+                    $('#sp_header_phone').text(data.phone)
                 })
         })
 }

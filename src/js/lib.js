@@ -224,7 +224,7 @@ window.alert = function(options){
         _html += "<p>";
         _html += options.text || "";
         _html += "</p>";
-        _html += "<div class='btn' id='btn_alert_close'>Close</div>";
+        _html += "<div class='btn' id='btn_alert_close'>确定</div>";
         _html += "</div>";
     }else{
         _html += "<div>";

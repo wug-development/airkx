@@ -178,4 +178,31 @@ $(function() {
             alert("请输入正确的手机号")
         }
     })
+    
+
+    $('#phoneNew').on('blur', function () {
+        let p = $(this).val().trim()
+        if (!_.checkTel(p)) {
+            alert('请输入正确的手机号码')
+        } else {
+            _.ajax({
+                url: '/FindLoginServlet',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    "Mobile": p
+                },
+                error: function() {
+                    alert("网络错误，请刷新重试")
+                },
+                success: function (data) {
+                    if (data == "1") {
+                        alert({text: '账号已存在，请登录！', callfun: function () {
+                            location.href = '@@pagepath/login.html'
+                        }})
+                    }
+                }
+            })
+        }
+    })
 })

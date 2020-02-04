@@ -381,6 +381,18 @@
             color: #666;
             box-sizing: border-box;
         }
+        .div_pass{
+            margin-top: 10px;
+            color: #DD5145;
+            display: flex;
+            justify-content: space-between;
+            div{
+                display: none;
+            }
+            #span_forget{
+                cursor: pointer;
+            }
+        }
         .btn{
             width: 300px;
             height: 50px;
@@ -413,6 +425,16 @@
                     box-sizing: border-box;
                     color: #666;
                 }
+            }
+        }
+    }
+}
+.banner-gn-box{
+    .bookticket-box{
+        width: 550px;
+        .form-txt-box{
+            .ddl-city{
+                width: 450px;
             }
         }
     }

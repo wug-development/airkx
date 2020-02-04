@@ -120,13 +120,37 @@ const checkBook = () => {
                     if (data == "1") {
                         $('#div_name,#div_email').hide()
                         $('.span_pass').text('登录密码：')
+                        $('.div_pass').find('div').show()
                     } else {
                         $('#div_name,#div_email').show()
                         $('.span_pass').text('设置订单查询密码：')
+                        $('.div_pass').find('div').hide()
                     }
                 }
             })
         }
+    });
+    $('#span_forget').on('click', function () {
+        let phone = $('#txt_phone').val().trim()
+        _.ajax({
+            url: '/Wangjimima',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                "phone": phone
+            },
+            error: function() {
+                alert("网络错误，请刷新重试")
+            },success: function (data) {
+                if (data == "-1") {
+                    alert("您还不是凯行网的会员，请先注册")
+                } else if (data == "0") {
+                    alert("短信发送失败，请联系服务人员")
+                } else if (data == "1") {
+                    alert("您的密码已经发送到您的手机，请注意查收")
+                }
+            }
+        })
     })
 
     let userID = _.getItem("userID")

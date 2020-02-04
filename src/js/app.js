@@ -100,6 +100,11 @@ function loadSwiper (obj) {
             }
             return A;
         };
+    };
+
+    if (sessionStorage && sessionStorage.getItem) {
+        var _p = sessionStorage.getItem('jrzx');
+        _p && $('#sp_header_phone').text(_p);
     }
 
     window.lessThenIE8 = function () {

@@ -50,7 +50,6 @@ const loadHtml = () => {
             $('#txt_price').text(obj.Paiojia)
             $('#txt_limit').text(obj.BZ)
         }
-        submitBook()
     }
 })()
 
