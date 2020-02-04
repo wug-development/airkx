@@ -148,6 +148,8 @@ const bindEvent = () => {
             alert('请选择出发日期')
         } else if (userTrip.type == '往返' && userTrip.eTime == '') {
             alert('请选择返回日期')
+        } else if (userTrip.type == '往返' && _.dateDiff(userTrip.eTime, userTrip.sTime) < 1) {
+            alert('返回日期最少比出发日期多一天')
         } else {
             let _search = `sCity=${userTrip.sCity}&eCity=${userTrip.eCity}&sTime=${userTrip.sTime}&eTime=${userTrip.eTime}`
             let _days = userTrip.type == '往返' ? _.dateDiff(userTrip.sTime, userTrip.eTime) : 0

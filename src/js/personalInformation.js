@@ -292,7 +292,7 @@ $(function() {
                                 <span>姓名:</span>\
                                 <input class="airPer" type="text">\
                                 <b>*</b>\
-                                <i>例如：zhangtiantian</i>\
+                                <i>例如：zhang/tiantian</i>\
                                 <p>该信息格式有误</p>\
                             </div>\
                              <div class="pi-item">\
@@ -349,7 +349,7 @@ $(function() {
                                 <span>姓名:</span>\
                                 <input class="airPer" type="text">\
                                 <b>*</b>\
-                                <i>例如：zhangtiantian</i>\
+                                <i>例如：zhang/tiantian</i>\
                                 <p>该信息格式有误</p>\
                             </div>\
                              <div class="pi-item">\
