@@ -36,7 +36,7 @@ function loadSwiper (obj) {
             if (location.href.indexOf('personalHomePage') > -1) {
                 $('#login_info').show()
                 $('#span_loginout').click(function () {
-                    sessionStorage.setItem("userID", '')
+                    sessionStorage.removeItem('userID')
                     window.location.href = '@@pagepath/index.html'
                 })
             } else {

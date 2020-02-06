@@ -763,12 +763,12 @@ $(function() {
                                                                     alert("网络错误，请刷新重试，或联系管理员")
                                                                 } else {
                                                                     setSessionstorage("userID", data);
-                                                                    var _text = "";
+                                                                    var _text = "订单提交成功！";
                                                                     if(getUrlParams('specialoffer') == "1"){
                                                                         _text = "，您申请的特价票已提交成功! 请耐心等待客服电话确认。";
                                                                     }
                                                                     alert({
-                                                                        text:"订单提交成功" + _text,
+                                                                        text:_text,
                                                                         callfun:function(){ 
                                                                             window.location.href = "@@pagepath/personalHomePage.html";
                                                                         }
@@ -1225,12 +1225,12 @@ $(function() {
                                                 alert("网络错误，请刷新重试，或联系管理员")
                                             } else {
                                                 setSessionstorage("userID", data);
-                                                var _text = "";
+                                                var _text = "订单提交成功！";
                                                 if(getUrlParams('specialoffer') == "1"){
-                                                    _text = "，您申请的特价票已提交成功! 请耐心等待客服电话确认。";
+                                                    _text = "您申请的特价票已提交成功! 请耐心等待客服电话确认。";
                                                 }
                                                 alert({
-                                                    text:"订单提交成功" + _text,
+                                                    text:_text,
                                                     callfun:function(){ 
                                                         window.location.href = "@@pagepath/personalHomePage.html";
                                                     }

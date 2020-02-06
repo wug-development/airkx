@@ -15,6 +15,9 @@ const checkBook = () => {
         if (phone == '') {
             alert('请输入手机号!')
             return false;
+        } else if (!_.checkTel(phone)) {
+            alert('请输入正确的手机号!')
+            return false;
         } else if (name == '' && $('#div_name').css('display') != 'none') {
             alert('请输入联系人!')
             return false;
