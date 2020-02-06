@@ -138,6 +138,8 @@ const bindEvent = () => {
         userTrip.sTime = $('#txt_stime').val().trim()
         if (userTrip.type == '往返') {
             userTrip.eTime = $('#txt_etime').val().trim()
+        } else {
+            userTrip.eTime = 'undefined'
         }
         userTrip.direct = $('#btn-direct').hasClass('cur')
         if (userTrip.sCity == '') {

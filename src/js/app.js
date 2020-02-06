@@ -4,7 +4,14 @@ function loadSwiper (obj) {
         loop: true,
         autoplay: 4000
     }
-    Object.assign(_defualt, obj)
+    if (obj) {
+        _defualt = {
+            box: obj.box || '.swiper-container',
+            loop: obj.loop || true,
+            autoplay: obj.autoplay || 4000
+        }
+    }
+
     var mySwiper = new Swiper(_defualt.box,{
         pagination: '.pagination',
         loop: _defualt.loop,
@@ -105,6 +112,8 @@ function loadSwiper (obj) {
     if (sessionStorage && sessionStorage.getItem) {
         var _p = sessionStorage.getItem('jrzx');
         _p && $('#sp_header_phone').text(_p);
+        var _img = sessionStorage.getItem('imgcode');
+        _img && $('.img-code').find('img').attr('src', _img);
     }
 
     window.lessThenIE8 = function () {

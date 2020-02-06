@@ -1711,11 +1711,15 @@ white-space: nowrap;
 
 .sirendingzhi {
     width: 1064px;
-    height: 332px;
     border: solid 1px #f00000;
     background-color: #eeeeee;
     margin-top: 20px;
     padding-left: 16px;
+    padding-bottom: 30px;
+}
+.dz-tip{
+    display: none;
+    color: #dd5145;
 }
 
 .sirendingzhiT {

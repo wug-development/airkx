@@ -4,7 +4,7 @@
     overflow: hidden;
     .banner-stu-box{
         height: 557px;
-        background: url('@@bannerimgpath/banner-lxs.jpg') no-repeat center;
+        background: url('@@bannerimgpath/banner-lxs.jpg') no-repeat left center;
     }
     .div-list{
         padding-bottom: 50px;
@@ -141,9 +141,17 @@
                     margin: 0;
                 }
             }
-            .dz-tip{
-                margin-top: 10px;
+            .div_pass{
                 color: #DD5145;
+                display: flex;
+                justify-content: space-between;
+                width: 360px;
+                div{
+                    display: none;
+                }
+                #span_forget{
+                    cursor: pointer;
+                }
             }
             .btn{
                 margin: 20px auto 0 auto;

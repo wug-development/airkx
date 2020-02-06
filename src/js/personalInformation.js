@@ -101,7 +101,7 @@ $(function() {
                                                                     <input class="airPer" type="text" value="' + CYCJR[k].CjrName + '">\
                                                                     <b>*</b>\
                                                                     <i>例如：zhang/tiantian</i>\
-                                                                    <p>该信息格式有误</p>\
+                                                                    <p>该信息格式有误，注意添加“/”</p>\
                                                                 </div>\
                                                                  <div class="pi-item">\
                                                                     <span>出生年月:</span>\
@@ -293,7 +293,7 @@ $(function() {
                                 <input class="airPer" type="text">\
                                 <b>*</b>\
                                 <i>例如：zhang/tiantian</i>\
-                                <p>该信息格式有误</p>\
+                                <p>该信息格式有误，注意添加“/”</p>\
                             </div>\
                              <div class="pi-item">\
                                 <span>出生年月:</span>\
@@ -350,7 +350,7 @@ $(function() {
                                 <input class="airPer" type="text">\
                                 <b>*</b>\
                                 <i>例如：zhang/tiantian</i>\
-                                <p>该信息格式有误</p>\
+                                <p>该信息格式有误，注意添加“/”</p>\
                             </div>\
                              <div class="pi-item">\
                                 <span>出生年月:</span>\
@@ -442,7 +442,7 @@ $(function() {
         $(".airPer").off('blur').on("blur", function() {
             var $this = $(this)
             $this.val($this.val().replace(/ /g,''));
-            if (englishName($this.val())) {
+            if (englishName($this.val()) && $this.val().indexOf('/')>0) {
                 $this.css("borderColor", "green")
                 $this.siblings("p").hide();
                 $engname = true;
@@ -505,6 +505,8 @@ $(function() {
                     isturn = true;
                 	$('.chengjiren').each(function(){
                 		if($.trim($(this).find(".airPer").val()) == ''){
+                			isturn = false;
+                		}else if($.trim($(this).find(".airPer").val()).indexOf('/') < 1){
                 			isturn = false;
                 		}else if($.trim($(this).find(".airchusheng").val()) == ''){
                 			isturn = false;
@@ -765,7 +767,7 @@ $(function() {
                                                                     setSessionstorage("userID", data);
                                                                     var _text = "订单提交成功！";
                                                                     if(getUrlParams('specialoffer') == "1"){
-                                                                        _text = "，您申请的特价票已提交成功! 请耐心等待客服电话确认。";
+                                                                        _text = "您申请的特价票已提交成功! 请耐心等待客服电话确认。";
                                                                     }
                                                                     alert({
                                                                         text:_text,

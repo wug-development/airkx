@@ -96,7 +96,8 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: linear-gradient(to bottom right, #f15f45, 50%, #df1c23);
+                    background: url('@@imgpath/index-yj-bg.png') no-repeat center;
+                    background-size: 100%;
                 }
                 .item-name{
                     margin-top: 20px;

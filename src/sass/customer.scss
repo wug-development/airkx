@@ -1,12 +1,12 @@
 .kf{
     position: fixed;
     width: 100px;
-    height: 440px;
+    height: 424px;
     background:url("@@xmimgpath/kf01.png") no-repeat center;
     background-size: 100% 100%;
     top:50%;
     right: 6px;
-    margin-top: -220px;
+    margin-top: -245px;
     z-index: 66;
     padding: 1px;
     box-sizing: border-box;
@@ -75,6 +75,9 @@
     padding: 9px 0;
     font-family: "苹方";
     position: relative;
+}
+.fw li:last-child{
+    border: 0;
 }
 .fw li img,.fw li span{
     display: inline-block;

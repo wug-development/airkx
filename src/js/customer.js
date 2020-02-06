@@ -70,7 +70,9 @@ window.Writecustomer = function() {
                     $(".weixinerweima").find("img").attr("src",data.wx);
                     $(".shoujihao").html(data.phone);
                     _.setItem('jrzx', data.phone);
-                    $('#sp_header_phone').text(data.phone)
+                    _.setItem('imgcode', data.wx);
+                    $('#sp_header_phone').text(data.phone);
+                    $('.img-code').find('img').attr('src', data.wx);
                 })
         })
 }

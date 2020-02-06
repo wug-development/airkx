@@ -117,7 +117,11 @@ $.ajax({
                     var eCity = $(this).find(".listtitle").attr("title").split("-")[1];
                     var type = $(this).find(".airType").html().substring(1, 3);
                     var sTime = $(this).find(".listdate").find("span").html().split("---")[0];
-                    var eTime = $(this).find(".listdate").find("span").html().split("---")[1];
+                    var eTime = 'undefined';//$(this).find(".listdate").find("span").html().split("---")[1]
+                    sTime = _.dateFormat(_.getAfterNDate(7,'d'),'yyyy-MM-dd');                    
+                    if (type == '往返') {
+                        eTime = _.dateFormat(_.getAfterNDate(21,'d'),'yyyy-MM-dd');
+                    }
                     var SDate = sTime.split("-")[1];
                     var EDay = DateMinus(eTime, sTime);
                     var cityType = 1;

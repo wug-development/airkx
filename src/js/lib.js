@@ -23,7 +23,7 @@ const _ = {
                 date.setMonth(date.getMonth() + number * 3);
                 break;
             }
-            case "m": {
+            case "M": {
                 date.setMonth(date.getMonth() + number);
             }
             case "w": {
@@ -247,8 +247,7 @@ window.alert = function(options){
     }
 };
 function closealert(){
-    var _layer = document.getElementById("wg_layer_alert");
-    _layer.remove();
+    $("#wg_layer_alert").remove();
 }
 
 

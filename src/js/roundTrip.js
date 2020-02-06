@@ -26,7 +26,7 @@ $(function() {
     $endCitySelect.siblings('input[type=hidden]').val(cityType + "$" + eCity);
     $("#startTime").val(sTime);
     var $$endTime=$("#endTime");
-    if (eTime != "undefined") {
+    if (eTime && eTime != "undefined") {
         $$endTime.val(eTime);
         $route.find("img").attr("src", "@@imgpath/route_wf_01.png")
         $route.find('b').eq(1).html("去程" + sTime)
@@ -1686,6 +1686,9 @@ function NOP() {
     $(".not-searched-wrap").show();
     $("#loading").hide();
     var $emall = false;
+    if (_.getItem('userID')) {
+        $('.sirendingzhi').find('ul').hide()
+    }
     $(".sirenyouxiang").blur(function() {
         var $this = $(this);
         if (!emall($this.val())) {
@@ -1721,17 +1724,20 @@ function NOP() {
                 .done(function(data) {
                     var $sirendingzhiUL=$(".sirendingzhi").find("ul").find('li');
                     var $wangjima=$(".wangjima");
+                    var $dzts=$(".dz-tip");
                     var $sirenmima=$(".sirenmima").siblings('span');
                     if (data == "1") {
-                        $sirendingzhiUL.eq(0).hide();
+                        $sirendingzhiUL.eq(1).hide();
                         $sirendingzhiUL.eq(2).hide();
                         $wangjima.show();
+                        $dzts.show();
                         $ppp=true;
                         $sirenmima.html("登陆密码");
                     } else {
-                        $sirendingzhiUL.eq(0).show();
+                        $sirendingzhiUL.eq(1).show();
                         $sirendingzhiUL.eq(2).show();
                         $wangjima.hide();
+                        $dzts.hide();
                         $ppp=false;
                         $sirenmima.html("请设置您的订单查询密码");
                     }
