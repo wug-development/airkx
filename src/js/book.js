@@ -138,8 +138,6 @@ const bindEvent = () => {
         userTrip.sTime = $('#txt_stime').val().trim()
         if (userTrip.type == '往返') {
             userTrip.eTime = $('#txt_etime').val().trim()
-        } else {
-            userTrip.eTime = 'undefined'
         }
         userTrip.direct = $('#btn-direct').hasClass('cur')
         if (userTrip.sCity == '') {
@@ -153,7 +151,13 @@ const bindEvent = () => {
         } else if (userTrip.type == '往返' && _.dateDiff(userTrip.eTime, userTrip.sTime) < 1) {
             alert('返回日期最少比出发日期多一天')
         } else {
-            let _search = `sCity=${userTrip.sCity}&eCity=${userTrip.eCity}&sTime=${userTrip.sTime}&eTime=${userTrip.eTime}`
+            let _search = `sCity=${userTrip.sCity}&eCity=${userTrip.eCity}&sTime=${userTrip.sTime}`
+            if (userTrip.type == '往返') {
+                _search += `&eTime=${userTrip.eTime}`
+            } else {
+                _search += '&eTime=undefined'
+                userTrip.eTime = ''
+            }
             let _days = userTrip.type == '往返' ? _.dateDiff(userTrip.sTime, userTrip.eTime) : 0
             let _sdate = userTrip.sTime.split("-")[1];
             let url = ''
