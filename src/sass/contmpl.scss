@@ -1,0 +1,90 @@
+.contmpl-box{
+    margin: 0;
+    overflow: hidden;
+    font-family: '微软雅黑', sans-serif;
+    .banner-contmpl-box{
+        height: 302px;
+        background: url('@@bannerimgpath/banner-aboutme.png') no-repeat center;
+        .my-data{
+            color: #fff;
+            text-align: center;
+            padding-top: 150px;
+            .data-title{
+                font-size: 36px;
+            }
+        }
+    }
+    .contmpl-content{
+        padding: 30px 0 60px 0;
+        color: #333333;
+        line-height: 28px;
+        .cmkg{
+            padding: 0 100px;
+        }
+        .line36{
+            padding: 10px 0;
+            text-indent: 32px;
+        }
+        h1{
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+        }
+        h2{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        h3{
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .tmpl-text{
+            display: flex;
+            .lab{
+                float: left;
+                width: 100px;
+                min-width: 100px;
+            }
+            div{
+                float: left;
+            }
+        }
+        table{
+            background-color: #000;
+            td{
+                background-color: #fff;
+                border: 1px solid #000;
+                padding-left: 5px;
+                min-width: 100px;
+                height: 40px;
+                line-height: 40px;
+            }
+            .w40{
+                width: 400px;
+            }
+            .w20{
+                width: 200px;
+            }
+        }
+        .blod{
+            font-weight: bold;
+        }
+        .center{
+            text-align: center;
+        }
+        .clear{
+            clear: both;
+        }
+        .tmpl-jy{
+            display: flex;
+            >div{
+                width: 50%;
+                float: left;
+                .sp10{
+                    padding-left: 100px;
+                }
+            }
+        }
+    }
+}
