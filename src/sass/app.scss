@@ -47,6 +47,7 @@ a{
             height: 100%;
             display: flex;
             align-items: center;
+            float: right;
             .link-method{
                 height: 26px;
                 line-height: 26px;
@@ -90,6 +91,7 @@ a{
                 text-align: center;
                 cursor: pointer;
                 user-select: none;
+                float: left;
                 a{
                     display: block;
                     width: 100%;

@@ -1,3 +1,4 @@
+require('babel-polyfill')
 const gulp = require('gulp')
 const livereload = require('gulp-livereload') // 热更新
 const babel = require('gulp-babel'); // JS 转es5
