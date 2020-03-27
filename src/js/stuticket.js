@@ -10,15 +10,21 @@ let bindEven = () => {
 
 const loadHtml = () => {
     let _d = [], data = []
-    for (let item of flightArr) {
-        if (!_d.includes(item.Zhou)) {
-            _d.push(item.Zhou)
+    for (let item=0; item < flightArr.length; item++) {
+        if (!_d.includes(flightArr[item].Zhou)) {
+            _d.push(flightArr[item].Zhou)
         }
     }
-    for (let m of _d) {
+    for (let m=0; m < _d.length; m++) {
+        let _arr = []
+        for (let f=0; f < flightArr.length; f++) {
+            if (flightArr[f].Zhou === _d[m]) {
+                _arr.push(flightArr[f])
+            }
+        }
         data.push({
-            name: m,
-            children: flightArr.filter((x) => x.Zhou === m)
+            name: _d[m],
+            children: _arr
         })
     }
     $('#div-list').html(_.render('#tmpList', data))

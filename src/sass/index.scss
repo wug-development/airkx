@@ -32,6 +32,7 @@
                 width: 300px;
                 height: 422px;
                 box-shadow: 0 0 5px #eee;
+                float: left;
                 .item-img{
                     height: 210px;
                     overflow: hidden;
@@ -88,16 +89,19 @@
                 width: 220px;
                 text-align: center;
                 position: relative;
+                float: left;
                 .item-img{
                     margin: 0 auto;
                     width: 154px;
                     height: 154px;
                     border-radius: 154px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     background: url('@@imgpath/index-yj-bg.png') no-repeat center;
                     background-size: 100%;
+                    position: relative;
+                    img{
+                        position: relative;
+                        top: 34px;
+                    }
                 }
                 .item-name{
                     margin-top: 20px;
@@ -126,6 +130,7 @@
         .qyyj-more{
             margin-top: 40px;
             text-align: center;
+            clear: both;
             a{
                 display: block;
                 margin: 0 auto;
@@ -145,11 +150,15 @@
             height: 100%;
         }
         .qzbx-qz{
+            float: left;
+            width: 50%;
             flex: 1;
             height: 571px;
             background: url('@@imgpath/icon-qianzheng.png') no-repeat right center;
         }
         .qzbx-bx{
+            float: right;
+            width: 50%;
             flex: 1;
             height: 571px;
             background: url('@@imgpath/icon-baoxian.png') no-repeat left center;
@@ -158,6 +167,7 @@
     .hzhb-box{
         padding-top: 100px;
         text-align: center;
+        clear: both;
         .hzhb-title{
             font-size: 36px;
             color: #333;
@@ -187,6 +197,7 @@
                         overflow: hidden;
                         justify-content: center;
                         align-items: center;
+                        float: left;
                         img{
                             max-width: 100%;
                             max-height: 100%;

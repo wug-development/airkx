@@ -21,8 +21,11 @@
                 justify-content: center;
                 padding-top: 70px;
                 font-size: 16px;
+                width: 1300px;
+                margin: 0 auto;
                 .data-item{
                     margin: 0 75px;
+                    float: left;
                     .item-data{
                         font-size: 44px;
                     }
@@ -33,11 +36,14 @@
     .company-info{
         background-color: #fff;
         padding: 96px 0;
+        clear: both;
         .aboutme-info-body{
             display: flex;
             color: #333;
             .info-content{
                 padding-right: 38px;
+                float: left;
+                width: 532px;
                 .info-title{
                     font-size: 36px;
                     font-family: '微软雅黑', sans-serif;
@@ -59,6 +65,8 @@
                 }
             }
             .aboutme-info-img{
+                float: left;
+                width: 670px;
                 img{
                     display: block;
                     width: 670px;
@@ -79,6 +87,7 @@
         background-color: #fff;
         text-align: center;
         font-family: '微软雅黑', sans-serif;
+        clear: both;
         .team-title{
             font-size: 36px;
             color: #333;
@@ -111,6 +120,9 @@
             margin-top: 60px;
             display: flex;
             justify-content: space-between;
+            div{
+                float: left;
+            }
             img{
                 display: block;
                 width: 200px;
@@ -119,11 +131,13 @@
         .zizhi-cert{
             margin-top: 30px;
             padding: 40px 0;
+            clear: both;
             .zizhi-cert-list{
                 margin: 0;
                 height: 900px !important;
                 .zizhi-cert-item{
                     height: 900px !important;
+                    width: 1240px !important;
                     div{
                         background-size: 100%;
                         display: flex;

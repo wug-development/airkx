@@ -38,6 +38,7 @@
                 flex-wrap: wrap;
                 width: 30px;
                 justify-content: center;
+                float: left;
                 span{
                     height: 40px;
                     line-height: 40px;
@@ -93,6 +94,7 @@
             cursor: pointer;
             user-select: none;
             margin-left: 12px;
+            float: left;
         }
         .btn-way:first-child{
             margin-left: 0;
@@ -113,6 +115,7 @@
     .book-form-box{
         margin-top: 15px;
         padding: 0;
+        clear: both;
         .book-change-org{
             height: 20px;
             line-height: 20px;
@@ -124,6 +127,7 @@
                 padding-left: 20px;
                 cursor: pointer;
                 user-select: none;
+                float: left;
             }
             .book-btn::before{
                 content: '';
@@ -163,6 +167,7 @@
             white-space: nowrap;
             cursor: pointer;
             line-height: 15px;
+            clear: both;
             span{
                 padding-right: 10px;
                 box-sizing: border-box;
@@ -170,12 +175,15 @@
             }
             .txt{
                 border: 0;
-                width: 100%;
+                width: 360px;
                 height: 100%;
                 cursor: pointer;
                 padding-left: 10px;
                 box-sizing: border-box;
                 font-family: "思源黑体", SourceHanSansCN, sans-serif;
+            }
+            .txt-small{
+                width: 125px;
             }
             .back-date{
                 display: flex;
@@ -185,6 +193,7 @@
                 box-sizing: border-box;
                 padding-left: 40px;
                 background: url('@@xmimgpath/icon_change.png') no-repeat left center;
+                float: left;
             }
             .start-date{
                 display: flex;
@@ -192,6 +201,7 @@
                 height: 100%;
                 align-items: center;
                 box-sizing: border-box;
+                float: left;
             }
             .ddl-city{
                 position: absolute;
@@ -328,6 +338,7 @@
             margin-right: 20px;
             cursor: pointer;
             user-select: none;
+            float: left;
         }
         .btn-search:active{
             background-color: #f00000;
@@ -337,6 +348,7 @@
             line-height: 20px;
             display: flex;
             padding: 10px 21px;
+            float: left;
             .book-btn{
                 position: relative;
                 margin-right: 15px;
@@ -386,6 +398,7 @@
             color: #DD5145;
             display: flex;
             justify-content: space-between;
+            clear: both;
             div{
                 display: none;
             }
@@ -400,6 +413,7 @@
             margin: 25px auto 0 auto;
             font-size: 18px;
             border-radius: 4px;
+            clear: both;
         }
         .txts-box{
             display: flex;
@@ -418,8 +432,9 @@
                 padding-left: 10px;
                 box-sizing: border-box;
                 color: #666;
+                float: left;
                 input{
-                    width: 100%;
+                    width: 184px;
                     border: 0;
                     padding-left: 10px;
                     box-sizing: border-box;
