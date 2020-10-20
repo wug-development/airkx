@@ -375,7 +375,7 @@ $(function() {
                                         "OrderState": OrderState,
                                         "FKState": FKState,
                                         "AirType": AirType,
-                                        "CLNAME": CLNAME,
+                                        "CLNAME": '', // CLNAME,
                                         "userID": userID,
                                         "LXR": LXR,
                                         "Mobile": Mobile,
