@@ -10,7 +10,7 @@ window.customer = ' <div class="kf">\
         <ul class="fw">\
             <li>\
                 <i class="kf_01"></i>\
-                <span><a href="https://www16.53kf.com/webCompany.php?arg=10173611&kf_sign=zQxMTMTUyMAyMjEwMTg1MDc0NDA4MDA0&style=1" target="_blank">线上咨询</a></span>\
+                <span><a href="https://tb.53kf.com/code/client/10173611/1" target="_blank">线上咨询</a></span>\
             </li>\
             <li>\
                 <i class="qq_01"></i>\
