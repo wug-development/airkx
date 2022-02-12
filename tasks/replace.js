@@ -14,21 +14,21 @@ gulp.task("replacetest", done => {
     done()
 })
 
-function setreplace(_reset){
+function setreplace(_reset) {
     reoption = {
-        patterns:[
-            { match:'csspath', replacement:_reset.csspath },
-            { match:'fontpath', replacement:_reset.fontpath },
-            { match:'imgpath', replacement: _reset.imgpath },
-            { match:'xmimgpath', replacement:_reset.xmimgpath },
-            { match:'bannerimgpath', replacement:_reset.bannerimgpath },
-            { match:'jspath', replacement:_reset.jspath },
-            { match:'js1path', replacement:_reset.js1path },
-            { match:'pagepath', replacement:_reset.pagepath },
-            { match:'apispath', replacement:_reset.apispath },
-            { match:'apiopath', replacement:_reset.apiopath },
-            { match:'money', replacement:_reset.money },
-            { match:'verson', replacement:(new Date()).getTime() }
+        patterns: [
+            { match: 'csspath', replacement: _reset.csspath },
+            { match: 'fontpath', replacement: _reset.fontpath },
+            { match: 'imgpath', replacement: _reset.imgpath },
+            { match: 'xmimgpath', replacement: _reset.xmimgpath },
+            { match: 'bannerimgpath', replacement: _reset.bannerimgpath },
+            { match: 'jspath', replacement: _reset.jspath },
+            { match: 'js1path', replacement: _reset.js1path },
+            { match: 'pagepath', replacement: _reset.pagepath },
+            { match: 'apispath', replacement: _reset.apispath },
+            { match: 'apimpath', replacement: _reset.apimpath },
+            { match: 'money', replacement: _reset.money },
+            { match: 'verson', replacement: (new Date()).getTime() }
         ]
     }
 }

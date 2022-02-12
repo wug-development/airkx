@@ -1,36 +1,65 @@
-.booknotes-box{
-    margin: 0;
-    overflow: hidden;
-    font-family: '微软雅黑', sans-serif;
-    .banner-booknotes-box{
-        height: 302px;
-        background: url('@@bannerimgpath/banner-aboutme.png') no-repeat center;
-        .my-data{
-            color: #fff;
-            text-align: center;
-            padding-top: 150px;
-            .data-title{
-                font-size: 36px;
-            }
-        }
+.booknotes-box {
+  margin: 0;
+  overflow: hidden;
+  font-family: '微软雅黑', sans-serif;
+  .banner-booknotes-box {
+    height: 302px;
+    background: url('@@bannerimgpath/banner-aboutme.png') no-repeat center;
+    .my-data {
+      color: #fff;
+      text-align: center;
+      padding-top: 150px;
+      .data-title {
+        font-size: 36px;
+      }
     }
-    .booknotes-content{
-        padding: 30px 0 60px 0;
-        color: #333333;
-        line-height: 28px;
-        h1{
-            margin-top: 30px;
-            font-size: 20px;
-            font-weight: normal;
-        }
-        h2{
-            font-size: 16px;
-            font-weight: normal;
-            margin-top: 30px;
-        }
-        h3{
-            font-size: 14px;
-            font-weight: normal;
-        }
+  }
+  .booknotes-content {
+    padding: 30px 0 60px 0;
+    color: #333333;
+    line-height: 28px;
+    h1 {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: normal;
     }
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 30px;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+  .booknotes-btn {
+    margin: 0 auto;
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    -moz-padding-start: npx;
+    -moz-padding-end: npx;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    *zoom: 1;
+    *overflow: visible;
+    -webkit-transition: background-color 0.1s linear;
+    -moz-transition: background-color 0.1s linear;
+    -o-transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear;
+    &:hover {
+      background-color: #343434;
+      border-color: #343434;
+    }
+  }
 }

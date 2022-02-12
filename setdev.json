@@ -1,13 +1,13 @@
 {
-    "imgpath" : "http://localhost:1239/images",
-    "xmimgpath" : "http://localhost:1239/images",
-    "bannerimgpath" : "http://localhost:1239/images",
-    "csspath" : "http://localhost:1239/css",
-    "fontpath" : "./font",
-    "jspath" : "http://localhost:1239/js",
-    "js1path" : "http://localhost:1239/js",
-    "pagepath" : "http://localhost:1239",
-    "apispath" : "http://www.airkx.com/kaixing",
-    "apiopath" : "http://192.168.0.19:8666/",
-    "money" : "&yen;"
+  "imgpath": "http://localhost:1239/images",
+  "xmimgpath": "http://localhost:1239/images",
+  "bannerimgpath": "http://localhost:1239/images",
+  "csspath": "http://localhost:1239/css",
+  "fontpath": "./font",
+  "jspath": "http://localhost:1239/js",
+  "js1path": "http://localhost:1239/js",
+  "pagepath": "http://localhost:1239",
+  "apispath": "http://www.airkx.com/kaixing",
+  "apimpath": "http://192.168.0.19:8666/",
+  "money": "&yen;"
 }
