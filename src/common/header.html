@@ -1,31 +1,52 @@
 <div class="header-box">
-    <div class="box-width header-body">
-        <div class="logo-box">
-            <a href="@@pagepath"><img src="@@imgpath/logo.png" alt="凯行网"></a>
-        </div>
-        <div class="link-lg-box">
-            <div class="link-method">
-                订票热线：400-722-7722&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;010-64060909&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span id="sp_header_phone">18601183538</span> 
-            </div>
-            <div class="lg-reg-box" id="login_before">
-                <span><a href="@@pagepath/login.html">登录</a></span>|<span><a href="@@pagepath/register.html">注册</a></span>
-            </div>
-            <div class="lg-reg-box" id="login_after">
-                <span class="header_uname"></span>|<span><a href="@@pagepath/personalHomePage.html">我的订单</a></span>
-            </div>
-            <div class="lg-reg-box" id="login_info">
-                <span class="header_uname"></span>|<span id="span_loginout">退出</span>
-            </div>
-        </div>
+  <div class="box-width header-body">
+    <div class="logo-box">
+      <a href="@@pagepath"><img src="@@imgpath/logo.png" alt="凯行网" /></a>
     </div>
-    <div class="menu-box">
-        <div class="box-width menu-body">
-            <div class='m-index @@if (context.index==="0" ) { cur}'><a href="@@pagepath">首页</a></div>
-            <div class='m-gjticket @@if (context.index==="1" ) { cur}'><a href="@@pagepath/internationalairticket.html">国际机票</a></div>
-            <div class='m-gnticket @@if (context.index==="2" ) { cur}'><a href="@@pagepath/inlandairticket.html">国内机票</a></div>
-            <div class='m-stuticket @@if (context.index==="3" ) { cur}'><a href="@@pagepath/studentticket.html">留学生机票</a></div>
-            <div class='m-aboutme @@if (context.index==="4" ) { cur}'><a href="@@pagepath/aboutme.html">关于我们</a></div>
-            <div class='m-linkme @@if (context.index==="5" ) { cur}'><a href="@@pagepath/contactus.html">联系我们</a></div>
-        </div>
+    <div class="link-lg-box">
+      <div class="link-method">
+        订票热线：400-722-7722&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;010-64060909&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span
+          id="sp_header_phone"
+          >18601183538</span
+        >
+      </div>
+      <div class="lg-reg-box" id="login_before">
+        <span><a href="@@pagepath/login.html">登录</a></span
+        >|<span><a href="@@pagepath/register.html">注册</a></span>
+      </div>
+      <div class="lg-reg-box" id="login_after">
+        <span class="header_uname"></span>|<span
+          ><a href="@@pagepath/personalHomePage.html">我的订单</a></span
+        >
+      </div>
+      <div class="lg-reg-box" id="login_info">
+        <span class="header_uname"></span>|<span id="span_loginout">退出</span>
+      </div>
     </div>
+  </div>
+  <div class="menu-box">
+    <div class="box-width menu-body">
+      <div class="m-index @@if (context.index==='0' ) { cur}">
+        <a href="@@pagepath">首页</a>
+      </div>
+      <div class="m-gjticket @@if (context.index==='1' ) { cur}">
+        <a href="@@pagepath/internationalairticket.html">国际机票</a>
+      </div>
+      <div class="m-gnticket @@if (context.index==='2' ) { cur}">
+        <a href="@@pagepath/inlandairticket.html">国内机票</a>
+      </div>
+      <div class="m-stuticket @@if (context.index==='3' ) { cur}">
+        <a href="@@pagepath/studentticket.html">留学生机票</a>
+      </div>
+      <div class="m-aboutme @@if (context.index==='4' ) { cur}">
+        <a href="@@pagepath/aboutme.html">关于我们</a>
+      </div>
+      <div class="m-linkme @@if (context.index==='5' ) { cur}">
+        <a href="@@pagepath/contactus.html">联系我们</a>
+      </div>
+      <div class="m-news @@if (context.index==='6' ) { cur}">
+        <a href="@@pagepath/booknotes.html">行业资讯</a>
+      </div>
+    </div>
+  </div>
 </div>

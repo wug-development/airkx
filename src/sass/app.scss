@@ -1,352 +1,389 @@
-html{
+html {
+  margin: 0;
+  padding: 0;
+  body {
     margin: 0;
     padding: 0;
-    body{
-        margin: 0;
-        padding: 0;
-        font-family: "思源黑体", "SourceHanSansCN", sans-serif;
-        background-color: #fff;
-        font-size: 14px;
-        min-width: 1240px;
-    }
-    .scroll-body{
-        padding-top: 170px;
-    }
-}
-div,p,ul,li,ol,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{
-    margin:0;
-    padding:0;
-    list-style:none;
-}
-i{
-    font-style: normal;
-}
-input, textarea{ 
-    border-radius: 0; 
-    outline: none; 
-}
-a{
-    text-decoration:none; 
-    color: inherit;
-}
-*:focus {outline: none;}
-/* 公用宽度1240 */
-.box-width{ 
-    width: 1240px;
-    margin: 0 auto;
-}
-.header-box{
-    height: 90px;
+    font-family: '思源黑体', 'SourceHanSansCN', sans-serif;
     background-color: #fff;
-    position: relative;
-    .header-body{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .logo-box{
-            float: left;
-        }
-        .link-lg-box{
-            height: 100%;
-            display: flex;
-            align-items: center;
-            float: right;
-            .link-method{
-                float: left;
-                height: 26px;
-                line-height: 26px;
-                padding-left: 32px;
-                font-size: 20px;
-                background: url('@@xmimgpath/icon-phone.png') no-repeat left center;
-            }
-            .lg-reg-box{
-                display: none;
-                float: right;
-                height: 32px;
-                line-height: 32px;
-                margin-left: 50px;
-                padding: 0 8px;
-                color: #fff;
-                background-color: #03122c;
-                border-radius: 4px;
-                text-align: center;
-                white-space: nowrap;
-                span{
-                    padding: 0 16px;
-                    cursor: pointer;
-                }
-            }
-        }
+    font-size: 14px;
+    min-width: 1240px;
+  }
+  .scroll-body {
+    padding-top: 170px;
+  }
+}
+div,
+p,
+ul,
+li,
+ol,
+table,
+tbody,
+tr,
+td,
+textarea,
+form,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+dl,
+dt,
+dd,
+img,
+iframe,
+header,
+nav,
+section,
+article,
+footer,
+figure,
+figcaption,
+menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+input,
+textarea {
+  border-radius: 0;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+*:focus {
+  outline: none;
+}
+/* 公用宽度1240 */
+.box-width {
+  width: 1240px;
+  margin: 0 auto;
+}
+.header-box {
+  height: 90px;
+  background-color: #fff;
+  position: relative;
+  .header-body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-box {
+      float: left;
     }
-    .menu-box{
-        position: absolute;
-        top: 90px;
-        left: 0;
-        width: 100%;
-        height: 54px;
-        line-height: 54px;
-        background-color: rgba(0, 0, 0, .4);
+    .link-lg-box {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      float: right;
+      .link-method {
+        float: left;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 32px;
+        font-size: 20px;
+        background: url('@@xmimgpath/icon-phone.png') no-repeat left center;
+      }
+      .lg-reg-box {
+        display: none;
+        float: right;
+        height: 32px;
+        line-height: 32px;
+        margin-left: 50px;
+        padding: 0 8px;
         color: #fff;
-        z-index: 1;
-        .menu-body{
-            display: flex;
-            div{
-                margin-right: 40px;
-                font-size: 16px;
-                text-align: center;
-                cursor: pointer;
-                user-select: none;
-                float: left;
-                a{
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    padding: 0 20px 0 50px;
-                    box-sizing: border-box;
-                }
-            }
-            .m-index{
-                background: url('@@xmimgpath/icon-index.png') no-repeat center;
-                background-position: 20px 16px;
-            }
-            .m-gjticket{
-                background: url('@@xmimgpath/icon-gj.png') no-repeat center;
-                background-position: 20px 16px;
-            }
-            .m-gnticket{
-                background: url('@@xmimgpath/icon-gn.png') no-repeat center;
-                background-position: 20px 18px;
-            }
-            .m-stuticket{
-                background: url('@@xmimgpath/icon-lxs.png') no-repeat center;
-                background-position: 20px 17px;
-            }
-            .m-aboutme{
-                background: url('@@xmimgpath/icon-gywm.png') no-repeat center;
-                background-position: 20px 18px;
-            }
-            .m-linkme{
-                background: url('@@xmimgpath/icon-lxwm.png') no-repeat center;
-                background-position: 20px 17px;
-            }
-            .cur{
-                background-color: #de1721;
-            }
-            div:hover{
-                background-color: #de1721;
-            }
+        background-color: #03122c;
+        border-radius: 4px;
+        text-align: center;
+        white-space: nowrap;
+        span {
+          padding: 0 16px;
+          cursor: pointer;
         }
+      }
     }
-    .menu-box::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        box-shadow: 0 5px 10px rgba(0,0,0,.36);
-    }
-}
-.footer-box{
-    background-color: #212121;
+  }
+  .menu-box {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+    background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
-    .ft-yewu{
-        height: 212px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .yw-label{
-            width: 300px;
-            height: 80px;
-            display: flex;
-            float: left;
-            .yw-fbkj{
-                background: url('@@xmimgpath/icon-fbkjfw.png') no-repeat center;
-            }
-            .yw-lhjszq{
-                background: url('@@xmimgpath/icon-lhjszq.png') no-repeat center;
-            }
-            .yw-ppys{
-                background: url('@@xmimgpath/icon-ppys.png') no-repeat center;
-            }
-            .yw-kxwys{
-                background: url('@@xmimgpath/icon-kxwys.png') no-repeat center;
-            }
-            .yw-icon{
-                width: 80px;
-                height: 80px;
-                background-color: #fff;
-                border-radius: 80px;
-            }
-            .yw-content{
-                width: 220px;
-                padding-left: 10px;
-                box-sizing: border-box;
-                color: #888888;
-                .yw-title{
-                    color: #fff;
-                    font-size: 16px;
-                    margin-bottom: 10px;
-                }
-            }
+    z-index: 1;
+    .menu-body {
+      display: flex;
+      div {
+        margin-right: 40px;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        float: left;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 0 20px 0 50px;
+          box-sizing: border-box;
         }
+      }
+      .m-index {
+        background: url('@@xmimgpath/icon-index.png') no-repeat center;
+        background-position: 20px 16px;
+      }
+      .m-gjticket {
+        background: url('@@xmimgpath/icon-gj.png') no-repeat center;
+        background-position: 20px 16px;
+      }
+      .m-gnticket {
+        background: url('@@xmimgpath/icon-gn.png') no-repeat center;
+        background-position: 20px 18px;
+      }
+      .m-stuticket {
+        background: url('@@xmimgpath/icon-lxs.png') no-repeat center;
+        background-position: 20px 17px;
+      }
+      .m-aboutme {
+        background: url('@@xmimgpath/icon-gywm.png') no-repeat center;
+        background-position: 20px 18px;
+      }
+      .m-linkme {
+        background: url('@@xmimgpath/icon-lxwm.png') no-repeat center;
+        background-position: 20px 17px;
+      }
+      .m-news {
+        background: url('@@xmimgpath/icon-zixun.png') no-repeat center;
+        background-position: 20px 18px;
+        background-size: 20px 20px;
+      }
+      .cur {
+        background-color: #de1721;
+      }
+      div:hover {
+        background-color: #de1721;
+      }
     }
-    .line{
-        border-top: 1px solid #888888;
-    }
-    .footer-body{
-        height: 222px;
-        padding: 40px 0;
+  }
+  .menu-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.36);
+  }
+}
+.footer-box {
+  background-color: #212121;
+  color: #fff;
+  .ft-yewu {
+    height: 212px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .yw-label {
+      width: 300px;
+      height: 80px;
+      display: flex;
+      float: left;
+      .yw-fbkj {
+        background: url('@@xmimgpath/icon-fbkjfw.png') no-repeat center;
+      }
+      .yw-lhjszq {
+        background: url('@@xmimgpath/icon-lhjszq.png') no-repeat center;
+      }
+      .yw-ppys {
+        background: url('@@xmimgpath/icon-ppys.png') no-repeat center;
+      }
+      .yw-kxwys {
+        background: url('@@xmimgpath/icon-kxwys.png') no-repeat center;
+      }
+      .yw-icon {
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        border-radius: 80px;
+      }
+      .yw-content {
+        width: 220px;
+        padding-left: 10px;
         box-sizing: border-box;
-        position: relative;
-        .footer-links{
-            display: flex;
-            color: #bdbdbd;
-            span{
-                padding: 0 20px;
-                margin: 0 20px;
-            }
-            span:first-child{
-                margin-left: 0;
-            }
+        color: #888888;
+        .yw-title {
+          color: #fff;
+          font-size: 16px;
+          margin-bottom: 10px;
         }
-        .footer-beianNo{
-            color: #888888;
-            line-height: 60px;
-            padding-left: 20px;
-        }
-        .card-all{
-            margin: 0;
-            display: flex;
-            .card{
-                width: 118px;
-                height: 38px;
-                margin-right: 30px;
-                float: left;
-                a{
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .card-zzrz{
-                background: url('@@xmimgpath/card-zzrz.png') no-repeat left center;
-            }
-            .card-cata{
-                background: url('@@xmimgpath/card-cata.png') no-repeat left center;
-            }
-            .card-beian{
-                background: url('@@xmimgpath/card-beian.png') no-repeat left center;
-            }
-            .card-webbeian{
-                background: url('@@xmimgpath/card-webbeian.png') no-repeat left center;
-            }
-            .card-shiming{
-                background: url('@@xmimgpath/card-shiming.png') no-repeat left center;
-            }
-        }
-        .img-code{
-            position: absolute;
-            right: 5px;
-            top: 42px;
-        }
+      }
     }
-}
-.btn{
-    color: #fff;
-    background-color: #de1721;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    a:hover{
-        text-decoration: none;
+  }
+  .line {
+    border-top: 1px solid #888888;
+  }
+  .footer-body {
+    height: 222px;
+    padding: 40px 0;
+    box-sizing: border-box;
+    position: relative;
+    .footer-links {
+      display: flex;
+      color: #bdbdbd;
+      span {
+        padding: 0 20px;
+        margin: 0 20px;
+      }
+      span:first-child {
+        margin-left: 0;
+      }
     }
+    .footer-beianNo {
+      color: #888888;
+      line-height: 60px;
+      padding-left: 20px;
+    }
+    .card-all {
+      margin: 0;
+      display: flex;
+      .card {
+        width: 118px;
+        height: 38px;
+        margin-right: 30px;
+        float: left;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .card-zzrz {
+        background: url('@@xmimgpath/card-zzrz.png') no-repeat left center;
+      }
+      .card-cata {
+        background: url('@@xmimgpath/card-cata.png') no-repeat left center;
+      }
+      .card-beian {
+        background: url('@@xmimgpath/card-beian.png') no-repeat left center;
+      }
+      .card-webbeian {
+        background: url('@@xmimgpath/card-webbeian.png') no-repeat left center;
+      }
+      .card-shiming {
+        background: url('@@xmimgpath/card-shiming.png') no-repeat left center;
+      }
+    }
+    .img-code {
+      position: absolute;
+      right: 5px;
+      top: 42px;
+    }
+  }
 }
-.btn:active{
-    background-color: #f00000;
+.btn {
+  color: #fff;
+  background-color: #de1721;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  a:hover {
+    text-decoration: none;
+  }
+}
+.btn:active {
+  background-color: #f00000;
 }
 /*提示框 */
 .wg_layer {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.3);
-    z-index: 99999;
-    >div {
-        width: 300px;
-        font-family: 微软雅黑;
-        border-radius: 5px;
-        overflow: hidden;
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        margin-left: -150px;
-        margin-top: -80px;
-        background-color: #fff;
-        color: #414141;
-        box-sizing: border-box;
-        >div {
-            text-align: center;
-            background-color: #c10c06;
-            color: #fff;
-            letter-spacing: 1px;
-            font-size: 14px;
-            line-height: 14px;
-            padding: 10px 0;
-            cursor: pointer;
-            width: 100%;
-            height: 36px;
-            box-sizing: border-box;
-            margin: 0;
-            border-radius: initial;
-        }
-        >p {
-            line-height: 24px;
-            text-align: center;
-            color: #414141;
-            font-size: 14px;
-            box-sizing: border-box;
-            padding: 40px 10px;
-        }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99999;
+  > div {
+    width: 300px;
+    font-family: 微软雅黑;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: -80px;
+    background-color: #fff;
+    color: #414141;
+    box-sizing: border-box;
+    > div {
+      text-align: center;
+      background-color: #c10c06;
+      color: #fff;
+      letter-spacing: 1px;
+      font-size: 14px;
+      line-height: 14px;
+      padding: 10px 0;
+      cursor: pointer;
+      width: 100%;
+      height: 36px;
+      box-sizing: border-box;
+      margin: 0;
+      border-radius: initial;
     }
+    > p {
+      line-height: 24px;
+      text-align: center;
+      color: #414141;
+      font-size: 14px;
+      box-sizing: border-box;
+      padding: 40px 10px;
+    }
+  }
 }
 /*swiper*/
-.swiper-container{
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+  .swiper-wrapper {
     position: relative;
-    overflow: hidden;
-    .swiper-wrapper{
-        position: relative;
-        .swiper-slide{
-            float: left;
-        }
+    .swiper-slide {
+      float: left;
     }
-    .pagination {
-        position: absolute;
-        left: 0;
-        padding-top: 20px;
-        text-align: center;
-        width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        .swiper-pagination-switch {
-            display: inline-block;
-            height: 16px;
-            width: 16px;
-            border: 1px solid #ccc;
-            border-radius: 30px;
-            margin: 0 12px;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-        .swiper-active-switch {
-            background-color: #de1721;
-            border: 1px solid #de1721;
-        }
+  }
+  .pagination {
+    position: absolute;
+    left: 0;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    .swiper-pagination-switch {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      margin: 0 12px;
+      box-sizing: border-box;
+      cursor: pointer;
     }
+    .swiper-active-switch {
+      background-color: #de1721;
+      border: 1px solid #de1721;
+    }
+  }
 }
 
 /* 清除内外边距 */
@@ -354,48 +391,69 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构�
 dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
 pre, /* text formatting elements 文本格式元素 */
 fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
-th, td { /* table elements 表格元素 */
-    margin: 0;
-    padding: 0;
+th, td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
 }
 
-
-address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
-code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
-small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+} /* 将斜体扶正 */
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: 'Courier New', Courier, monospace;
+} /* 统一等宽字体 */
+small {
+  font-size: 12px;
+} /* 小于 12px 的中文很难阅读，让 small 正常化 */
 
 /* 重置表单元素 */
-legend { color: #000; } /* for ie6 */
-fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+legend {
+  color: #000;
+} /* for ie6 */
+fieldset,
+img {
+  border: none;
+} /* img 搭车：让链接里的 img 无边框 */
 /* 注：optgroup 无法扶正 */
 
 /* 重置表格元素 */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* 重置 hr */
 hr {
-    border: none;
-    height: 1px;
+  border: none;
+  height: 1px;
 }
 
 /* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /*swiper
 */
 ::-webkit-scrollbar {
-    width:3px;
+  width: 3px;
 } /* 这是针对缺省样式 (必须的) */
 ::-webkit-scrollbar-track {
-    background-color: #ffffff;
+  background-color: #ffffff;
 } /* 滚动条的滑轨背景颜色 */
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.5);
 } /* 滑块颜色 */
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }

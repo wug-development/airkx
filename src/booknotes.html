@@ -11,21 +11,38 @@
   </head>
   <body>
     <div class="booknotes-box">
-      @@include('./common/header.html', {"index": "10"})
+      @@include('./common/header.html', {"index": "6"})
       <div class="banner-booknotes-box">
         <div class="my-data">
           <div class="data-title">机票预定须知</div>
         </div>
       </div>
-      <div class="booknotes-content" id="div_bookhtml">
-        <div class="booknotes-btn" id="btn-createOrder">付费阅读</div>
+      <div class="booknotes-content">
+        <div class="box-width" id="div_bookhtml">
+          <h1>1.旅客注意事项</h1>
+          <h2>1.1 不宜乘机人群</h2>
+          <h3>1.1.1 重症病人</h3>
+          <div>
+            a.
+            心血管疾病患者、脑血管病、呼吸系统疾病患者，严重贫血的病人，耳鼻疾病患者，有大面积外伤的旅客，不宜乘飞机。
+          </div>
+          <div>b. 做过胃肠手术的病人，一般在手术十天内不能乘坐飞机。</div>
+          <div>c. 消化道出血病人要在出血停止三周后才能乘飞机。</div>
+          <div>
+            d.
+            传染性疾病患者，在国家规定的隔离期内，不能乘坐飞机。其中水痘病人在损害部位未痊愈，不能乘飞机。
+          </div>
+        </div>
+        <div class="booknotes-btn" id="btn-createOrder">付费阅读更多</div>
       </div>
       <div class="pay-layer">
         <div class="record-body">
           <div class="rc-title-defualt">凯行网</div>
+          <div class="sub-title">微信扫码支付</div>
           <div class="rc-line">
             <img id="qrcode_img" src="" />
           </div>
+          <div class="pay-tip">应付金额：1元</div>
           <div class="rc-line btns">
             <div class="btn btn-success radius" id="btn-close-qr">关 闭</div>
           </div>

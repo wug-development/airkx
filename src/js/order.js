@@ -7,7 +7,7 @@
             data: {
                 adminid: 7,
                 adminname: '周科',
-                name: '武广',
+                name: '资讯',
                 phone: '13810173310',
                 price: 1,
                 type: 2,
@@ -40,7 +40,8 @@ function getIsPay(orderno) {
         }
     }).done(function (data) {
         if (data.data === 1) {
-            $('#div_bookhtml').html(getHtml());
+            $('#div_bookhtml').append(getHtml());
+            $('#btn-createOrder').hide();
         }
     });
 }
