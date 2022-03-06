@@ -1,1636 +1,1632 @@
 html,
 body {
-    position: relative;
+  position: relative;
 }
 
 .search-wrap {
-    width: 100%;
-    height: 100px;
-    background-color: #ebebeb;
+  width: 100%;
+  height: 100px;
+  background-color: #ebebeb;
 }
 
 .zrsearch-wrap {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background-color: #ebebeb;
-    left: 0;
-    top: 195px;
-    z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #ebebeb;
+  left: 0;
+  top: 195px;
+  z-index: -1;
 }
 
 .content {
-    display: block;
-    width: 1100px;
-    min-width: 1100px;
-    background-color: #fff;
-    margin: 0 auto;
-    overflow: hidden;
+  display: block;
+  width: 1100px;
+  min-width: 1100px;
+  background-color: #fff;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .search-cont .searchsub {
-    position: absolute;
-    font-family: "苹方";
-    width: 160px;
-    height: 40px;
-    background-color: #f00000;
-    color: #ffffff;
-    font-size: 18px;
-    border: none;
-    right: 24px;
-    bottom: 10px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+  position: absolute;
+  font-family: '苹方';
+  width: 160px;
+  height: 40px;
+  background-color: #f00000;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  right: 24px;
+  bottom: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .search-menu {
-    width: 100%;
-    margin-top: 32px;
-    height: 34px;
-    display: inline-block;
+  width: 100%;
+  margin-top: 32px;
+  height: 34px;
+  display: inline-block;
 }
 
 .flytype {
-    float: left;
-    width: 100px;
-    height: 31px;
-    border: solid 1px #d6d6d6;
-    background-color: #fff;
-    position: relative;
-    cursor: pointer;
+  float: left;
+  width: 100px;
+  height: 31px;
+  border: solid 1px #d6d6d6;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
 }
 
 .flytype span {
-    font-size: 14px;
-    line-height: 31px;
-    padding-left: 8px;
+  font-size: 14px;
+  line-height: 31px;
+  padding-left: 8px;
 }
 
 .sCitySelect {
-    width: 158px;
-    height: 31px;
-    border: solid 1px #d6d6d6;
-    background-color: #fff;
-    float: left;
-    margin-left: 12px;
-    position: relative;
+  width: 158px;
+  height: 31px;
+  border: solid 1px #d6d6d6;
+  background-color: #fff;
+  float: left;
+  margin-left: 12px;
+  position: relative;
 }
 
 .flytypeIcon {
-    width: 45px;
-    height: 31px;
-    float: left;
-    background-image: url(@@imgpath/shuangxiang.png);
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 45px;
+  height: 31px;
+  float: left;
+  background-image: url(@@imgpath/shuangxiang.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .eCitySelect {
-    width: 158px;
-    height: 31px;
-    border: solid 1px #d6d6d6;
-    background-color: #fff;
-    float: left;
-    position: relative;
+  width: 158px;
+  height: 31px;
+  border: solid 1px #d6d6d6;
+  background-color: #fff;
+  float: left;
+  position: relative;
 }
 
 .eTimeSelect {
-    width: 158px;
-    height: 31px;
-    border: solid 1px #d6d6d6;
-    background-color: #fff;
-    float: left;
-    margin-left: 12px;
+  width: 158px;
+  height: 31px;
+  border: solid 1px #d6d6d6;
+  background-color: #fff;
+  float: left;
+  margin-left: 12px;
 }
 
 .flySelect {
-    width: 85px;
-    height: 31px;
-    background-color: #f00000;
-    line-height: 31px;
-    text-align: center;
-    font-size: 14px;
-    color: #fff;
-    border-radius: 7px;
-    float: left;
-    margin-left: 35px;
-    cursor: pointer;
+  width: 85px;
+  height: 31px;
+  background-color: #f00000;
+  line-height: 31px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 7px;
+  float: left;
+  margin-left: 35px;
+  cursor: pointer;
 }
-.flySelect.active{
-    background-color: #333;
-    cursor: default;
+.flySelect.active {
+  background-color: #333;
+  cursor: default;
 }
 .search-cont {
-    width: 100%;
-    height: 20px;
-    margin-top: 13px;
-    line-height: 20px;
-    font-size: 12px;
-    color: #ef5050;
+  width: 100%;
+  height: 20px;
+  margin-top: 13px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #ef5050;
 }
 
 .search-cont p {
-    float: left;
-    margin: 0;
-    padding: 0;
-    margin-right: 10px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
 }
 
 .search-cont span {
-    float: left;
-    margin: 0;
-    padding: 0;
-    float: left;
-    margin-right: 27px;
-    cursor: pointer;
+  float: left;
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-right: 27px;
+  cursor: pointer;
 }
 
 .flytypebac {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    background-color: #f8f8f8;
-    border: solid 1px #e7e7e7;
-    top: 6px;
-    right: 3px;
-    line-height: 18px;
-    font-size: 9px;
-    text-align: center;
-    z-index: 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background-color: #f8f8f8;
+  border: solid 1px #e7e7e7;
+  top: 6px;
+  right: 3px;
+  line-height: 18px;
+  font-size: 9px;
+  text-align: center;
+  z-index: 0;
 }
 
 .flytypeSelect {
-    width: 100px;
-    border: solid 1px #d6d6d6;
-    position: absolute;
-    left: -1px;
-    top: 32px;
-    border-top: none;
-    height: 0;
-    overflow: hidden;
+  width: 100px;
+  border: solid 1px #d6d6d6;
+  position: absolute;
+  left: -1px;
+  top: 32px;
+  border-top: none;
+  height: 0;
+  overflow: hidden;
 }
 
 .flytypeSelect b {
-    height: 24px;
-    display: block;
-    cursor: pointer;
-    line-height: 24px;
-    font-size: 14px;
-    background-color: #fff;
-    font-style: normal;
-    font-weight: normal;
-    padding-left: 8px;
+  height: 24px;
+  display: block;
+  cursor: pointer;
+  line-height: 24px;
+  font-size: 14px;
+  background-color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 8px;
 }
 
 .flytypeSelect b:hover {
-    background-color: #ffb2b2;
+  background-color: #ffb2b2;
 }
 
 #startCityGN,
 #endCityGN {
-    border: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    padding-left: 11px;
-    display: block;
-    height: 100%;
-    width: 147px;
-    background-color: transparent;
-    background-image: url(@@imgpath/feijiqifei.png);
-    background-position: 134px 7px;
-    background-repeat: no-repeat;
-    font-size: 12px;
-    color: #333333;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 11px;
+  display: block;
+  height: 100%;
+  width: 147px;
+  background-color: transparent;
+  background-image: url(@@imgpath/feijiqifei.png);
+  background-position: 134px 7px;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  color: #333333;
 }
 
 #endCitySelect {
-    background-image: url(@@imgpath/feijijiangluo.png);
+  background-image: url(@@imgpath/feijijiangluo.png);
 }
 
 #startTime,
 #endTime {
-    border: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    padding-left: 11px;
-    display: block;
-    height: 100%;
-    width: 147px;
-    background-color: transparent;
-    background-image: url(@@imgpath/riqi.png);
-    background-position: 134px 7px;
-    background-repeat: no-repeat;
-    font-size: 14px;
-    color: #333333;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 11px;
+  display: block;
+  height: 100%;
+  width: 147px;
+  background-color: transparent;
+  background-image: url(@@imgpath/riqi.png);
+  background-position: 134px 7px;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  color: #333333;
 }
-#endTime.active{
-    background-color: #eee;
+#endTime.active {
+  background-color: #eee;
 }
 .route {
-    width: 1200px;
-    height: 60px;
-    margin: 0 auto;
-    line-height: 60px;
-    font-size: 16px;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 60px;
+  font-size: 16px;
 }
 
 .route b {
-    font-weight: normal;
-    font-style: normal;
-    padding-left: 20px;
-    color: #424242;
+  font-weight: normal;
+  font-style: normal;
+  padding-left: 20px;
+  color: #424242;
 }
 
-.route>img {
-    vertical-align: middle;
+.route > img {
+  vertical-align: middle;
 }
 
 .speed-bar {
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    vertical-align: middle;
-    background-color: #fff;
-    text-align: center;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  vertical-align: middle;
+  background-color: #fff;
+  text-align: center;
 }
 
-.speed-bar .sbar-item>b {
-    display: inline-block;
-    width: 110px;
-    height: 2px;
-    background-color: #ccc;
-    margin: 0 10px;
+.speed-bar .sbar-item > b {
+  display: inline-block;
+  width: 110px;
+  height: 2px;
+  background-color: #ccc;
+  margin: 0 10px;
 }
 
 .sbar-item {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .sbar-item img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
-
 
 /*not-searched-wrap*/
 
 .not-searched-wrap {
-    width: 1100px;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    display: none;
+  width: 1100px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: none;
 }
 
 .not-searched {
-    width: 1094px;
-    margin: 0 auto;
-    border: 3px solid #f00000;
-    padding: 25px 0 40px 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #f00000;
-    background-color: #ffd9d9;
-    line-height: 33px;
+  width: 1094px;
+  margin: 0 auto;
+  border: 3px solid #f00000;
+  padding: 25px 0 40px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f00000;
+  background-color: #ffd9d9;
+  line-height: 33px;
 }
 
-.not-searched>p:first-child {
-    line-height: 56px;
+.not-searched > p:first-child {
+  line-height: 56px;
 }
 
-.not-searched>p>a {
-    color: #f00000;
-    text-decoration: underline;
+.not-searched > p > a {
+  color: #f00000;
+  text-decoration: underline;
 }
 
 .youarehere {
-    color: #666666;
-    font-size: 20px;
-    margin-left: 30px;
-    height: 54px;
-    line-height: 54px;
+  color: #666666;
+  font-size: 20px;
+  margin-left: 30px;
+  height: 54px;
+  line-height: 54px;
 }
 
-.youarehere>a {
-    color: #666666;
+.youarehere > a {
+  color: #666666;
 }
 
 .advert {
-    width: 100%;
-    position: relative;
-    font-size: 0;
-    height: 203px;
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  height: 203px;
 }
 
 .advbgl {
-    width: 50.07%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url(@@imgpath/ad_01_01.png);
-    background-repeat: no-repeat;
-    background-position: right top;
+  width: 50.07%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(@@imgpath/ad_01_01.png);
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 
 .advbgr {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-image: url(@@imgpath/ad_01_02.png);
-    background-repeat: no-repeat;
-    background-position: left top;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(@@imgpath/ad_01_02.png);
+  background-repeat: no-repeat;
+  background-position: left top;
 }
 
 .advert .inpforma {
-    position: absolute;
-    width: 66px;
-    height: 30px;
-    color: #FFFFFF;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    bottom: 0;
+  position: absolute;
+  width: 66px;
+  height: 30px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
 }
 
 .history,
 .history1 {
-    width: 169px;
-    height: 209px;
-    border: solid #d6d6d6 1px;
-    border-top: none;
-    background-color: #fff;
-    position: absolute;
-    left: -1px;
-    top: 32px;
-    z-index: 9999;
-    overflow-y: scroll;
-    display: none;
+  width: 169px;
+  height: 209px;
+  border: solid #d6d6d6 1px;
+  border-top: none;
+  background-color: #fff;
+  position: absolute;
+  left: -1px;
+  top: 32px;
+  z-index: 9999;
+  overflow-y: scroll;
+  display: none;
 }
 
 .history dl,
 .history1 dl {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
 }
 
 .history dl dt,
 .history1 dl dt {
-    padding-left: 3px;
-    display: block;
-    height: 23px;
-    line-height: 23px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #dfdfdf;
-    overflow: hidden;
+  padding-left: 3px;
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #dfdfdf;
+  overflow: hidden;
 }
 
 .history dl dt span,
 .history1 dl dt span {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 
 .history dl dd,
 .history1 dl dd {
-    padding-left: 12px;
-    display: block;
-    height: 23px;
-    line-height: 23px;
-    font-size: 12px;
-    color: #5d5d5d;
-    background-color: #fff;
-    cursor: pointer;
+  padding-left: 12px;
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  font-size: 12px;
+  color: #5d5d5d;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 .history dl dd:hover {
-    background-color: #ffefef;
+  background-color: #ffefef;
 }
 
 .history1 dl dd:hover {
-    background-color: #ffefef;
+  background-color: #ffefef;
 }
 
 .history dl dd p,
 .history1 dl dd p {
-    float: left;
-    margin: 0;
-    padding: 0;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
 
 .history dl dd b,
 .history1 dl dd b {
-    float: right;
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    font-style: normal;
-    margin-right: 8px;
+  float: right;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 8px;
 }
 
 #loading {
-    display: none;
-    margin: 30px auto;
+  display: none;
+  margin: 30px auto;
 }
 
 .lineListZ {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .linTitle {
-    width: 100%;
-    height: 30px;
-    background-color: #333333;
-    line-height: 30px;
-    color: #fff;
-    font-size: 14px;
+  width: 100%;
+  height: 30px;
+  background-color: #333333;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
 }
 
 .hangkong {
-    float: left;
-    width: 128px;
-    height: 100%;
-    text-align: center
+  float: left;
+  width: 128px;
+  height: 100%;
+  text-align: center;
 }
 
 .hangbanxinxi {
-    width: 249px;
-    height: 100%;
-    text-align: center;
-    float: left;
+  width: 249px;
+  height: 100%;
+  text-align: center;
+  float: left;
 }
 
 .chufajichang {
-    width: 165px;
-    height: 100%;
-    float: left;
-    padding-left: 13px;
+  width: 165px;
+  height: 100%;
+  float: left;
+  padding-left: 13px;
 }
 
 .daodajichang {
-    width: 132px;
-    height: 100%;
-    float: left;
-    padding-left: 19px;
+  width: 132px;
+  height: 100%;
+  float: left;
+  padding-left: 19px;
 }
 
 .piaojiashuijin {
-    width: 179px;
-    height: 100%;
-    float: left;
-    padding-left: 212px;
+  width: 179px;
+  height: 100%;
+  float: left;
+  padding-left: 212px;
 }
 
 .lineListDetil {
-    width: 100%;
-    height: auto;
-    margin-bottom:100px; 
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
 }
-
 
 /**
  * 国际列表
  */
 
 * {
-    font-family: "苹方";
+  font-family: '苹方';
 }
 
 .list {
-    width: 1096px;
-    height: 111px;
-    border: solid 1px #dcdcdc;
-    border-top: solid 2px #f00000;
-    margin: 5px auto 0;
+  width: 1096px;
+  height: 111px;
+  border: solid 1px #dcdcdc;
+  border-top: solid 2px #f00000;
+  margin: 5px auto 0;
 }
 
 .WF {
-    width: 1096px;
-    margin: 0 auto 0;
+  width: 1096px;
+  margin: 0 auto 0;
 }
 
 .DC {
-    width: 100%;
-    margin: 0 auto 0;
+  width: 100%;
+  margin: 0 auto 0;
 }
 
 .aircom {
-    width: 127px;
-    height: 100%;
-    float: left;
-    position: relative;
-    border-right: dashed 1px #ece9e9;
+  width: 127px;
+  height: 100%;
+  float: left;
+  position: relative;
+  border-right: dashed 1px #ece9e9;
 }
 
 .aircomC {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 50px;
 }
 
 .aircom img {
-    display: block;
-    width: 31px;
-    height: 25px;
-    margin: 0 auto;
+  display: block;
+  width: 31px;
+  height: 25px;
+  margin: 0 auto;
 }
 
 .aircom span {
-    font-size: 14px;
-    color: #040000;
-    line-height: 14px;
-    display: block;
-    text-align: center;
-    margin-top: 6px;
+  font-size: 14px;
+  color: #040000;
+  line-height: 14px;
+  display: block;
+  text-align: center;
+  margin-top: 6px;
 }
 
 .hangxian {
-    width: 580px;
-    height: auto;
-    float: left;
-    border-right: dashed 1px #ece9e9;
+  width: 580px;
+  height: auto;
+  float: left;
+  border-right: dashed 1px #ece9e9;
 }
 
 .qucheng {
-    height: auto;
-    border-bottom: dashed 1px #ece9e9;
-    padding-left: 27px;
+  height: auto;
+  border-bottom: dashed 1px #ece9e9;
+  padding-left: 27px;
 }
 
 .huicheng {
-    height: auto;
-    padding-left: 27px;
+  height: auto;
+  padding-left: 27px;
 }
 
 .type {
-    width: 70px;
-    height: 100%;
-    float: left;
-    position: relative;
+  width: 70px;
+  height: 100%;
+  float: left;
+  position: relative;
 }
 
 .typeC {
-    width: 1005;
-    height: 35px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+  width: 1005;
+  height: 35px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .type span {
-    display: block;
-    font-size: 14px;
-    color: #2aa3dd;
-    line-height: 14px;
+  display: block;
+  font-size: 14px;
+  color: #2aa3dd;
+  line-height: 14px;
 }
 
 .type b {
-    display: block;
-    font-size: 12px;
-    color: #6d6b6b;
-    line-height: 12px;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 8px;
+  display: block;
+  font-size: 12px;
+  color: #6d6b6b;
+  line-height: 12px;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 8px;
 }
 
 .chenglist {
-    width: 480px;
-    float: left;
-    height: auto;
+  width: 480px;
+  float: left;
+  height: auto;
 }
 
 .lineList {
-    width: 100%;
-    height: 55px;
+  width: 100%;
+  height: 55px;
 }
 
 .hangban {
-    width: 153px;
-    height: 100%;
-    float: left;
-    overflow: hidden;
+  width: 153px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
 }
 
 .hangban span {
-    font-size: 14px;
-    line-height: 10px;
-    color: #040000;
-    display: block;
-    padding-left: 12px;
-    margin-top: 13px;
+  font-size: 14px;
+  line-height: 10px;
+  color: #040000;
+  display: block;
+  padding-left: 12px;
+  margin-top: 13px;
 }
 
 .hangban b {
-    display: block;
-    font-size: 12px;
-    line-height: 12px;
-    margin-top: 7px;
-    font-style: normal;
-    font-weight: normal;
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 7px;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .hangban b i {
-    color: #5fb6e6;
-    font-style: normal;
+  color: #5fb6e6;
+  font-style: normal;
 }
 
 .jichangS {
-    width: 178px;
-    height: 100%;
-    float: left;
+  width: 178px;
+  height: 100%;
+  float: left;
 }
 
 .jichangS span {
-    font-size: 14px;
-    line-height: 14px;
-    color: #101010;
-    margin-top: 13px;
-    display: block;
+  font-size: 14px;
+  line-height: 14px;
+  color: #101010;
+  margin-top: 13px;
+  display: block;
 }
 
 .jichangS b {
-    font-size: 14px;
-    line-height: 14px;
-    color: #a9a7a7;
-    margin-top: 7px;
-    font-style: normal;
-    font-weight: normal;
-    display: block;
+  font-size: 14px;
+  line-height: 14px;
+  color: #a9a7a7;
+  margin-top: 7px;
+  font-style: normal;
+  font-weight: normal;
+  display: block;
 }
 
 .jichangE {
-    width: 149px;
-    height: 100%;
-    float: left;
+  width: 149px;
+  height: 100%;
+  float: left;
 }
 
 .jichangE span {
-    font-size: 14px;
-    line-height: 14px;
-    color: #101010;
-    margin-top: 13px;
-    display: block;
+  font-size: 14px;
+  line-height: 14px;
+  color: #101010;
+  margin-top: 13px;
+  display: block;
 }
 
 .jichangE b {
-    font-size: 14px;
-    line-height: 14px;
-    color: #a9a7a7;
-    margin-top: 7px;
-    font-style: normal;
-    font-weight: normal;
-    display: block;
+  font-size: 14px;
+  line-height: 14px;
+  color: #a9a7a7;
+  margin-top: 7px;
+  font-style: normal;
+  font-weight: normal;
+  display: block;
 }
 
 .more {
-    float: left;
-    width: 162px;
-    height: 100%;
-    position: relative;
+  float: left;
+  width: 162px;
+  height: 100%;
+  position: relative;
 }
 
 .clickMore {
-    width: 68px;
-    height: 17px;
-    border: solid 1px #dcdcdc;
-    text-align: center;
-    line-height: 17px;
-    color: #e01614;
-    font-size: 12px;
-    cursor: pointer;
-    position: absolute;
-    left: 28px;
-    top: 50%;
-    margin-top: -10px;
+  width: 68px;
+  height: 17px;
+  border: solid 1px #dcdcdc;
+  text-align: center;
+  line-height: 17px;
+  color: #e01614;
+  font-size: 12px;
+  cursor: pointer;
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  margin-top: -10px;
 }
 
 .price {
-    width: 100px;
-    height: 100%;
-    float: left;
-    position: relative;
+  width: 100px;
+  height: 100%;
+  float: left;
+  position: relative;
 }
 
 .priceC {
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .price span {
-    font-size: 16px;
-    color: #e23534;
-    line-height: 16px;
-    display: block;
+  font-size: 16px;
+  color: #e23534;
+  line-height: 16px;
+  display: block;
 }
 
 .price span i {
-    font-weight: normal;
-    font-style: normal;
-    font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
 }
 
 .price b {
-    display: block;
-    margin-top: 8px;
-    color: #8f8d8d;
-    font-size: 12px;
-    line-height: 12px;
-    font-style: normal;
-    font-weight: normal;
+  display: block;
+  margin-top: 8px;
+  color: #8f8d8d;
+  font-size: 12px;
+  line-height: 12px;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .yuding {
-    width: 100px;
-    height: 100%;
-    float: left;
-    position: relative;
+  width: 100px;
+  height: 100%;
+  float: left;
+  position: relative;
 }
 
 .yudingC {
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .sure {
-    width: 83px;
-    height: 31px;
-    color: #fff;
-    border-radius: 6px;
-    background-color: #f00000;
-    line-height: 31px;
-    font-size: 14px;
-    text-align: center;
-    cursor: pointer;
+  width: 83px;
+  height: 31px;
+  color: #fff;
+  border-radius: 6px;
+  background-color: #f00000;
+  line-height: 31px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .listdetile {
-    width: 1098px;
-    height: 0;
-    border: solid 1px #dcdcdc;
-    border-top: none;
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: #f5f5f5;
+  width: 1098px;
+  height: 0;
+  border: solid 1px #dcdcdc;
+  border-top: none;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #f5f5f5;
 }
 
 .listdetileD {
-    width: 548px;
-    height: auto;
-    float: left;
+  width: 548px;
+  height: auto;
+  float: left;
 }
 
 .listdetileS {
-    width: 548px;
-    height: auto;
-    float: left;
-    margin-left: 2px;
+  width: 548px;
+  height: auto;
+  float: left;
+  margin-left: 2px;
 }
 
 .listdetileDTitle {
-    width: 100%;
-    height: 19px;
-    border-bottom: solid 1px #f00000;
+  width: 100%;
+  height: 19px;
+  border-bottom: solid 1px #f00000;
 }
 
 .listdetileDTitleC {
-    width: 47px;
-    height: 14px;
-    color: #fff;
-    background-color: #f00000;
-    margin-top: 5px;
-    margin-left: 11px;
-    text-align: center;
-    line-height: 14px;
-    font-size: 12px;
-    display: inline-block;
+  width: 47px;
+  height: 14px;
+  color: #fff;
+  background-color: #f00000;
+  margin-top: 5px;
+  margin-left: 11px;
+  text-align: center;
+  line-height: 14px;
+  font-size: 12px;
+  display: inline-block;
 }
 
 .moreList {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 
 .moreList:hover {
-    background-color: #faadad;
+  background-color: #faadad;
 }
 
 .moreListC {
-    width: 495px;
-    border-bottom: dashed 1px #c1c0c0;
-    margin: 0 auto;
-    height: auto;
+  width: 495px;
+  border-bottom: dashed 1px #c1c0c0;
+  margin: 0 auto;
+  height: auto;
 }
 
 .moreListList {
-    width: 100%;
-    height: 38px;
+  width: 100%;
+  height: 38px;
 }
 
 .moreListListJiXing {
-    width: 118px;
-    height: 100%;
-    margin-left: 7px;
-    float: left;
+  width: 118px;
+  height: 100%;
+  margin-left: 7px;
+  float: left;
 }
 
 .moreListListJiXing span {
-    display: block;
-    padding-left: 15px;
-    font-size: 12px;
-    line-height: 12px;
-    color: #000;
-    margin-top: 4px;
+  display: block;
+  padding-left: 15px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000;
+  margin-top: 4px;
 }
 
 .moreListListJiXing b {
-    display: block;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 12px;
-    color: #8f8d8d;
-    margin-top: 4px;
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #8f8d8d;
+  margin-top: 4px;
 }
 
 .moreListListJiXing b i {
-    font-style: normal;
-    font-weight: normal;
-    color: #4eb0e4;
+  font-style: normal;
+  font-weight: normal;
+  color: #4eb0e4;
 }
 
 .moreListListS,
 .moreListListE {
-    width: 150px;
-    height: 100%;
-    float: left;
+  width: 150px;
+  height: 100%;
+  float: left;
 }
 
 .moreListListS span,
 .moreListListE span {
-    display: block;
-    font-size: 12px;
-    line-height: 12px;
-    color: #101010;
-    margin-top: 4px;
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  color: #101010;
+  margin-top: 4px;
 }
 
 .moreListListS b,
 .moreListListE b {
-    display: block;
-    font-size: 12px;
-    line-height: 12px;
-    color: #6f6f6f;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 5px;
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  color: #6f6f6f;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 5px;
 }
 
 .DCList {
-    width: 1098px;
-    border: solid 1px #dcdcdc;
-    border-top: solid 2px #f00000;
-    margin: 20px auto 0;
-    background-repeat: no-repeat;
-    background-position: 495px center;
-    background-image: url(@@imgpath/xiaofeiji.png)
+  width: 1098px;
+  border: solid 1px #dcdcdc;
+  border-top: solid 2px #f00000;
+  margin: 20px auto 0;
+  background-repeat: no-repeat;
+  background-position: 495px center;
+  background-image: url(@@imgpath/xiaofeiji.png);
 }
 
 .DCAircom {
-    float: left;
-    width: 124px;
-    height: 100%;
-    position: relative;
+  float: left;
+  width: 124px;
+  height: 100%;
+  position: relative;
 }
 
 .DCAircomC {
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -25px;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -25px;
 }
 
 .DCAircomC img {
-    display: block;
-    width: 31px;
-    height: 25px;
-    margin: 0 auto;
+  display: block;
+  width: 31px;
+  height: 25px;
+  margin: 0 auto;
 }
 
 .DCAircomC span {
-    display: block;
-    font-size: 14px;
-    line-height: 14px;
-    color: #040000;
-    margin-top: 6px;
-    text-align: center;
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  color: #040000;
+  margin-top: 6px;
+  text-align: center;
 }
 
 .DCjixing {
-    float: left;
-    width: 70px;
-    height: 100%;
-    margin-left: 30px;
-    position: relative;
+  float: left;
+  width: 70px;
+  height: 100%;
+  margin-left: 30px;
+  position: relative;
 }
 
 .DCjixingC {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    left: 0;
-    top: 50%;
-    margin-top: -20px;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  left: 0;
+  top: 50%;
+  margin-top: -20px;
 }
 
 .DCjixingC span {
-    font-size: 14px;
-    line-height: 14px;
-    display: block;
-    color: #2aa3dd;
+  font-size: 14px;
+  line-height: 14px;
+  display: block;
+  color: #2aa3dd;
 }
 
 .DCjixingC b {
-    font-size: 12px;
-    line-height: 12px;
-    display: block;
-    color: #5a5858;
-    margin-top: 11px;
+  font-size: 12px;
+  line-height: 12px;
+  display: block;
+  color: #5a5858;
+  margin-top: 11px;
 }
 
 .DCxingcheng {
-    width: 509px;
-    height: 100%;
-    float: left;
+  width: 509px;
+  height: 100%;
+  float: left;
 }
 
 .DCxingchengListZF {
-    width: 100%;
-    height: 77px;
+  width: 100%;
+  height: 77px;
 }
 
 .DCZFhangban {
-    width: 150px;
-    float: left;
-    height: 100%;
+  width: 150px;
+  float: left;
+  height: 100%;
 }
 
 .DCZFhangban span {
-    font-size: 14px;
-    line-height: 14px;
-    padding-left: 14px;
-    display: inline-block;
-    margin-top: 22px;
-    color: #040000;
+  font-size: 14px;
+  line-height: 14px;
+  padding-left: 14px;
+  display: inline-block;
+  margin-top: 22px;
+  color: #040000;
 }
 
 .DCZFhangban b {
-    font-size: 12px;
-    line-height: 12px;
-    display: block;
-    margin-top: 6px;
-    font-style: normal;
-    font-weight: normal;
-    color: #8f8d8d;
+  font-size: 12px;
+  line-height: 12px;
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-weight: normal;
+  color: #8f8d8d;
 }
 
 .DCZFhangban b i {
-    color: #5fb6e6;
-    font-style: normal;
-    font-weight: normal;
+  color: #5fb6e6;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .DCZFSPort,
 .DCZFEPort {
-    float: left;
-    width: 178px;
-    height: 100%;
+  float: left;
+  width: 178px;
+  height: 100%;
 }
 
 .DCZFSPort span,
 .DCZFEPort span {
-    font-size: 14px;
-    line-height: 14px;
-    color: #101010;
-    display: block;
-    margin-top: 20px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #101010;
+  display: block;
+  margin-top: 20px;
 }
 
 .DCZFSPort b,
 .DCZFEPort b {
-    font-size: 14px;
-    line-height: 14px;
-    color: #a9a7a7;
-    display: block;
-    margin-top: 10px;
-    font-style: normal;
-    font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #a9a7a7;
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .DCMore {
-    float: left;
-    width: 162px;
-    height: 100%;
-    position: relative
+  float: left;
+  width: 162px;
+  height: 100%;
+  position: relative;
 }
 
 .DCMoreC {
-    width: 68px;
-    height: 17px;
-    border: solid 1px #dcdcdc;
-    color: #e23534;
-    text-align: center;
-    line-height: 17px;
-    font-size: 12px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -8px;
-    cursor: pointer;
+  width: 68px;
+  height: 17px;
+  border: solid 1px #dcdcdc;
+  color: #e23534;
+  text-align: center;
+  line-height: 17px;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+  cursor: pointer;
 }
 
 .DCprice {
-    float: left;
-    width: 100px;
-    height: 100%;
-    position: relative
+  float: left;
+  width: 100px;
+  height: 100%;
+  position: relative;
 }
 
 .DCpriceC {
-    position: absolute;
-    width: 100%;
-    height: 38px;
-    left: 0;
-    top: 50%;
-    margin-top: -19px;
+  position: absolute;
+  width: 100%;
+  height: 38px;
+  left: 0;
+  top: 50%;
+  margin-top: -19px;
 }
 
 .DCpriceC span {
-    display: block;
-    font-size: 15px;
-    line-height: 15px;
-    color: #e01614;
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
+  color: #e01614;
 }
 
 .DCpriceC span i {
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .DCpriceC b {
-    display: block;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    color: #8f8d8d;
-    line-height: 12px;
-    margin-top: 8px;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  color: #8f8d8d;
+  line-height: 12px;
+  margin-top: 8px;
 }
 
 .DCSure {
-    width: 100px;
-    height: 100%;
-    float: left;
-    position: relative
+  width: 100px;
+  height: 100%;
+  float: left;
+  position: relative;
 }
 
 .DCSureC {
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -25px;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -25px;
 }
 
 .DCSureSure {
-    width: 83px;
-    height: 31px;
-    border-radius: 4px;
-    background-color: #f00000;
-    color: #fff;
-    font-size: 14px;
-    line-height: 31px;
-    text-align: center;
-    cursor: pointer;
+  width: 83px;
+  height: 31px;
+  border-radius: 4px;
+  background-color: #f00000;
+  color: #fff;
+  font-size: 14px;
+  line-height: 31px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .DCtui {
-    width: 100%;
-    height: 14px;
-    position: relative;
-    margin-top: 3px;
+  width: 100%;
+  height: 14px;
+  position: relative;
+  margin-top: 3px;
 }
 
 .DCtui span {
-    font-size: 12px;
-    line-height: 12px;
-    color: #1c87ca;
-    float: left;
-    margin-left: 7px;
-    cursor: pointer;
+  font-size: 12px;
+  line-height: 12px;
+  color: #1c87ca;
+  float: left;
+  margin-left: 7px;
+  cursor: pointer;
 }
 
 .DCxingchengList {
-    width: 100%;
-    height: 55px;
+  width: 100%;
+  height: 55px;
 }
 
 .Z span {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
 .Z b {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 .tuigai {
-    width: 350px;
-    height: auto;
-    position: absolute;
-    left: -360px;
-    top: 0px;
-    display: none;
-    z-index: 11;
+  width: 350px;
+  height: auto;
+  position: absolute;
+  left: -360px;
+  top: 0px;
+  display: none;
+  z-index: 11;
 }
 
 .tuigaiT {
-    width: 100%;
-    height: 34px;
-    color: #fff;
-    text-align: center;
-    line-height: 34px;
-    background-color: #f00000;
+  width: 100%;
+  height: 34px;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+  background-color: #f00000;
 }
 
 .tuigaiCon {
-    height: auto;
-    padding-top: 18px;
-    padding-bottom: 20px;
-    background-color: #eff4f7;
-    color: #5e5e5f;
-    font-size: 14px;
-    line-height: 26px;
-    padding-left: 15px;
+  height: auto;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  background-color: #eff4f7;
+  color: #5e5e5f;
+  font-size: 14px;
+  line-height: 26px;
+  padding-left: 15px;
 }
 
 .DC {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .DCmoreList {
-    width: 100%;
-    height: 0;
-    border: solid 1px #dcdcdc;
-    border-top: none;
-    overflow: hidden;
+  width: 100%;
+  height: 0;
+  border: solid 1px #dcdcdc;
+  border-top: none;
+  overflow: hidden;
 }
 
 .DCmoreListL {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 
 .DCmoreListL:hover {
-    background-color: #ffb2b2;
+  background-color: #ffb2b2;
 }
 
 .DCmoreListLL {
-    width: 883px;
-    height: 100%;
-    border-bottom: dashed 1px #dcdcdc;
-    margin-left: 91px;
+  width: 883px;
+  height: 100%;
+  border-bottom: dashed 1px #dcdcdc;
+  margin-left: 91px;
 }
 
 .DCmoreListLLC {
-    height: 100%;
+  height: 100%;
 }
 
 .zhuanjicishu {
-    width: 108px;
-    height: 100%;
-    float: left;
-    position: relative;
+  width: 108px;
+  height: 100%;
+  float: left;
+  position: relative;
 }
 
 .zhuanjicishu span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    font-size: 12px;
-    line-height: 14px;
-    color: #5a5858;
-    width: 100%;
-    height: 15px;
-    text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 12px;
+  line-height: 14px;
+  color: #5a5858;
+  width: 100%;
+  height: 15px;
+  text-align: center;
 }
 
 .DCmoreListLLCXingcheng {
-    float: left;
-    width: 743px;
-    height: auto;
-    padding-left: 27px;
+  float: left;
+  width: 743px;
+  height: auto;
+  padding-left: 27px;
 }
 
 .DCmoreListLLCXingchengC {
-    height: 45px;
+  height: 45px;
 }
 
 .DCmoreListLLCXingchengCjixing {
-    width: 150px;
-    height: 100%;
-    float: left;
+  width: 150px;
+  height: 100%;
+  float: left;
 }
 
 .DCmoreListLLCXingchengCjixing span {
-    font-size: 14px;
-    line-height: 14px;
-    color: #040000;
-    padding-left: 6px;
-    display: block;
-    margin-top: 4px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #040000;
+  padding-left: 6px;
+  display: block;
+  margin-top: 4px;
 }
 
 .DCmoreListLLCXingchengCjixing b {
-    font-size: 12px;
-    line-height: 12px;
-    color: #8f8d8d;
-    font-weight: normal;
-    font-style: normal;
-    display: block;
-    margin-top: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #8f8d8d;
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+  margin-top: 5px;
 }
 
 .DCmoreListLLCXingchengCjixing b i {
-    color: #5fb6e6;
-    font-weight: normal;
-    font-style: normal;
+  color: #5fb6e6;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .DCmoreListLLCXingchengCSport {
-    float: left;
-    width: 178px;
-    height: 100%;
+  float: left;
+  width: 178px;
+  height: 100%;
 }
 
 .DCmoreListLLCXingchengCSport span {
-    font-size: 12px;
-    line-height: 12px;
-    color: #101010;
-    display: block;
-    margin-top: 8px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #101010;
+  display: block;
+  margin-top: 8px;
 }
 
 .DCmoreListLLCXingchengCSport b {
-    font-size: 12px;
-    line-height: 12px;
-    color: #555252;
-    display: block;
-    margin-top: 5px;
-    font-weight: normal;
-    font-style: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #555252;
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+  font-style: normal;
 }
-
 
 /**
      * 国内
      */
 
 .guonei {
-    width: 1098px;
-    height: 77px;
-    border: solid 1px #dcdcdc;
-    border-top: solid 2px #f00000;
-    margin: 20px auto 0px;
+  width: 1098px;
+  height: 77px;
+  border: solid 1px #dcdcdc;
+  border-top: solid 2px #f00000;
+  margin: 20px auto 0px;
 }
 
 .GNAircom {
-    width: 128px;
-    height: 100%;
-    float: left;
+  width: 128px;
+  height: 100%;
+  float: left;
 }
 
 .GNAircom img {
-    display: block;
-    width: 25px;
-    height: 21px;
-    margin: 17px auto 0;
+  display: block;
+  width: 25px;
+  height: 21px;
+  margin: 17px auto 0;
 }
 
 .GNAircom span {
-    display: block;
-    font-size: 14px;
-    line-height: 14px;
-    color: #040000;
-    text-align: center;
-    margin-top: 3px;
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  color: #040000;
+  text-align: center;
+  margin-top: 3px;
 }
 
 .GNtype {
-    width: 70px;
-    height: 100%;
-    float: left;
-    margin-left: 28px;
+  width: 70px;
+  height: 100%;
+  float: left;
+  margin-left: 28px;
 }
 
 .GNtype span {
-    font-size: 14px;
-    line-height: 14px;
-    color: #2aa3dd;
-    display: block;
-    margin-top: 19px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #2aa3dd;
+  display: block;
+  margin-top: 19px;
 }
 
 .GNtype b {
-    display: block;
-    font-size: 12px;
-    line-height: 12px;
-    color: #7e7d7d;
-    font-weight: normal;
-    font-style: normal;
-    margin-top: 11px;
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  color: #7e7d7d;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 11px;
 }
 
 .GNjixing {
-    float: left;
-    width: 150px;
-    height: 100%;
+  float: left;
+  width: 150px;
+  height: 100%;
 }
 
 .GNjixing span {
-    display: block;
-    padding-left: 16px;
-    font-size: 14px;
-    line-height: 14px;
-    margin-top: 20px;
+  display: block;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 20px;
 }
 
 .GNjixing b {
-    font-weight: normal;
-    font-style: normal;
-    font-size: 12px;
-    line-height: 12px;
-    display: block;
-    margin-top: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 12px;
+  display: block;
+  margin-top: 10px;
 }
 
 .GNjixing b i {
-    font-weight: normal;
-    font-style: normal;
-    color: #4eb0e4;
+  font-weight: normal;
+  font-style: normal;
+  color: #4eb0e4;
 }
 
 .GNSprot,
 .GNEprot {
-    float: left;
-    height: 100%;
+  float: left;
+  height: 100%;
 }
 
 .GNSprot span,
 .GNEprot span {
-    display: block;
-    font-size: 14px;
-    color: #101010;
-    line-height: 14px;
-    margin-top: 20px;
+  display: block;
+  font-size: 14px;
+  color: #101010;
+  line-height: 14px;
+  margin-top: 20px;
 }
 
 .GNSprot b,
 .GNEprot b {
-    display: block;
-    font-size: 14px;
-    color: #a9a7a7;
-    line-height: 14px;
-    margin-top: 10px;
-    font-weight: normal;
-    font-style: normal;
+  display: block;
+  font-size: 14px;
+  color: #a9a7a7;
+  line-height: 14px;
+  margin-top: 10px;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .flyTime {
-    float: left;
-    width: 104px;
-    height: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
-    background-image: url(@@imgpath/jiantou.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
+  float: left;
+  width: 104px;
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-image: url(@@imgpath/jiantou.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
 .flyTime span {
-    font-size: 12px;
-    line-height: 12px;
-    color: #bababa;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 23px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #bababa;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 23px;
 }
 
 .GNLast {
-    width: 280px;
-    height: 100%;
-    float: right;
+  width: 280px;
+  height: 100%;
+  float: right;
 }
 
 .GNprice {
-    width: 175px;
-    height: 100%;
-    float: left;
+  width: 175px;
+  height: 100%;
+  float: left;
 }
 
 .GNpriceP {
-    margin-top: 24px;
-    overflow: hidden;
+  margin-top: 24px;
+  overflow: hidden;
 }
 
 .GNpriceP span {
-    font-size: 16px;
-    line-height: 16px;
-    color: #e23534;
-    float: left;
+  font-size: 16px;
+  line-height: 16px;
+  color: #e23534;
+  float: left;
 }
 
 .GNpriceP i {
-    float: left;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 12px;
-    line-height: 16px;
-    color: #e23534;
+  float: left;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #e23534;
 }
 
 .GNpriceP p {
-    float: left;
-    margin: 0;
-    padding: 0;
-    margin-left: 12px;
-    font-size: 12px;
-    color: #979595;
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin-left: 12px;
+  font-size: 12px;
+  color: #979595;
 }
 
 .GNtuoigai {
-    margin-top: 7px;
-    position: relative;
+  margin-top: 7px;
+  position: relative;
 }
 
 .GNtuoigai span {
-    float: left;
-    cursor: pointer;
-    font-size: 12px;
-    line-height: 12px;
-    color: #1c87ca;
-    cursor: Default;
+  float: left;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 12px;
+  color: #1c87ca;
+  cursor: Default;
 }
 
 .GNtuoigai span.active {
-    cursor: wait;
+  cursor: wait;
 }
 
 .GNtuoigai b {
-    float: left;
-    font-size: 12px;
-    line-height: 12px;
-    color: #979595;
-    margin-left: 6px;
-    font-weight: normal;
-    font-style: normal;
+  float: left;
+  font-size: 12px;
+  line-height: 12px;
+  color: #979595;
+  margin-left: 6px;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .GNyuding {
-    float: left;
-    height: 100%;
+  float: left;
+  height: 100%;
 }
 
 .GNyudingding {
-    width: 83px;
-    height: 31px;
-    line-height: 31px;
-    color: #fff;
-    background-color: #f00000;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 4px;
-    margin-top: 12px;
-    cursor: pointer;
+  width: 83px;
+  height: 31px;
+  line-height: 31px;
+  color: #fff;
+  background-color: #f00000;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 12px;
+  cursor: pointer;
 }
 
 .GNmore {
-    font-size: 12px;
-    line-height: 16px;
-    color: #1c87ca;
-    text-align: center;
-    cursor: pointer;
+  font-size: 12px;
+  line-height: 16px;
+  color: #1c87ca;
+  text-align: center;
+  cursor: pointer;
 }
 
 .guoneimore {
-    width: 1098px;
-    height: 0;
-    margin: 0 auto 10px;
-    border: solid 1px #dcdcdc;
-    overflow: hidden;
+  width: 1098px;
+  height: 0;
+  margin: 0 auto 10px;
+  border: solid 1px #dcdcdc;
+  overflow: hidden;
 }
 
 .guoneimoreList {
-    width: 100%;
-    height: 62px;
-    position: relative;
+  width: 100%;
+  height: 62px;
+  position: relative;
 }
 
 .guoneimoreList:after {
-    content: "";
-    width: 886px;
-    height: 1px;
-    border-bottom: dashed 1px #dcdcdc;
-    position: absolute;
-    left: 100px;
-    bottom: 0;
+  content: '';
+  width: 886px;
+  height: 1px;
+  border-bottom: dashed 1px #dcdcdc;
+  position: absolute;
+  left: 100px;
+  bottom: 0;
 }
 
 .cangwei {
-    float: left;
-    margin-left: 156px;
-    color: #979595;
-    font-size: 12px;
-    line-height: 62px;
+  float: left;
+  margin-left: 156px;
+  color: #979595;
+  font-size: 12px;
+  line-height: 62px;
 }
 
 .GNMO {
-    margin-top: 13px;
+  margin-top: 13px;
 }
 
 .yupiao {
-    font-size: 12px;
-    line-height: 14px;
-    color: #666;
-    text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+  color: #666;
+  text-align: center;
 }
 
 .GNtuoigaiCon {
-    position: absolute;
-    left: -330px;
-    top: 20px;
-    width: 310px;
-    height: auto;
-    z-index: 11;
-    display: none;
-    border: solid 1px #eff4f7;
+  position: absolute;
+  left: -330px;
+  top: 20px;
+  width: 310px;
+  height: auto;
+  z-index: 11;
+  display: none;
+  border: solid 1px #eff4f7;
 }
 
 .GNtuoigaiConTitle {
-    width: 100%;
-    height: 33px;
-    line-height: 33px;
-    color: #fff;
-    background-color: #f00000;
-    text-align: center;
-    font-size: 12px;
+  width: 100%;
+  height: 33px;
+  line-height: 33px;
+  color: #fff;
+  background-color: #f00000;
+  text-align: center;
+  font-size: 12px;
 }
 
 .GNtuoigaiConCon {
-    height: auto;
-    padding: 15px;
-    font-size: 12px;
-    line-height: 16px;
-    background-color: #fff;
+  height: auto;
+  padding: 15px;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #fff;
 }
