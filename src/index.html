@@ -1,244 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>国际机票查询|国际机票预订-中国民航北京机票一级代理400-722-7722 凯行网官网Airkx.com</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      国际机票查询|国际机票预订-中国民航北京机票一级代理400-722-7722
+      凯行网官网Airkx.com
+    </title>
     @@include('./common/meta.html')
-    <link rel="stylesheet" href="@@csspath/index.css?v=@@verson">
-    <link rel="stylesheet" href="@@csspath/bookticket.css?v=@@verson">
-    <link rel="stylesheet" href="@@csspath/customer.css?v=@@verson">
-</head>
-<body>
+    <link rel="stylesheet" href="@@csspath/index.css?v=@@verson" />
+    <link rel="stylesheet" href="@@csspath/bookticket.css?v=@@verson" />
+    <link rel="stylesheet" href="@@csspath/customer.css?v=@@verson" />
+  </head>
+  <body>
     <div class="index-box">
-        @@include('./common/header.html', {"index": "0"})
-        <div class="banner-box">
-            <div class="box-width banner-content">
-                <div class="bookticket-box">
-                    <div class="book-title"><span>KX</span>预定国际航班</div>
-                    <div class="book-tree">
-                        <ul>
-                            <li class="cur">
-                                <span>搜索</span>
-                                <i></i>
-                            </li>
-                            <li>
-                                <span>选择</span>
-                                <i></i>
-                            </li>
-                            <li>
-                                <span>预定</span>
-                                <i></i>
-                            </li>
-                            <li>
-                                <span>提交</span>
-                                <i></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="book-tip">选择出发到达的城市及时间</div>
-                    <div class="book-airflight-way" id="choose_way">
-                        <div class="btn-way btn-one" data-type="1">单程</div>
-                        <div class="btn-way btn-dobble cur" data-type="2">往返</div>
-                        <div class="btn-way btn-made" data-type="3">定制行程</div>
-                    </div>
-                    <div class="book-form-box">
-                        <div class="book-change-org">
-                            <div class="book-btn cur" data-type="2">中国大陆始发</div>
-                            <div class="book-btn" data-type="1">境外始发</div>
-                        </div>
-                        <div class="form-txt-box ddl-start ddl-box sddl" data-type="2">
-                            <span class="sddl">出发城市</span>
-                            <input type="text" id="txt_startCity" class="txt sddl" placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
-                            <ul class="ddl-city sddl" id="ddl-scity" data-type="2"></ul>
-                        </div>
-                        <div class="form-txt-box ddl-end ddl-box eddl" data-type="1">
-                            <span class="eddl">到达城市</span>
-                            <input type="text" id="txt_endCity" class="txt eddl" placeholder="英文 / 中文 / 拼音 / 三字码" maxlength="100">
-                            <ul class="ddl-city eddl" id="ddl-ecity" data-type="1"></ul>
-                        </div>
-                        <div class="form-txt-box ddl-date">
-                            <div class="start-date">
-                                <span>出发日期</span>
-                                <input type="text" id="txt_stime" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
-                            </div>
-                            <div class="back-date">
-                                <span>返回日期</span>
-                                <input type="text" id="txt_etime" class="txt txt-small" readonly placeholder="请选择" maxlength="100">
-                            </div>
-                        </div>
-                        <div class="form-txt-box ddl-more ddl">
-                            <span class="ddl">更多选择</span>
-                            <input type="text" class="txt ddl" id="ddl_more" readonly placeholder="经济舱" maxlength="100">
-                            <ul class="ddl-cag-box ddl">
-                                <li class="cur">经济舱</li>
-                                <li>商务舱</li>
-                                <li>头等舱</li>
-                            </ul>
-                        </div>
-                        <div class="book-btns">
-                            <div class="btn-search" id="btn_search">搜索航班</div>
-                            <div class="book-directflight">
-                                <div class="book-btn" id="btn-direct">仅查直飞</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="book-dingzhi">
-                        <div class="tip">亲！请写下您的行程，剩下的交给我们来办</div>
-                        <textarea class="txt-content" id="txt_content" placeholder="如果可以，请尽量详细描述，以便我们能更好为您量身设计行程！"></textarea>
-                        <div class="txts-box">
-                            <div>
-                                <span>手机号：</span>
-                                <input type="text" id="txt_phone" maxlength="20" placeholder="">
-                            </div>
-                            <div id="div_name">
-                                <span>姓名：</span>
-                                <input type="text" id="txt_name" maxlength="20" placeholder="">
-                            </div>
-                            <div id="div_email">
-                                <span>邮箱：</span>
-                                <input type="text" id="txt_email" maxlength="100" placeholder="">
-                            </div>
-                            <div>
-                                <span class="span_pass">设置订单查询密码：</span>
-                                <input type="text" id="txt_pass" maxlength="30" placeholder="">
-                            </div>
-                        </div>
-                        <div class="div_pass">
-                            <div class="dz-tip">系统检测到您已是会员！</div>
-                            <div id="span_forget">忘记密码？</div>
-                        </div>
-                        <div class="btn" id="btn_submit">提交</div>
-                    </div>
+      @@include('./common/header.html', {"index": "0"})
+      <div class="banner-box">
+        <div class="box-width banner-content">
+          <div class="bookticket-box">
+            <div class="book-title"><span>KX</span>预定国际航班</div>
+            <div class="book-tree">
+              <ul>
+                <li class="cur">
+                  <span>搜索</span>
+                  <i></i>
+                </li>
+                <li>
+                  <span>选择</span>
+                  <i></i>
+                </li>
+                <li>
+                  <span>预定</span>
+                  <i></i>
+                </li>
+                <li>
+                  <span>提交</span>
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+            <div class="book-tip">选择出发到达的城市及时间</div>
+            <div class="book-airflight-way" id="choose_way">
+              <div class="btn-way btn-one" data-type="1">单程</div>
+              <div class="btn-way btn-dobble cur" data-type="2">往返</div>
+              <div class="btn-way btn-made" data-type="3">定制行程</div>
+            </div>
+            <div class="book-form-box">
+              <div class="book-change-org">
+                <div class="book-btn cur" data-type="2">中国大陆始发</div>
+                <div class="book-btn" data-type="1">境外始发</div>
+              </div>
+              <div class="form-txt-box ddl-start ddl-box sddl" data-type="2">
+                <span class="sddl">出发城市</span>
+                <input
+                  type="text"
+                  id="txt_startCity"
+                  class="txt sddl"
+                  placeholder="英文 / 中文 / 拼音 / 三字码"
+                  maxlength="100"
+                />
+                <ul class="ddl-city sddl" id="ddl-scity" data-type="2"></ul>
+              </div>
+              <div class="form-txt-box ddl-end ddl-box eddl" data-type="1">
+                <span class="eddl">到达城市</span>
+                <input
+                  type="text"
+                  id="txt_endCity"
+                  class="txt eddl"
+                  placeholder="英文 / 中文 / 拼音 / 三字码"
+                  maxlength="100"
+                />
+                <ul class="ddl-city eddl" id="ddl-ecity" data-type="1"></ul>
+              </div>
+              <div class="form-txt-box ddl-date">
+                <div class="start-date">
+                  <span>出发日期</span>
+                  <input
+                    type="text"
+                    id="txt_stime"
+                    class="txt txt-small"
+                    readonly
+                    placeholder="请选择"
+                    maxlength="100"
+                  />
                 </div>
-            </div>
-        </div>
-        <div class="zfcg-box">
-            <div class="zfcg-title">政府采购定点机票代理商</div>
-            <div class="zfcg-content">
-                根据中国民用航空局印发的《关于加强公务机票管理有关事项的通知》以及（财库{2014}33号文件，以下简称《通知》）中明确的购票人在国内出差、
-                <br/>因公临时出国时所购买的机票规定。中国财政部和民用航空局经过严格的审核，筛选出政府机票采购供应商
-            </div>
-            <ul class="zfcg-list box-width">
-                <li class="zfcg-item">
-                    <div class="item-img"><img src="@@imgpath/img-xy.png" alt="凯行网"></div>
-                    <div class="item-title">可靠的信用资质</div>
-                    <div class="item-content">我公司是政府采购机票的定点单位，具备国际航协及国内航协的认可资质，同时具有中航鑫港公司的政府采购机票担保函</div>
-                </li>
-                <li class="zfcg-item">
-                    <div class="item-img"><img src="@@imgpath/img-cg.png" alt="凯行网"></div>
-                    <div class="item-title">公务机票采购优惠</div>
-                    <div class="item-content">各政府部门、科学院校、医院等事业单位。持有公务卡的公务员、老师、医生等相关人员；在我单位购买机票可享受全价票<span>8.8</span>折，折扣票<span>9.5</span>折的优惠</div>
-                </li>
-                <li class="zfcg-item">
-                    <div class="item-img"><img src="@@imgpath/img-zf.png" alt="凯行网"></div>
-                    <div class="item-title">公务卡简捷支付</div>
-                    <div class="item-content">购买机票可以使用公务卡进行网上无卡支付，我们也可以上门刷卡支付</div>
-                </li>
-                <li class="zfcg-item">
-                    <div class="item-img"><img src="@@imgpath/img-yj.png" alt="凯行网"></div>
-                    <div class="item-title">可签约月结服务</div>
-                    <div class="item-content">我公司提供政府单位签约进行<span>先</span>乘机<span>后</span>付款月结服务</div>
-                </li>
-            </ul>
-        </div>
-        <div class="qyyj-box">
-            <div class="qyyj-title">企业月结－凯行网企业票务通</div>
-            <div class="qyyj-tip">可靠的信用资质&nbsp;&nbsp;/&nbsp;&nbsp;方便快捷的服务&nbsp;&nbsp;/&nbsp;&nbsp;灵活的结算周期</div>
-            <ul class="qyyj-list box-width">
-                <li class="qyyj-item">
-                    <div class="item-img"><img src="@@imgpath/icon-xyzz.png" alt=""></div>
-                    <div class="item-name">可靠的信用资质</div>
-                </li>
-                <li class="qyyj-item">
-                    <div class="item-img"><img src="@@imgpath/icon-fyxy.png" alt=""></div>
-                    <div class="item-name">签署机票订购服务协议<br/><a href="@@pagepath/contracttemplate.html">合同范本</a></div>
-                </li>
-                <li class="qyyj-item">
-                    <div class="item-img"><img src="@@imgpath/icon-dpfs.png" alt=""></div>
-                    <div class="item-name">平台自助人工服务等<br/>多种订票方式</div>
-                </li>
-                <li class="qyyj-item">
-                    <div class="item-img"><img src="@@imgpath/icon-tgq.png" alt=""></div>
-                    <div class="item-name">方便快捷的退、改、签服务</div>
-                </li>
-                <li class="qyyj-item">
-                    <div class="item-img"><img src="@@imgpath/icon-jszq.png" alt=""></div>
-                    <div class="item-name">灵活的结算周期</div>
-                </li>
-            </ul>
-            <div class="qyyj-more"><a href="@@pagepath/monthlyknots.html">了解更多></a></div>
-        </div>
-        <div class="qzbx-box">
-            <div class="qzbx-qz"><a href="@@pagepath/gobalVsia.html">&nbsp;</a></div>
-            <div class="qzbx-bx"><a href="@@pagepath/insuranceVisa.html">&nbsp;</a></div>
-        </div>
-        <div class="hzhb-box">
-            <div class="hzhb-title">合作伙伴</div>
-            <div class="hzhb-content">简单订票、轻松旅行 用我们的专业为您提供最优质的服务</div>
-            <div class="swiper-container box-width hzhb-companys">
-                <ul class="swiper-wrapper hzhb-list">
-                    <li class="swiper-slide hzhb-item">
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_0.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_1.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_2.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_3.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_4.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_5.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_6.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_7.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_8.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_9.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_10.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_11.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_12.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_13.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_14.png" alt=""></div>
-                    </li>
-                    <li class="swiper-slide hzhb-item">
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_15.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_16.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_17.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_18.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_19.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_20.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_21.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_22.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_23.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_24.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_25.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_26.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_27.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_28.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_29.png" alt=""></div>
-                    </li>
-                    <li class="swiper-slide hzhb-item">
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_30.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_31.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_32.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_33.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_34.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_35.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_36.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_37.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_38.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_39.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_40.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_41.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_42.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_43.png" alt=""></div>
-                        <div class="com-logo"><img src="@@xmimgpath/icon-logo/comlogo_44.png" alt=""></div>
-                    </li>
+                <div class="back-date">
+                  <span>返回日期</span>
+                  <input
+                    type="text"
+                    id="txt_etime"
+                    class="txt txt-small"
+                    readonly
+                    placeholder="请选择"
+                    maxlength="100"
+                  />
+                </div>
+              </div>
+              <div class="form-txt-box ddl-more ddl">
+                <span class="ddl">更多选择</span>
+                <input
+                  type="text"
+                  class="txt ddl"
+                  id="ddl_more"
+                  readonly
+                  placeholder="经济舱"
+                  maxlength="100"
+                />
+                <ul class="ddl-cag-box ddl">
+                  <li class="cur">经济舱</li>
+                  <li>商务舱</li>
+                  <li>头等舱</li>
                 </ul>
-                <div class="pagination"></div>
+              </div>
+              <div class="book-btns">
+                <div class="btn-search" id="btn_search">搜索航班</div>
+                <div class="book-directflight">
+                  <div class="book-btn" id="btn-direct">仅查直飞</div>
+                </div>
+              </div>
             </div>
+            <div class="book-dingzhi">
+              <div class="tip">亲！请写下您的行程，剩下的交给我们来办</div>
+              <textarea
+                class="txt-content"
+                id="txt_content"
+                placeholder="如果可以，请尽量详细描述，以便我们能更好为您量身设计行程！"
+              ></textarea>
+              <div class="txts-box">
+                <div>
+                  <span>手机号：</span>
+                  <input
+                    type="text"
+                    id="txt_phone"
+                    maxlength="20"
+                    placeholder=""
+                  />
+                </div>
+                <div id="div_name">
+                  <span>姓名：</span>
+                  <input
+                    type="text"
+                    id="txt_name"
+                    maxlength="20"
+                    placeholder=""
+                  />
+                </div>
+                <div id="div_email">
+                  <span>邮箱：</span>
+                  <input
+                    type="text"
+                    id="txt_email"
+                    maxlength="100"
+                    placeholder=""
+                  />
+                </div>
+                <div>
+                  <span class="span_pass">设置订单查询密码：</span>
+                  <input
+                    type="text"
+                    id="txt_pass"
+                    maxlength="30"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div class="div_pass">
+                <div class="dz-tip">系统检测到您已是会员！</div>
+                <div id="span_forget">忘记密码？</div>
+              </div>
+              <div class="btn" id="btn_submit">提交</div>
+            </div>
+          </div>
         </div>
-        @@include('./common/footer.html')
+      </div>
+      <div class="zfcg-box">
+        <div class="zfcg-title">政府采购定点机票代理商</div>
+        <div class="zfcg-content">
+          根据中国民用航空局印发的《关于加强公务机票管理有关事项的通知》以及（财库{2014}33号文件，以下简称《通知》）中明确的购票人在国内出差、
+          <br />因公临时出国时所购买的机票规定。中国财政部和民用航空局经过严格的审核，筛选出政府机票采购供应商
+        </div>
+        <ul class="zfcg-list box-width">
+          <li class="zfcg-item">
+            <div class="item-img">
+              <img src="@@imgpath/img-xy.png" alt="凯行网" />
+            </div>
+            <div class="item-title">可靠的信用资质</div>
+            <div class="item-content">
+              我公司是政府采购机票的定点单位，具备国际航协及国内航协的认可资质，同时具有中航鑫港公司的政府采购机票担保函
+            </div>
+          </li>
+          <li class="zfcg-item">
+            <div class="item-img">
+              <img src="@@imgpath/img-cg.png" alt="凯行网" />
+            </div>
+            <div class="item-title">公务机票采购优惠</div>
+            <div class="item-content">
+              各政府部门、科学院校、医院等事业单位。持有公务卡的公务员、老师、医生等相关人员；在我单位购买机票可享受全价票<span>8.8</span>折，折扣票<span>9.5</span>折的优惠
+            </div>
+          </li>
+          <li class="zfcg-item">
+            <div class="item-img">
+              <img src="@@imgpath/img-zf.png" alt="凯行网" />
+            </div>
+            <div class="item-title">公务卡简捷支付</div>
+            <div class="item-content">
+              购买机票可以使用公务卡进行网上无卡支付，我们也可以上门刷卡支付
+            </div>
+          </li>
+          <li class="zfcg-item">
+            <div class="item-img">
+              <img src="@@imgpath/img-yj.png" alt="凯行网" />
+            </div>
+            <div class="item-title">可签约月结服务</div>
+            <div class="item-content">
+              我公司提供政府单位签约进行<span>先</span>乘机<span>后</span>付款月结服务
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="qyyj-box">
+        <div class="qyyj-title">企业月结－凯行网企业票务通</div>
+        <div class="qyyj-tip">
+          可靠的信用资质&nbsp;&nbsp;/&nbsp;&nbsp;方便快捷的服务&nbsp;&nbsp;/&nbsp;&nbsp;灵活的结算周期
+        </div>
+        <ul class="qyyj-list box-width">
+          <li class="qyyj-item">
+            <div class="item-img">
+              <img src="@@imgpath/icon-xyzz.png" alt="" />
+            </div>
+            <div class="item-name">可靠的信用资质</div>
+          </li>
+          <li class="qyyj-item">
+            <div class="item-img">
+              <img src="@@imgpath/icon-fyxy.png" alt="" />
+            </div>
+            <div class="item-name">
+              签署机票订购服务协议<br /><a
+                href="@@pagepath/contracttemplate.html"
+                >合同范本</a
+              >
+            </div>
+          </li>
+          <li class="qyyj-item">
+            <div class="item-img">
+              <img src="@@imgpath/icon-dpfs.png" alt="" />
+            </div>
+            <div class="item-name">平台自助人工服务等<br />多种订票方式</div>
+          </li>
+          <li class="qyyj-item">
+            <div class="item-img">
+              <img src="@@imgpath/icon-tgq.png" alt="" />
+            </div>
+            <div class="item-name">方便快捷的退、改、签服务</div>
+          </li>
+          <li class="qyyj-item">
+            <div class="item-img">
+              <img src="@@imgpath/icon-jszq.png" alt="" />
+            </div>
+            <div class="item-name">灵活的结算周期</div>
+          </li>
+        </ul>
+        <div class="qyyj-more">
+          <a href="@@pagepath/monthlyknots.html">了解更多></a>
+        </div>
+      </div>
+      <div class="qzbx-box">
+        <div class="qzbx-qz">
+          <a href="@@pagepath/gobalVsia.html">&nbsp;</a>
+        </div>
+        <div class="qzbx-bx">
+          <a href="@@pagepath/insuranceVisa.html">&nbsp;</a>
+        </div>
+      </div>
+      <div class="hzhb-box">
+        <div class="hzhb-title">合作伙伴</div>
+        <div class="hzhb-content">
+          简单订票、轻松旅行 用我们的专业为您提供最优质的服务
+        </div>
+        <div class="swiper-container box-width hzhb-companys">
+          <ul class="swiper-wrapper hzhb-list">
+            <li class="swiper-slide hzhb-item">
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_0.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_1.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_2.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_3.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_4.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_5.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_6.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_7.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_8.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_9.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_10.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_11.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_12.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_13.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_14.png" alt="" />
+              </div>
+            </li>
+            <li class="swiper-slide hzhb-item">
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_15.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_16.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_17.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_18.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_19.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_20.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_21.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_22.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_23.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_24.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_25.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_26.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_27.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_28.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_29.png" alt="" />
+              </div>
+            </li>
+            <li class="swiper-slide hzhb-item">
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_30.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_31.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_32.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_33.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_34.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_35.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_36.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_37.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_38.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_39.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_40.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_41.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_42.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_43.png" alt="" />
+              </div>
+              <div class="com-logo">
+                <img src="@@xmimgpath/icon-logo/comlogo_44.png" alt="" />
+              </div>
+            </li>
+          </ul>
+          <div class="pagination"></div>
+        </div>
+      </div>
+      @@include('./common/footer.html')
     </div>
     <script src="@@jspath/lib/swiper-2.1.min.js?v=@@verson"></script>
-    <script src="@@js1path/lib/layDate-v5.0.7/laydate/laydate.js?v=@@verson"></script>
+    <script src="@@js1path/lib/laydate/laydate.js?v=@@verson"></script>
     <script src="@@jspath/book.js?v=@@verson"></script>
     <script src="@@jspath/custom-route.js?v=@@verson"></script>
     <script src="@@jspath/customer.js?v=@@verson"></script>
     <script src="@@jspath/index.js?v=@@verson"></script>
-</body>
+  </body>
 </html>
