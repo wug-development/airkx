@@ -1,109 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>国内机票查询|国内机票预订-中国民航北京机票一级代理400-722-7722 凯行网官网Airkx.com</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      国内机票查询|国内机票预订-中国民航北京机票一级代理400-722-7722
+      凯行网官网Airkx.com
+    </title>
     @@include('./common/meta.html')
-    <link rel="stylesheet" href="@@csspath/index.css?v=@@verson">
-    <link rel="stylesheet" href="@@csspath/roundTtripGN.css?v=@@verson">
-</head>
-<body>
+    <link rel="stylesheet" href="@@csspath/index.css?v=@@verson" />
+    <link rel="stylesheet" href="@@csspath/roundTtripGN.css?v=@@verson" />
+  </head>
+  <body>
     <div class="index-box">
-        @@include('./common/header.html', {"index": "2"})   
-        <div class="pad-line"></div>     
-        <div class="speed-bar">
-            <span class="sbar-item">
-                    <img src="@@imgpath/disc_01.png" alt="">
-                    搜索
-                    <b></b>
-                </span>
-            <span class="sbar-item">
-                    <img src="@@imgpath/disc_02.png" alt="">
-                    选择
-                    <b></b>
-                </span>
-            <span class="sbar-item">
-                    <img src="@@imgpath/disc_03.png" alt="">
-                    预定
-                    <b></b>
-                </span>
-            <span class="sbar-item">
-                    <img src="@@imgpath/disc_04.png" alt="">
-                    提交
-                </span>
-        </div>
-        <div class="zrsearch-wrap"></div>
-        <div class="content">
-            <div class="search-wrap">
-                <div class="search-menu">
-                    <div class="flytype">
-                        <div class="flytypebac">▼</div>
-                        <div class="flytypeSelect">
-                            <b></b>
-                        </div>
-                        <span></span>
-                    </div>
-                    <div class="sCitySelect">
-                        <input type="text" / id="startCityGN" value="英文/拼音/三字码" autocomplete="off">
-                        <input type="hidden">
-                        <div class="history">
-                        </div>
-                    </div>
-                    <div class="flytypeIcon"></div>
-                    <div class="eCitySelect">
-                        <input type="text" / id="endCityGN" value="英文/拼音/三字码" autocomplete="off">
-                        <input type="hidden">
-                        <div class="history1">
-                        </div>
-                    </div>
-                    <div class="eTimeSelect">
-                        <input readonly="readonly" type="text" / id="startTime" autocomplete="off">
-                    </div>
-                    <!-- <div class="eTimeSelect">
+      @@include('./common/header.html', {"index": "2"})
+      <div class="pad-line"></div>
+      <div class="speed-bar">
+        <span class="sbar-item">
+          <img src="@@imgpath/disc_01.png" alt="" />
+          搜索
+          <b></b>
+        </span>
+        <span class="sbar-item">
+          <img src="@@imgpath/disc_02.png" alt="" />
+          选择
+          <b></b>
+        </span>
+        <span class="sbar-item">
+          <img src="@@imgpath/disc_03.png" alt="" />
+          预定
+          <b></b>
+        </span>
+        <span class="sbar-item">
+          <img src="@@imgpath/disc_04.png" alt="" />
+          提交
+        </span>
+      </div>
+      <div class="zrsearch-wrap"></div>
+      <div class="content">
+        <div class="search-wrap">
+          <div class="search-menu">
+            <div class="flytype">
+              <div class="flytypebac">▼</div>
+              <div class="flytypeSelect">
+                <b></b>
+              </div>
+              <span></span>
+            </div>
+            <div class="sCitySelect">
+              <input type="text" / id="startCityGN" value="英文/拼音/三字码"
+              autocomplete="off">
+              <input type="hidden" />
+              <div class="history"></div>
+            </div>
+            <div class="flytypeIcon"></div>
+            <div class="eCitySelect">
+              <input type="text" / id="endCityGN" value="英文/拼音/三字码"
+              autocomplete="off">
+              <input type="hidden" />
+              <div class="history1"></div>
+            </div>
+            <div class="eTimeSelect">
+              <input readonly="readonly" type="text" / id="startTime"
+              autocomplete="off">
+            </div>
+            <!-- <div class="eTimeSelect">
                         <input readonly="readonly" type="text" id="endTime" / autocomplete="off" class="Edate">
                     </div> -->
-                    <div class="flySelect">搜索</div>
-                </div>
-            </div>
-            <div class="route">
-                <span></span>
-                <img src="" alt="">
-                <span></span>
-                <b></b>
-                <b></b>
-                <b></b>
-            </div>
-            <div class="lineListZ">
-                <div class="linTitle">
-                    <div class="hangkong">航空公司</div>
-                    <div class="hangbanxinxi">航班信息</div>
-                    <div class="chufajichang">出发机场</div>
-                    <div class="daodajichang">到达机场</div>
-                    <div class="piaojiashuijin">票价+税金</div>
-                </div>
-                <div class="lineListDetil"></div>
-            </div>
-            <div class="not-searched-wrap">
-                <div class="not-searched">
-                    <p>抱歉，没有符合您搜索条件的航班。</p>
-                    <p>您可以： </p>
-                    <p>·更改搜索条件 <a href="#">重新查询</a>。</p>
-                    <p>·致电客服 : 010-6406-0909 寻求帮助</p>
-                </div>
-                <div class="youarehere">
-                </div>
-                <div class="advert">
-                    <div class="advbgl"></div>
-                    <div class="advbgr"></div>
-                    <div class="inpforma">广告</div>
-                </div>
-            </div>
-            <img src="@@imgpath/loading.gif" alt="" id="loading">
-        </div>    
-        @@include('./common/footer.html')
+            <div class="flySelect">搜索</div>
+          </div>
+        </div>
+        <div class="route">
+          <span></span>
+          <img src="" alt="" />
+          <span></span>
+          <b></b>
+          <b></b>
+          <b></b>
+        </div>
+        <div class="lineListZ">
+          <div class="linTitle">
+            <div class="hangkong">航空公司</div>
+            <div class="hangbanxinxi">航班信息</div>
+            <div class="chufajichang">出发机场</div>
+            <div class="daodajichang">到达机场</div>
+            <div class="piaojiashuijin">票价+税金</div>
+          </div>
+          <div class="lineListDetil"></div>
+        </div>
+        <div class="not-searched-wrap">
+          <div class="not-searched">
+            <p>抱歉，没有符合您搜索条件的航班。</p>
+            <p>您可以：</p>
+            <p>·更改搜索条件 <a href="#">重新查询</a>。</p>
+            <p>·致电客服 : 010-6406-0909 寻求帮助</p>
+          </div>
+          <div class="youarehere"></div>
+          <div class="advert">
+            <div class="advbgl"></div>
+            <div class="advbgr"></div>
+            <div class="inpforma">广告</div>
+          </div>
+        </div>
+        <img src="@@imgpath/loading.gif" alt="" id="loading" />
+      </div>
+      @@include('./common/footer.html')
     </div>
     <script src="@@jspath/roundTripGN.js?v=@@verson"></script>
-    <script src="@@js1path/lib/layDate-v5.0.7/laydate/laydate.js?v=@@verson"></script>
+    <script src="@@js1path/lib/laydate/laydate.js?v=@@verson"></script>
     <script src="@@jspath/jquery-airselector.js?v=@@verson"></script>
-</body>
+  </body>
 </html>
