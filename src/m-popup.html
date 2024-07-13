@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      font-size: 13.333vw !important;
+    }
+    .notice-popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .notice-popup--wrapper {
+      background-color: #fff;
+      padding: 0 0.32rem;
+      border-radius: 0.16rem;
+      width: 6.86rem;
+      height: 7.2rem;
+      box-sizing: border-box;
+      text-align: center;
+      box-shadow: 0px 0px 0.2rem rgba(0, 0, 0, 0.5);
+      color: #333;
+    }
+    .notice-popup--title {
+      font-size: 0.32rem;
+      height: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-bottom: 0.02rem solid rgba(153, 153, 153, 0.4);
+    }
+    .notice-popup--content {
+      padding-top: 0.32rem;
+      font-size: 0.28rem;
+      line-height: 0.44rem;
+      text-indent: 2em;
+      text-align: left;
+    }
+    .notice-popup--name {
+      margin-top: 1.5rem;
+      font-size: 0.28rem;
+      font-weight: 400;
+      margin-bottom: 0.2rem;
+      text-align: right;
+    }
+    .notice-popup--date {
+      font-size: 0.28rem;
+      font-weight: 400;
+      margin-bottom: 0.4rem;
+      text-align: right;
+    }
+    .notice-popup--btn {
+      background-color: #e01114;
+      color: #fff;
+      border-radius: 0.1rem;
+      font-size: 0.32rem;
+      cursor: pointer;
+      width: 2.4rem;
+      height: 0.8rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="notice-popup">
+    <div class="notice-popup--wrapper">
+      <div class="notice-popup--title">公告</div>
+      <div class="notice-popup--content">我司最近接到个别客户咨询购买“国内随心飞”产品；我司在此郑重声明，我司从来没有发布过“国内随心飞”产品，更没有这项业务；如果有人盗用我公司名义销售此产品请广大飞友勿信！！！</div>
+      <div class="notice-popup--name">北京凯行网航空服务有限公司</div>
+      <div class="notice-popup--date">2024年7月13日</div>
+      <div class="notice-popup--btn" id="btn-close-popup">关闭(10s)</div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var popupTime = 10;
+      document.getElementById('btn-close-popup').addEventListener('click', function() {
+        document.querySelector('.notice-popup').style.display = 'none';
+        popupTime = 1;
+      });
+      var popupTimer = setInterval(() => {
+        if (popupTime > 1) {
+          popupTime--;
+          document.getElementById('btn-close-popup').innerHTML = '关闭(' + popupTime + 's)';
+        } else {
+          document.querySelector('.notice-popup').style.display = 'none';
+          clearInterval(popupTimer);
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
